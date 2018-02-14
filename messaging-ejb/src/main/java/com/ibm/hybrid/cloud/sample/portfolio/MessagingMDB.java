@@ -16,6 +16,12 @@
 
 package com.ibm.hybrid.cloud.sample.portfolio;
 
+//JSON Web Token (JWT) construction
+import com.ibm.websphere.security.jwt.InvalidBuilderException;
+import com.ibm.websphere.security.jwt.JwtBuilder;
+import com.ibm.websphere.security.jwt.JwtToken;
+
+//Standard HTTP request classes.  Maybe replace these with use of JAX-RS 2.0 client package instead...
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
@@ -89,6 +95,13 @@ public class MessagingMDB implements MessageListener {
 			logger.fine("Successfully wrote JSON");
 		}
 
+		String userName = input.getString("id");
+		if (userName == null) userName = "null";
+
+		// add the JWT token to the authorization header. 
+		String jwtToken = createJWT(userName);
+		conn.setRequestProperty("Authorization", "Bearer "+ jwtToken);
+
 		logger.fine("Driving call to REST API");
 		InputStream stream = conn.getInputStream();
 
@@ -100,6 +113,43 @@ public class MessagingMDB implements MessageListener {
 
 		logger.fine("Returning JSON to caller of REST API");
 		return json;
+	}
+
+	/**
+	 * Create Json Web Token.
+	 * return: the base64 encoded and signed token. 
+	 */
+	private static String createJWT(String userName){
+		String jwtTokenString = null;		
+		try {
+			// create() uses default settings.  
+			// For other settings, specify a JWTBuilder element in server.xml
+			// and call create(builder id)
+			JwtBuilder builder = JwtBuilder.create();
+
+			// Put the user info into a JWT Token
+			builder.subject(userName);
+			builder.claim("upn", userName);
+
+			// Set the audience to our sample's value
+			String audience = System.getenv("JWT_AUDIENCE");
+			builder.claim("aud", audience);
+
+			//builder.claim("groups", groups);
+
+			//convention is the issuer is the url, but for demo portability a fixed value is used.
+			//builder.claim("iss", request.getRequestURL().toString());
+			String issuer = System.getenv("JWT_ISSUER");
+			builder.claim("iss", issuer);
+
+			JwtToken theToken = builder.buildJwt();			
+			jwtTokenString = theToken.compact();
+		} catch (Exception e) {			
+			e.printStackTrace();
+			throw new RuntimeException(e);
+		}
+		System.out.println("*** debug: JWT: "+ jwtTokenString);
+		return jwtTokenString;
 	}
 
 	private static void logException(Throwable t) {

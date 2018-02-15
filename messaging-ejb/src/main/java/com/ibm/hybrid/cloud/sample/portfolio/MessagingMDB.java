@@ -86,6 +86,12 @@ public class MessagingMDB implements MessageListener {
 		conn.setRequestProperty("Content-Type", "application/json");
 		conn.setDoOutput(true);
 
+		String userName = getUserName(input);
+
+		// add the JWT token to the authorization header. 
+		String jwtToken = createJWT(userName);
+		conn.setRequestProperty("Authorization", "Bearer "+ jwtToken);
+
 		if (input != null) {
 			logger.fine("Writing JSON to body of REST call:"+input);
 			OutputStream body = conn.getOutputStream();
@@ -94,12 +100,6 @@ public class MessagingMDB implements MessageListener {
 			body.close();
 			logger.fine("Successfully wrote JSON");
 		}
-
-		String userName = getUserName(input);
-
-		// add the JWT token to the authorization header. 
-		String jwtToken = createJWT(userName);
-		conn.setRequestProperty("Authorization", "Bearer "+ jwtToken);
 
 		logger.fine("Driving call to REST API");
 		InputStream stream = conn.getInputStream();

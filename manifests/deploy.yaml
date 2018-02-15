@@ -32,43 +32,43 @@ spec:
 #       image: mycluster.icp:8500/stock-trader/messaging:latest # IBM Cloud Private
 #       image: registry.ng.bluemix.net/stock_trader/messaging:latest # IBM Container Service
         env:
-           - name: MQ_ID
-             valueFrom:
-               secretKeyRef:
-                 name: mq
-                 key: id
-           - name: MQ_PASSWORD
-             valueFrom:
-               secretKeyRef:
-                 name: mq   
-                 key: pwd
-           - name: MQ_HOST
-             valueFrom:
-               secretKeyRef:
-                 name: mq
-                 key: host
-           - name: MQ_PORT
-             valueFrom:
-               secretKeyRef:
-                 name: mq
-                 key: port
-           - name: MQ_CHANNEL
-             valueFrom:
-               secretKeyRef:
-                 name: mq   
-                 key: channel
-           - name: MQ_QUEUE_MANAGER
-             valueFrom:
-               secretKeyRef:
-                 name: mq   
-                 key: queue-manager
-           - name: MQ_QUEUE
-             valueFrom:
-               secretKeyRef:
-                 name: mq   
-                 key: queue
-          - name: JWT_AUDIENCE
+          - name: MQ_ID
             valueFrom:
+              secretKeyRef:
+                name: mq
+                key: id
+          - name: MQ_PASSWORD
+            valueFrom:
+              secretKeyRef:
+                name: mq   
+                key: pwd
+          - name: MQ_HOST
+            valueFrom:
+              secretKeyRef:
+                name: mq
+                key: host
+          - name: MQ_PORT
+            valueFrom:
+              secretKeyRef:
+                name: mq
+                key: port
+          - name: MQ_CHANNEL
+            valueFrom:
+              secretKeyRef:
+                name: mq   
+                key: channel
+          - name: MQ_QUEUE_MANAGER
+            valueFrom:
+              secretKeyRef:
+                name: mq   
+                key: queue-manager
+          - name: MQ_QUEUE
+            valueFrom:
+              secretKeyRef:
+                name: mq   
+                key: queue
+           - name: JWT_AUDIENCE
+             valueFrom:
               secretKeyRef:
                 name: jwt 
                 key: audience
@@ -79,5 +79,6 @@ spec:
                 key: issuer
         ports:
           - containerPort: 9080
+          - containerPort: 9443
         imagePullPolicy: Always
 ---

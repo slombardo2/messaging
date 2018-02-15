@@ -154,10 +154,10 @@ public class MessagingMDB implements MessageListener {
 			JwtToken theToken = builder.buildJwt();			
 			jwtTokenString = theToken.compact();
 		} catch (Exception e) {			
-			e.printStackTrace();
+			logException(e);
 			throw new RuntimeException(e);
 		}
-		System.out.println("*** debug: JWT: "+ jwtTokenString);
+		logger.fine("*** debug: JWT: "+ jwtTokenString);
 		return jwtTokenString;
 	}
 

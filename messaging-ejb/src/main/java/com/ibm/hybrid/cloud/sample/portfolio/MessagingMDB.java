@@ -26,10 +26,10 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
 import java.io.PrintWriter;
+import java.io.StringReader;
 import java.io.StringWriter;
 import java.net.HttpURLConnection;
 import java.net.URL;
-import java.util.Base64;
 
 //Logging (JSR 47)
 import java.util.logging.Level;
@@ -95,8 +95,7 @@ public class MessagingMDB implements MessageListener {
 			logger.fine("Successfully wrote JSON");
 		}
 
-		String userName = input.getString("id");
-		if (userName == null) userName = "null";
+		String userName = getUserName(input);
 
 		// add the JWT token to the authorization header. 
 		String jwtToken = createJWT(userName);
@@ -113,6 +112,16 @@ public class MessagingMDB implements MessageListener {
 
 		logger.fine("Returning JSON to caller of REST API");
 		return json;
+	}
+
+	private static String getUserName(String input) throws IOException {
+		StringReader reader = new StringReader(input);
+		JsonObject json = Json.createReader(reader).readObject();
+
+		String userName = json.getString("id");
+		if (userName == null) userName = "null";
+
+		return userName;
 	}
 
 	/**

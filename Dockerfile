@@ -14,8 +14,8 @@
 
 FROM websphere-liberty:javaee7
 COPY server.xml /config/server.xml
-COPY key.jks /output/resources/security/key.jks
-COPY ltpa.keys /output/resources/security/ltpa.keys
+COPY key.jks /config/resources/security/key.jks
+#COPY ltpa.keys /config/resources/security/ltpa.keys
 COPY wmq.jmsra.rar /config/wmq.jmsra.rar
 COPY messaging-ear/target/messaging-ear-1.0-SNAPSHOT.ear /config/apps/Messaging.ear
 RUN installUtility install --acceptLicense defaultServer

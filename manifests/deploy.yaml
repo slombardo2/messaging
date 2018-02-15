@@ -67,8 +67,8 @@ spec:
               secretKeyRef:
                 name: mq   
                 key: queue
-           - name: JWT_AUDIENCE
-             valueFrom:
+          - name: JWT_AUDIENCE
+            valueFrom:
               secretKeyRef:
                 name: jwt 
                 key: audience

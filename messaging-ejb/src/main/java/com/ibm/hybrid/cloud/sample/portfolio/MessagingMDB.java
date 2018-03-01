@@ -87,6 +87,8 @@ public class MessagingMDB implements MessageListener {
 		conn.setDoOutput(true);
 
 		String userName = getUserName(input);
+		conn.setRequestProperty("Portfolio", userName); //for use in Istio routing rules
+		//use Istio to define whether to route to notification-slack or notification-twitter
 
 		// add the JWT token to the authorization header. 
 		String jwtToken = createJWT(userName);

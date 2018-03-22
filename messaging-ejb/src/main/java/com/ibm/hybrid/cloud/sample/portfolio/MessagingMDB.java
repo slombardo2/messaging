@@ -64,10 +64,10 @@ public class MessagingMDB implements MessageListener {
 	public void onMessage(Message message) {
 		if (message instanceof TextMessage) try {
 			TextMessage text = (TextMessage) message;
-			String json = text.getText();
+			String payload = text.getText();
 
-			logger.fine("Sending "+json+" to "+NOTIFICATION_SERVICE);
-			JsonObject output = invokeREST("POST", NOTIFICATION_SERVICE, json);
+			logger.fine("Sending "+payload+" to "+NOTIFICATION_SERVICE);
+			JsonObject output = invokeREST("POST", NOTIFICATION_SERVICE, payload);
 			logger.info("Received the following response from the Notification microservice: "+output);
 		} catch (Throwable t) {
 			logger.warning("An error occurred processing a JMS message from the queue");
@@ -77,7 +77,7 @@ public class MessagingMDB implements MessageListener {
 		}
 	}
 
-	private static JsonObject invokeREST(String verb, String uri, String input) throws IOException {
+	private static JsonObject invokeREST(String verb, String uri, String payload) throws IOException {
 		logger.fine("Preparing to invoke "+verb+" on "+uri);
 		URL url = new URL(uri);
 
@@ -86,18 +86,20 @@ public class MessagingMDB implements MessageListener {
 		conn.setRequestProperty("Content-Type", "application/json");
 		conn.setDoOutput(true);
 
-		String userName = getUserName(input);
-		conn.setRequestProperty("Portfolio", userName); //for use in Istio routing rules
+		JsonObject input = parseJson(payload);
+		String owner = input.getString("owner");
+		conn.setRequestProperty("portfolio", owner); //for use in Istio routing rules
 		//use Istio to define whether to route to notification-slack or notification-twitter
 
 		// add the JWT token to the authorization header. 
+		String userName = getUserName(input);
 		String jwtToken = createJWT(userName);
 		conn.setRequestProperty("Authorization", "Bearer "+ jwtToken);
 
 		if (input != null) {
 			logger.fine("Writing JSON to body of REST call:"+input);
 			OutputStream body = conn.getOutputStream();
-			body.write(input.getBytes());
+			body.write(payload.getBytes());
 			body.flush();
 			body.close();
 			logger.fine("Successfully wrote JSON");
@@ -116,10 +118,16 @@ public class MessagingMDB implements MessageListener {
 		return json;
 	}
 
-	private static String getUserName(String input) throws IOException {
+	private static JsonObject parseJson(String input) throws IOException {
+		logger.fine("Parsing JSON from JMS message");
+
 		StringReader reader = new StringReader(input);
 		JsonObject json = Json.createReader(reader).readObject();
 
+		return json;
+	}
+
+	private static String getUserName(JsonObject json) throws IOException {
 		String userName = json.getString("id");
 		if (userName == null) userName = "null";
 

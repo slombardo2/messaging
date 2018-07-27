@@ -14,7 +14,7 @@
 
 FROM websphere-liberty:javaee7
 
-COPY /target/liberty/wlp/usr/servers/defaultServer /config/
+COPY /messaging-ear/target/liberty/wlp/usr/servers/defaultServer /config/
 
 #COPY ltpa.keys /config/resources/security/ltpa.keys
 ## Copy in MQ prereqs:

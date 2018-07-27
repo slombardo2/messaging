@@ -61,5 +61,5 @@
         <properties.wasJms queueName="NotificationQ"/>
     </jmsQueue> -->
 
-    <enterpriseApplication id="Messaging" location="Messaging.ear" name="Messaging"/>
+    <enterpriseApplication id="Messaging" location="${app.location}" name="Messaging"/>
 </server>

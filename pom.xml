@@ -23,8 +23,15 @@
 
     <name>StockTrader - messaging</name>
 
+    <parent>
+        <groupId>net.wasdev.wlp.maven.parent</groupId>
+        <artifactId>liberty-maven-app-parent</artifactId>
+        <version>2.1</version>
+    </parent>
+
     <modules> <!-- child modules to be executed as part of this build -->
         <module>messaging-ejb</module>
         <module>messaging-ear</module>
     </modules>
+
 </project>

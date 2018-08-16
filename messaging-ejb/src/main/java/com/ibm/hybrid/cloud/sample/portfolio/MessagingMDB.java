@@ -36,7 +36,6 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 //EJB 3.2
-import javax.ejb.ActivationConfigProperty;
 import javax.ejb.MessageDriven;
 
 //JMS 2.0
@@ -66,7 +65,7 @@ public class MessagingMDB implements MessageListener {
 			TextMessage text = (TextMessage) message;
 			String payload = text.getText();
 
-			logger.fine("Sending "+payload+" to "+NOTIFICATION_SERVICE);
+			logger.info("Sending "+payload+" to "+NOTIFICATION_SERVICE);
 			JsonObject output = invokeREST("POST", NOTIFICATION_SERVICE, payload);
 			logger.info("Received the following response from the Notification microservice: "+output);
 		} catch (Throwable t) {
@@ -87,7 +86,7 @@ public class MessagingMDB implements MessageListener {
 		conn.setDoOutput(true);
 
 		JsonObject input = parseJson(payload);
-		String owner = input.getString("owner");
+		String owner = input!=null ? input.getString("owner") : "null";
 		conn.setRequestProperty("portfolio", owner); //for use in Istio routing rules
 		//use Istio to define whether to route to notification-slack or notification-twitter
 

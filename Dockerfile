@@ -13,13 +13,14 @@
 #   limitations under the License.
 
 FROM websphere-liberty:javaee8
-COPY server.xml /config/server.xml
-COPY key.jks /config/resources/security/key.jks
-#COPY ltpa.keys /config/resources/security/ltpa.keys
-COPY wmq.jmsra.rar /config/wmq.jmsra.rar
+COPY src/main/liberty/config /config/
 COPY messaging-ear/target/messaging-ear-1.0-SNAPSHOT.ear /config/apps/Messaging.ear
 
+#apt-get needs root access
+USER root
+RUN chmod g+w /config/apps
 RUN apt-get update
 RUN apt-get install curl -y
+USER 1001
 
 RUN installUtility install --acceptLicense defaultServer

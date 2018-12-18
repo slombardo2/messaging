@@ -17,16 +17,17 @@
         <feature>mdb-3.2</feature>
         <feature>ejbLite-3.2</feature>
         <feature>jndi-1.0</feature>
-        <feature>jsonp-1.0</feature>
+        <feature>jsonb-1.0</feature>
         <feature>jca-1.7</feature>
         <feature>jms-2.0</feature>
+        <feature>mpRestClient-1.1</feature>
         <feature>ssl-1.0</feature>
 <!--    <feature>wasJmsClient-2.0</feature> -->
         <feature>jwt-1.0</feature>
         <feature>logstashCollector-1.0</feature>
     </featureManager>
 
-    <logging traceSpecification="*=info:com.ibm.hybrid.cloud.sample.portfolio.*=fine" consoleLogLevel="INFO"/>
+    <logging traceSpecification="*=info:com.ibm.hybrid.cloud.sample.stocktrader.messaging.*=fine" consoleLogLevel="INFO"/>
 
     <keyStore id="defaultKeyStore" password="passw0rd" type="jks"
          location="${server.config.dir}/resources/security/key.jks" />
@@ -49,7 +50,7 @@
             destinationRef="NotificationQ"
             destinationType="javax.jms.Queue" />
     </jmsActivationSpec>
-    <jmsQueue id="NotificationQ" jndiName="jms/Portfolio/NotificationQueue">
+    <jmsQueue id="NotificationQ" jndiName="jms/StockTrader/NotificationQueue">
         <properties.mq baseQueueName="${env.MQ_QUEUE}" baseQueueManagerName="${env.MQ_QUEUE_MANAGER}"/>
     </jmsQueue>
 

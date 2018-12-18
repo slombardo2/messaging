@@ -16,7 +16,7 @@
 
 package com.ibm.hybrid.cloud.sample.stocktrader.messaging;
 
-import com.ibm.hybrid.cloud.sample.stocktrader.messaging.client.NotificationClient;
+import com.ibm.hybrid.cloud.sample.stocktrader.messaging.NotificationClient;
 import com.ibm.hybrid.cloud.sample.stocktrader.messaging.json.LoyaltyChange;
 import com.ibm.hybrid.cloud.sample.stocktrader.messaging.json.NotificationResult;
 
@@ -27,6 +27,9 @@ import java.io.StringWriter;
 //Logging (JSR 47)
 import java.util.logging.Level;
 import java.util.logging.Logger;
+
+//CDI 1.2
+import javax.inject.Inject;
 
 //EJB 3.2
 import javax.ejb.MessageDriven;

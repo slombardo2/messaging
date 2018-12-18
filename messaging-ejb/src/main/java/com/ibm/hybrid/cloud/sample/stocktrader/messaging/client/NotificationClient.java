@@ -14,7 +14,7 @@
    limitations under the License.
  */
 
-package com.ibm.hybrid.cloud.sample.stocktrader.messaging;
+package com.ibm.hybrid.cloud.sample.stocktrader.messaging.client;
 
 import com.ibm.hybrid.cloud.sample.stocktrader.messaging.json.NotificationResult;
 import com.ibm.hybrid.cloud.sample.stocktrader.messaging.json.LoyaltyChange;

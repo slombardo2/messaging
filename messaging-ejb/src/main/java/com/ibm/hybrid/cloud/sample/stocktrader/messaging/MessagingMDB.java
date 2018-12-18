@@ -16,7 +16,7 @@
 
 package com.ibm.hybrid.cloud.sample.stocktrader.messaging;
 
-import com.ibm.hybrid.cloud.sample.stocktrader.messaging.NotificationClient;
+import com.ibm.hybrid.cloud.sample.stocktrader.messaging.client.NotificationClient;
 import com.ibm.hybrid.cloud.sample.stocktrader.messaging.json.LoyaltyChange;
 import com.ibm.hybrid.cloud.sample.stocktrader.messaging.json.NotificationResult;
 

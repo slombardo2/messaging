@@ -40,6 +40,41 @@ spec:
             value: "{{ .Values.service.servicePort }}"
           - name: APPLICATION_NAME
             value: "{{ .Release.Name }}"
+          - name: MQ_ID
+            valueFrom:
+              secretKeyRef:
+                name: mq
+                key: id
+          - name: MQ_PASSWORD
+            valueFrom:
+              secretKeyRef:
+                name: mq   
+                key: pwd
+          - name: MQ_HOST
+            valueFrom:
+              secretKeyRef:
+                name: mq
+                key: host
+          - name: MQ_PORT
+            valueFrom:
+              secretKeyRef:
+                name: mq
+                key: port
+          - name: MQ_CHANNEL
+            valueFrom:
+              secretKeyRef:
+                name: mq   
+                key: channel
+          - name: MQ_QUEUE_MANAGER
+            valueFrom:
+              secretKeyRef:
+                name: mq   
+                key: queue-manager
+          - name: MQ_QUEUE
+            valueFrom:
+              secretKeyRef:
+                name: mq   
+                key: queue
           - name: JWT_AUDIENCE
             valueFrom:
               secretKeyRef:

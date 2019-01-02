@@ -75,8 +75,9 @@ public class MessagingMDB implements MessageListener {
 
 			Jsonb jsonb = JsonbBuilder.create();
 			LoyaltyChange loyaltyChange = jsonb.fromJson(payload, LoyaltyChange.class);
+			String owner = loyaltyChange.getOwner();
 
-			NotificationResult result = notificationClient.notify("Bearer "+jwt.getRawToken(), loyaltyChange);
+			NotificationResult result = notificationClient.notify("Bearer "+jwt.getRawToken(), owner, loyaltyChange);
 			logger.info("Received the following response from the Notification microservice: "+result);
 		} catch (Throwable t) {
 			logger.warning("An error occurred processing a JMS message from the queue");

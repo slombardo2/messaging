@@ -13,7 +13,7 @@
 #   limitations under the License.
 
 FROM websphere-liberty:javaee8
-COPY messaging-ejb/src/main/liberty/config /config/
+COPY src/main/liberty/config /config/
 COPY messaging-ear/target/messaging-ear-1.0-SNAPSHOT.ear /config/apps/Messaging.ear
 
 #apt-get needs root access

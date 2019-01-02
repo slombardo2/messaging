@@ -34,7 +34,7 @@ import org.eclipse.microprofile.rest.client.inject.RegisterRestClient;
 /** mpRestClient "remote" interface for the notification microservice */
 public interface NotificationClient {
 	@POST
-	@Path("/{symbol}")
+	@Path("/")
 	@Produces("application/json")
-	public NotificationResult notify(@HeaderParam("Authorization") String jwt, LoyaltyChange LoyaltyChange);
+	public NotificationResult notify(@HeaderParam("Authorization") String jwt, @HeaderParam("owner") String owner, LoyaltyChange LoyaltyChange);
 }

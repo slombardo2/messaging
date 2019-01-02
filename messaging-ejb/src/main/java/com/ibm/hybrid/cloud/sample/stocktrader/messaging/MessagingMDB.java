@@ -30,6 +30,7 @@ import java.util.logging.Logger;
 
 //CDI 1.2
 import javax.inject.Inject;
+import javax.enterprise.context.ApplicationScoped;
 
 //EJB 3.2
 import javax.ejb.MessageDriven;
@@ -54,6 +55,7 @@ import org.eclipse.microprofile.jwt.JsonWebToken;
  * Message-Driven Bean implementation class for: MessagingMDB
  */
 @MessageDriven(name = "MessagingMDB", mappedName = "jms/StockTrader/NotificationQueue")
+@ApplicationScoped //CDI scope
 public class MessagingMDB implements MessageListener {
 	private static Logger logger = Logger.getLogger(MessagingMDB.class.getName());
 

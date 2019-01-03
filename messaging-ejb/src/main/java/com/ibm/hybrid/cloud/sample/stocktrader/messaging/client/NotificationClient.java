@@ -20,6 +20,7 @@ import com.ibm.hybrid.cloud.sample.stocktrader.messaging.json.NotificationResult
 import com.ibm.hybrid.cloud.sample.stocktrader.messaging.json.LoyaltyChange;
 import javax.enterprise.context.Dependent;
 import javax.ws.rs.ApplicationPath;
+import javax.ws.rs.Consumes;
 import javax.ws.rs.HeaderParam;
 import javax.ws.rs.PathParam;
 import javax.ws.rs.POST;
@@ -34,7 +35,8 @@ import org.eclipse.microprofile.rest.client.inject.RegisterRestClient;
 /** mpRestClient "remote" interface for the notification microservice */
 public interface NotificationClient {
 	@POST
-	@Path("/{symbol}")
+	@Path("/")
+	@Consumes("application/json")
 	@Produces("application/json")
-	public NotificationResult notify(@HeaderParam("Authorization") String jwt, LoyaltyChange LoyaltyChange);
+	public NotificationResult notify(@HeaderParam("Authorization") String jwt, @HeaderParam("owner") String owner, LoyaltyChange LoyaltyChange);
 }

@@ -1,0 +1,1178 @@
+********************************************************************************
+product = WebSphere Application Server 18.0.0.4 (wlp-1.0.23.cl180420181121-0300)
+wlp.install.dir = /opt/ibm/wlp/
+server.config.dir = /home/default/app/mc-target/liberty/wlp/usr/servers/defaultServer/
+java.home = /home/default/java/jre
+java.version = 1.8.0_191
+java.runtime = Java(TM) SE Runtime Environment (8.0.5.26 - pxa6480sr5fp26-20181115_03(SR5 FP26))
+os = Linux (4.4.0-139-generic; amd64) (en_US)
+process = 2151@mc-messaging-57f4a550-0ed3-11e9-858c-idc-6f85b6f956-cshxb
+********************************************************************************
+[1/3/19 18:12:50:354 UTC] 00000001 com.ibm.ws.kernel.launch.internal.FrameworkManager           A CWWKE0001I: The server defaultServer has been launched.
+[1/3/19 18:12:50:380 UTC] 00000001 com.ibm.ws.kernel.launch.internal.FrameworkManager           A CWWKE0100I: This product is licensed for development, and limited production use. The full license terms can be viewed here: https://public.dhe.ibm.com/ibmdl/export/pub/software/websphere/wasdev/license/base_ilan/ilan/18.0.0.4/lafiles/en.html
+[1/3/19 18:12:51:619 UTC] 00000025 com.ibm.ws.logging.internal.TraceSpecification               I TRAS0018I: The trace state has been changed. The new trace state is *=info:com.ibm.hybrid.cloud.sample.stocktrader.messaging.*=fine.
+[1/3/19 18:12:51:973 UTC] 00000001 com.ibm.ws.kernel.launch.internal.FrameworkManager           I CWWKE0002I: The kernel started after 1.987 seconds
+[1/3/19 18:12:52:074 UTC] 0000002a com.ibm.ws.kernel.feature.internal.FeatureManager            I CWWKF0007I: Feature update started.
+[1/3/19 18:12:52:333 UTC] 0000002a com.ibm.ws.kernel.feature.internal.FeatureManager            E CWWKF0033E: The singleton features com.ibm.websphere.appserver.javaeeCompatible-8.0 and com.ibm.websphere.appserver.javaeeCompatible-6.0 cannot be loaded at the same time.  The configured features jsonb-1.0 and jwtSso-1.0 include one or more features that cause the conflict. Your configuration is not supported; update server.xml to remove incompatible features.
+[1/3/19 18:12:52:341 UTC] 0000002a com.ibm.ws.logging.internal.impl.IncidentImpl                I FFDC1015I: An FFDC Incident has been created: "java.lang.IllegalArgumentException: Unable to load conflicting versions of features "com.ibm.websphere.appserver.javaeeCompatible-8.0" and "com.ibm.websphere.appserver.javaeeCompatible-6.0".  The feature dependency chains that led to the conflict are: com.ibm.websphere.appserver.jsonb-1.0 -> com.ibm.websphere.appserver.jsonbInternal-1.0 -> com.ibm.websphere.appserver.jsonbImpl-1.0.1 -> com.ibm.websphere.appserver.jsonp-1.1 -> com.ibm.websphere.appserver.jsonpInternal-1.1 -> com.ibm.websphere.appserver.jsonpImpl-1.1.1 -> com.ibm.websphere.appserver.javaeeCompatible-8.0 and com.ibm.websphere.appserver.jwtSso-1.0 -> com.ibm.websphere.appserver.servlet-3.1 -> com.ibm.websphere.appserver.javaeeCompatible-6.0 com.ibm.ws.kernel.feature.internal.FeatureManager reportErrors" at ffdc_19.01.03_18.12.52.0.log
+[1/3/19 18:12:52:345 UTC] 0000002a com.ibm.ws.kernel.feature.internal.FeatureManager            E CWWKF0033E: The singleton features com.ibm.websphere.appserver.javax.cdi-2.0 and com.ibm.websphere.appserver.javax.cdi-1.2 cannot be loaded at the same time.  The configured features jsonb-1.0 and mpJwt-1.1 include one or more features that cause the conflict. Your configuration is not supported; update server.xml to remove incompatible features.
+[1/3/19 18:12:52:348 UTC] 0000002a com.ibm.ws.logging.internal.impl.IncidentImpl                I FFDC1015I: An FFDC Incident has been created: "java.lang.IllegalArgumentException: Unable to load conflicting versions of features "com.ibm.websphere.appserver.javax.cdi-2.0" and "com.ibm.websphere.appserver.javax.cdi-1.2".  The feature dependency chains that led to the conflict are: com.ibm.websphere.appserver.jsonb-1.0 -> com.ibm.websphere.appserver.jsonbInternal-1.0 -> com.ibm.websphere.appserver.jsonbImpl-1.0.1 -> com.ibm.websphere.appserver.javax.cdi-2.0 and com.ibm.websphere.appserver.mpJwt-1.1 -> com.ibm.websphere.appserver.cdi-1.2 -> com.ibm.websphere.appserver.javax.cdi-1.2 com.ibm.ws.kernel.feature.internal.FeatureManager reportErrors" at ffdc_19.01.03_18.12.52.1.log
+[1/3/19 18:12:55:038 UTC] 0000002a com.ibm.ws.config.xml.internal.MetaTypeRegistry              E CWWKG0059E: The persisted identity com.ibm.ws.jca.activationSpec could not be processed because it extends an unavailable persisted identity com.ibm.ws.jca.activationSpec.supertype.
+[1/3/19 18:12:55:041 UTC] 0000002a com.ibm.ws.config.xml.internal.MetaTypeRegistry              E CWWKG0059E: The persisted identity com.ibm.ws.jca.adminObject could not be processed because it extends an unavailable persisted identity com.ibm.ws.jca.adminObject.supertype.
+[1/3/19 18:12:55:041 UTC] 0000002a com.ibm.ws.config.xml.internal.MetaTypeRegistry              E CWWKG0059E: The persisted identity com.ibm.ws.jca.resourceAdapter could not be processed because it extends an unavailable persisted identity com.ibm.ws.jca.resourceAdapter.supertype.
+[1/3/19 18:12:55:042 UTC] 0000002a com.ibm.ws.config.xml.internal.MetaTypeRegistry              E CWWKG0059E: The persisted identity com.ibm.ws.jca.connectionFactory could not be processed because it extends an unavailable persisted identity com.ibm.ws.jca.connectionFactory.supertype.
+[1/3/19 18:12:55:059 UTC] 0000002a com.ibm.ws.config.xml.internal.MetaTypeRegistry              E CWWKG0059E: The persisted identity com.ibm.ws.jca.jmsTopicConnectionFactory could not be processed because it extends an unavailable persisted identity com.ibm.ws.jca.connectionFactory.supertype.
+[1/3/19 18:12:55:059 UTC] 0000002a com.ibm.ws.config.xml.internal.MetaTypeRegistry              E CWWKG0059E: The persisted identity com.ibm.ws.jca.jmsActivationSpec could not be processed because it extends an unavailable persisted identity com.ibm.ws.jca.activationSpec.supertype.
+[1/3/19 18:12:55:059 UTC] 0000002a com.ibm.ws.config.xml.internal.MetaTypeRegistry              E CWWKG0059E: The persisted identity com.ibm.ws.jca.jmsQueueConnectionFactory could not be processed because it extends an unavailable persisted identity com.ibm.ws.jca.connectionFactory.supertype.
+[1/3/19 18:12:55:060 UTC] 0000002a com.ibm.ws.config.xml.internal.MetaTypeRegistry              E CWWKG0059E: The persisted identity com.ibm.ws.jca.jmsConnectionFactory could not be processed because it extends an unavailable persisted identity com.ibm.ws.jca.connectionFactory.supertype.
+[1/3/19 18:12:55:060 UTC] 0000002a com.ibm.ws.config.xml.internal.MetaTypeRegistry              E CWWKG0059E: The persisted identity com.ibm.ws.jca.jmsQueue could not be processed because it extends an unavailable persisted identity com.ibm.ws.jca.adminObject.supertype.
+[1/3/19 18:12:55:060 UTC] 0000002a com.ibm.ws.config.xml.internal.MetaTypeRegistry              E CWWKG0059E: The persisted identity com.ibm.ws.jca.jmsTopic could not be processed because it extends an unavailable persisted identity com.ibm.ws.jca.adminObject.supertype.
+[1/3/19 18:12:55:061 UTC] 0000002a com.ibm.ws.config.xml.internal.MetaTypeRegistry              E CWWKG0059E: The persisted identity com.ibm.ws.jca.jmsDestination could not be processed because it extends an unavailable persisted identity com.ibm.ws.jca.adminObject.supertype.
+[1/3/19 18:12:55:545 UTC] 0000001f com.ibm.ws.security.ready.internal.SecurityReadyServiceImpl  I CWWKS0007I: The security service is starting...
+[1/3/19 18:12:55:625 UTC] 0000001b ervice-191-com.ibm.ws.org.apache.cxf.cxf.rt.rs.mp.client.3.2 E CWWKE0702E: Could not resolve module: com.ibm.ws.org.apache.cxf.cxf.rt.rs.mp.client.3.2 [191]
+  Unresolved requirement: Import-Package: javax.enterprise.context; version="[1.1.0,2.1.0)"
+
+[1/3/19 18:12:55:953 UTC] 0000001b LogService-49-com.ibm.ws.org.eclipse.yasson.1.0              E CWWKE0702E: Could not resolve module: com.ibm.ws.org.eclipse.yasson.1.0 [49]
+  Unresolved requirement: Import-Package: javax.enterprise.context.spi
+
+[1/3/19 18:12:56:058 UTC] 00000025 com.ibm.ws.ssl.config.WSKeyStore                             I CWPKI0802I: Creating the SSL certificate. This may take a few seconds.
+[1/3/19 18:12:56:077 UTC] 0000002d com.ibm.ws.security.token.ltpa.internal.LTPAKeyInfoManager   I CWWKS4103I: Creating the LTPA keys. This may take a few seconds.
+[1/3/19 18:12:56:106 UTC] 0000001f ibm.ws.security.authentication.internal.jaas.JAASServiceImpl I CWWKS1123I: The collective authentication plugin with class name NullCollectiveAuthenticationPlugin has been activated. 
+[1/3/19 18:12:56:829 UTC] 0000001f com.ibm.ws.app.manager.internal.monitor.DropinMonitor        A CWWKZ0058I: Monitoring dropins for applications.
+[1/3/19 18:12:56:886 UTC] 0000002f com.ibm.ws.tcpchannel.internal.TCPChannel                    I CWWKO0219I: TCP Channel defaultHttpEndpoint has been started and is now listening for requests on host localhost  (IPv4: 127.0.0.1) port 9080.
+[1/3/19 18:12:57:340 UTC] 0000002d com.ibm.ws.security.token.ltpa.internal.LTPAKeyInfoManager   A CWWKS4104A: LTPA keys created in 1.262 seconds. LTPA key file: /home/default/app/mc-target/liberty/wlp/usr/servers/defaultServer/resources/security/ltpa.keys
+[1/3/19 18:12:57:350 UTC] 0000002d com.ibm.ws.security.token.ltpa.internal.LTPAKeyCreateTask    I CWWKS4105I: LTPA configuration is ready after 1.275 seconds.
+[1/3/19 18:12:57:380 UTC] 0000001f com.ibm.ws.cache.ServerCache                                 I DYNA1001I: WebSphere Dynamic Cache instance named baseCache initialized successfully.
+[1/3/19 18:12:57:384 UTC] 0000001f com.ibm.ws.cache.ServerCache                                 I DYNA1071I: The cache provider default is being used.
+[1/3/19 18:12:57:385 UTC] 0000001f com.ibm.ws.cache.CacheServiceImpl                            I DYNA1056I: Dynamic Cache (object cache) initialized successfully.
+[1/3/19 18:12:57:435 UTC] 0000001f com.ibm.ws.security.jwt.internal.ConsumerImpl                I CWWKS6012I: The JSON Web Token (JWT) consumer service is available.
+[1/3/19 18:12:57:450 UTC] 0000001f com.ibm.ws.security.jwt.web.JwtEndpointServices              I CWWKS6002I: The JSON Web Token (JWT) endpoint service is available.
+[1/3/19 18:12:57:474 UTC] 0000001f com.ibm.ws.security.mp.jwt.impl.MicroProfileJwtConfigImpl    I CWWKS5500I: The MicroProfile JWT configuration [defaultMpJwt] was successfully processed.
+[1/3/19 18:12:57:477 UTC] 0000001f com.ibm.ws.security.mp.jwt.impl.MicroProfileJwtServiceImpl   I CWWKS5500I: The MicroProfile JWT configuration [MicroProfileJwtService] was successfully processed.
+[1/3/19 18:12:57:501 UTC] 00000025 com.ibm.ws.ssl.config.WSKeyStore                             A CWPKI0803A: SSL certificate created in 1.443 seconds. SSL key file: /home/default/app/mc-target/liberty/wlp/usr/servers/defaultServer/resources/security/key.jks
+[1/3/19 18:12:57:504 UTC] 0000001b LogService-125-com.ibm.websphere.javaee.transaction.1.2      E CWWKE0702E: Could not resolve module: com.ibm.websphere.javaee.transaction.1.2 [125]
+  Unresolved requirement: Import-Package: javax.enterprise.context
+
+[1/3/19 18:12:57:506 UTC] 0000001b LogService-126-com.ibm.websphere.javaee.connector.1.7        E CWWKE0702E: Could not resolve module: com.ibm.websphere.javaee.connector.1.7 [126]
+  Unresolved requirement: Import-Package: javax.transaction
+    -> Export-Package: javax.transaction; bundle-symbolic-name="com.ibm.websphere.javaee.transaction.1.2"; bundle-version="1.0.23.cl180420181121-0300"; version="1.2.0"; uses:="javax.enterprise.context,javax.enterprise.util,javax.interceptor,javax.transaction.xa"
+       com.ibm.websphere.javaee.transaction.1.2 [125]
+         Unresolved requirement: Import-Package: javax.enterprise.context
+  Unresolved requirement: Import-Package: javax.transaction.xa
+    -> Export-Package: javax.transaction.xa; bundle-symbolic-name="com.ibm.websphere.javaee.transaction.1.2"; bundle-version="1.0.23.cl180420181121-0300"; version="1.2.0"
+
+[1/3/19 18:12:57:508 UTC] 0000001b LogService-127-com.ibm.ws.transaction.cdi                    E CWWKE0702E: Could not resolve module: com.ibm.ws.transaction.cdi [127]
+  Unresolved requirement: Import-Package: javax.enterprise.context; version="[1.1.0,3.0.0)"
+
+[1/3/19 18:12:57:510 UTC] 0000001b LogService-128-com.ibm.ws.transaction                        E CWWKE0702E: Could not resolve module: com.ibm.ws.transaction [128]
+  Unresolved requirement: Import-Package: javax.transaction.xa; version="1.1.0"
+    -> Export-Package: javax.transaction.xa; bundle-symbolic-name="com.ibm.websphere.javaee.transaction.1.2"; bundle-version="1.0.23.cl180420181121-0300"; version="1.2.0"
+       com.ibm.websphere.javaee.transaction.1.2 [125]
+         Unresolved requirement: Import-Package: javax.enterprise.context
+  Unresolved requirement: Import-Package: javax.transaction; version="1.1.0"
+    -> Export-Package: javax.transaction; bundle-symbolic-name="com.ibm.websphere.javaee.transaction.1.2"; bundle-version="1.0.23.cl180420181121-0300"; version="1.2.0"; uses:="javax.enterprise.context,javax.enterprise.util,javax.interceptor,javax.transaction.xa"
+
+[1/3/19 18:12:57:512 UTC] 0000001b LogService-129-com.ibm.ws.tx.jta.extensions                  E CWWKE0702E: Could not resolve module: com.ibm.ws.tx.jta.extensions [129]
+  Unresolved requirement: Import-Package: com.ibm.tx.jta.impl; version="[1.1.0,2.0.0)"
+    -> Export-Package: com.ibm.tx.jta.impl; bundle-symbolic-name="com.ibm.tx.jta"; bundle-version="1.0.23.cl180420181121-0300"; version="1.1.0"; uses:="com.ibm.tx.config,com.ibm.tx.jta,com.ibm.tx.util,com.ibm.tx.util.alarm,com.ibm.ws.Transaction,com.ibm.ws.Transaction.JTA,com.ibm.ws.Transaction.JTS,com.ibm.ws.recoverylog.spi,com.ibm.ws.uow,com.ibm.wsspi.tx,javax.resource.spi,javax.resource.spi.work,javax.transaction,javax.transaction.xa"
+       com.ibm.tx.jta [131]
+         Unresolved requirement: Import-Package: javax.resource.spi.work; version="[1.6.0,2.0.0)"
+           -> Export-Package: javax.resource.spi.work; bundle-symbolic-name="com.ibm.websphere.javaee.connector.1.7"; bundle-version="1.0.23.cl180420181121-0300"; version="1.7.0"; uses:="javax.resource,javax.resource.spi,javax.security.auth,javax.security.auth.callback,javax.transaction.xa"
+              com.ibm.websphere.javaee.connector.1.7 [126]
+                Unresolved requirement: Import-Package: javax.transaction
+                  -> Export-Package: javax.transaction; bundle-symbolic-name="com.ibm.websphere.javaee.transaction.1.2"; bundle-version="1.0.23.cl180420181121-0300"; version="1.2.0"; uses:="javax.enterprise.context,javax.enterprise.util,javax.interceptor,javax.transaction.xa"
+                     com.ibm.websphere.javaee.transaction.1.2 [125]
+                       Unresolved requirement: Import-Package: javax.enterprise.context
+         Unresolved requirement: Import-Package: com.ibm.tx; version="[1.0.0,2.0.0)"
+           -> Export-Package: com.ibm.tx; bundle-symbolic-name="com.ibm.tx.util"; bundle-version="1.0.23.cl180420181121-0300"; version="1.0.0"
+              com.ibm.tx.util [132]
+                Unresolved requirement: Import-Package: javax.transaction; version="1.1.0"
+                  -> Export-Package: javax.transaction; bundle-symbolic-name="com.ibm.websphere.javaee.transaction.1.2"; bundle-version="1.0.23.cl180420181121-0300"; version="1.2.0"; uses:="javax.enterprise.context,javax.enterprise.util,javax.interceptor,javax.transaction.xa"
+         Unresolved requirement: Import-Package: com.ibm.tx.config; version="[1.1.0,2.0.0)"
+           -> Export-Package: com.ibm.tx.config; bundle-symbolic-name="com.ibm.tx.util"; bundle-version="1.0.23.cl180420181121-0300"; version="1.1.0"; uses:="com.ibm.tx.util.alarm"
+         Unresolved requirement: Import-Package: com.ibm.ws.recoverylog.spi; version="[1.2.0,2.0.0)"
+           -> Export-Package: com.ibm.ws.recoverylog.spi; bundle-symbolic-name="com.ibm.ws.recoverylog"; bundle-version="1.0.23.cl180420181121-0300"; version="1.2.0"; uses:="com.ibm.tx.util.alarm,com.ibm.websphere.ras.annotation,com.ibm.ws.ras.instrument.annotation,com.ibm.wsspi.resource,org.osgi.service.component"
+              com.ibm.ws.recoverylog [134]
+                Unresolved requirement: Import-Package: com.ibm.tx.util; version="[2.0.0,3.0.0)"
+                  -> Export-Package: com.ibm.tx.util; bundle-symbolic-name="com.ibm.tx.util"; bundle-version="1.0.23.cl180420181121-0300"; version="2.0.0"; uses:="javax.transaction"
+                Unresolved requirement: Import-Package: com.ibm.tx.util.logging; version="[2.0.0,3.0.0)"
+                  -> Export-Package: com.ibm.tx.util.logging; bundle-symbolic-name="com.ibm.tx.util"; bundle-version="1.0.23.cl180420181121-0300"; version="2.0.0"
+                Unresolved requirement: Import-Package: com.ibm.tx.util.alarm; version="[1.0.0,2.0.0)"
+                  -> Export-Package: com.ibm.tx.util.alarm; bundle-symbolic-name="com.ibm.tx.util"; bundle-version="1.0.23.cl180420181121-0300"; version="1.0.0"
+         Unresolved requirement: Import-Package: com.ibm.tx.util; version="[2.0.0,3.0.0)"
+           -> Export-Package: com.ibm.tx.util; bundle-symbolic-name="com.ibm.tx.util"; bundle-version="1.0.23.cl180420181121-0300"; version="2.0.0"; uses:="javax.transaction"
+         Unresolved requirement: Import-Package: com.ibm.tx.util.logging; version="[2.0.0,3.0.0)"
+           -> Export-Package: com.ibm.tx.util.logging; bundle-symbolic-name="com.ibm.tx.util"; bundle-version="1.0.23.cl180420181121-0300"; version="2.0.0"
+         Unresolved requirement: Import-Package: javax.resource.spi; version="[1.6.0,2.0.0)"
+           -> Export-Package: javax.resource.spi; bundle-symbolic-name="com.ibm.websphere.javaee.connector.1.7"; bundle-version="1.0.23.cl180420181121-0300"; version="1.7.0"; uses:="javax.resource,javax.resource.spi.endpoint,javax.resource.spi.work,javax.security.auth,javax.transaction,javax.transaction.xa"
+         Unresolved requirement: Import-Package: com.ibm.tx.util.alarm; version="[1.0.0,2.0.0)"
+           -> Export-Package: com.ibm.tx.util.alarm; bundle-symbolic-name="com.ibm.tx.util"; bundle-version="1.0.23.cl180420181121-0300"; version="1.0.0"
+  Unresolved requirement: Import-Package: com.ibm.tx.jta; version="[2.1.0,3.0.0)"
+    -> Export-Package: com.ibm.tx.jta; bundle-symbolic-name="com.ibm.tx.jta"; bundle-version="1.0.23.cl180420181121-0300"; version="2.1.0"; uses:="javax.resource.spi,javax.resource.spi.work,javax.transaction,javax.transaction.xa"
+
+[1/3/19 18:12:57:513 UTC] 0000001b LogService-130-com.ibm.rls.jdbc                              E CWWKE0702E: Could not resolve module: com.ibm.rls.jdbc [130]
+  Unresolved requirement: Import-Package: com.ibm.ws.recoverylog.spi; version="[1.2.0,2.0.0)"
+    -> Export-Package: com.ibm.ws.recoverylog.spi; bundle-symbolic-name="com.ibm.ws.recoverylog"; bundle-version="1.0.23.cl180420181121-0300"; version="1.2.0"; uses:="com.ibm.tx.util.alarm,com.ibm.websphere.ras.annotation,com.ibm.ws.ras.instrument.annotation,com.ibm.wsspi.resource,org.osgi.service.component"
+       com.ibm.ws.recoverylog [134]
+         Unresolved requirement: Import-Package: com.ibm.tx.util; version="[2.0.0,3.0.0)"
+           -> Export-Package: com.ibm.tx.util; bundle-symbolic-name="com.ibm.tx.util"; bundle-version="1.0.23.cl180420181121-0300"; version="2.0.0"; uses:="javax.transaction"
+              com.ibm.tx.util [132]
+                Unresolved requirement: Import-Package: javax.transaction; version="1.1.0"
+                  -> Export-Package: javax.transaction; bundle-symbolic-name="com.ibm.websphere.javaee.transaction.1.2"; bundle-version="1.0.23.cl180420181121-0300"; version="1.2.0"; uses:="javax.enterprise.context,javax.enterprise.util,javax.interceptor,javax.transaction.xa"
+                     com.ibm.websphere.javaee.transaction.1.2 [125]
+                       Unresolved requirement: Import-Package: javax.enterprise.context
+         Unresolved requirement: Import-Package: com.ibm.tx.util.logging; version="[2.0.0,3.0.0)"
+           -> Export-Package: com.ibm.tx.util.logging; bundle-symbolic-name="com.ibm.tx.util"; bundle-version="1.0.23.cl180420181121-0300"; version="2.0.0"
+         Unresolved requirement: Import-Package: com.ibm.tx.util.alarm; version="[1.0.0,2.0.0)"
+           -> Export-Package: com.ibm.tx.util.alarm; bundle-symbolic-name="com.ibm.tx.util"; bundle-version="1.0.23.cl180420181121-0300"; version="1.0.0"
+  Unresolved requirement: Import-Package: com.ibm.ws.recoverylog.utils; version="[1.1.0,2.0.0)"
+    -> Export-Package: com.ibm.ws.recoverylog.utils; bundle-symbolic-name="com.ibm.ws.recoverylog"; bundle-version="1.0.23.cl180420181121-0300"; version="1.1.0"; uses:="com.ibm.websphere.ras.annotation,com.ibm.ws.ras.instrument.annotation"
+  Unresolved requirement: Import-Package: com.ibm.tx.util.logging; version="[2.0.0,3.0.0)"
+    -> Export-Package: com.ibm.tx.util.logging; bundle-symbolic-name="com.ibm.tx.util"; bundle-version="1.0.23.cl180420181121-0300"; version="2.0.0"
+
+[1/3/19 18:12:57:515 UTC] 0000001b LogService-131-com.ibm.tx.jta                                E CWWKE0702E: Could not resolve module: com.ibm.tx.jta [131]
+  Unresolved requirement: Import-Package: javax.resource.spi.work; version="[1.6.0,2.0.0)"
+    -> Export-Package: javax.resource.spi.work; bundle-symbolic-name="com.ibm.websphere.javaee.connector.1.7"; bundle-version="1.0.23.cl180420181121-0300"; version="1.7.0"; uses:="javax.resource,javax.resource.spi,javax.security.auth,javax.security.auth.callback,javax.transaction.xa"
+       com.ibm.websphere.javaee.connector.1.7 [126]
+         Unresolved requirement: Import-Package: javax.transaction
+           -> Export-Package: javax.transaction; bundle-symbolic-name="com.ibm.websphere.javaee.transaction.1.2"; bundle-version="1.0.23.cl180420181121-0300"; version="1.2.0"; uses:="javax.enterprise.context,javax.enterprise.util,javax.interceptor,javax.transaction.xa"
+              com.ibm.websphere.javaee.transaction.1.2 [125]
+                Unresolved requirement: Import-Package: javax.enterprise.context
+  Unresolved requirement: Import-Package: com.ibm.tx; version="[1.0.0,2.0.0)"
+    -> Export-Package: com.ibm.tx; bundle-symbolic-name="com.ibm.tx.util"; bundle-version="1.0.23.cl180420181121-0300"; version="1.0.0"
+       com.ibm.tx.util [132]
+         Unresolved requirement: Import-Package: javax.transaction; version="1.1.0"
+           -> Export-Package: javax.transaction; bundle-symbolic-name="com.ibm.websphere.javaee.transaction.1.2"; bundle-version="1.0.23.cl180420181121-0300"; version="1.2.0"; uses:="javax.enterprise.context,javax.enterprise.util,javax.interceptor,javax.transaction.xa"
+  Unresolved requirement: Import-Package: com.ibm.tx.config; version="[1.1.0,2.0.0)"
+    -> Export-Package: com.ibm.tx.config; bundle-symbolic-name="com.ibm.tx.util"; bundle-version="1.0.23.cl180420181121-0300"; version="1.1.0"; uses:="com.ibm.tx.util.alarm"
+  Unresolved requirement: Import-Package: com.ibm.ws.recoverylog.spi; version="[1.2.0,2.0.0)"
+    -> Export-Package: com.ibm.ws.recoverylog.spi; bundle-symbolic-name="com.ibm.ws.recoverylog"; bundle-version="1.0.23.cl180420181121-0300"; version="1.2.0"; uses:="com.ibm.tx.util.alarm,com.ibm.websphere.ras.annotation,com.ibm.ws.ras.instrument.annotation,com.ibm.wsspi.resource,org.osgi.service.component"
+       com.ibm.ws.recoverylog [134]
+         Unresolved requirement: Import-Package: com.ibm.tx.util; version="[2.0.0,3.0.0)"
+           -> Export-Package: com.ibm.tx.util; bundle-symbolic-name="com.ibm.tx.util"; bundle-version="1.0.23.cl180420181121-0300"; version="2.0.0"; uses:="javax.transaction"
+         Unresolved requirement: Import-Package: com.ibm.tx.util.logging; version="[2.0.0,3.0.0)"
+           -> Export-Package: com.ibm.tx.util.logging; bundle-symbolic-name="com.ibm.tx.util"; bundle-version="1.0.23.cl180420181121-0300"; version="2.0.0"
+         Unresolved requirement: Import-Package: com.ibm.tx.util.alarm; version="[1.0.0,2.0.0)"
+           -> Export-Package: com.ibm.tx.util.alarm; bundle-symbolic-name="com.ibm.tx.util"; bundle-version="1.0.23.cl180420181121-0300"; version="1.0.0"
+  Unresolved requirement: Import-Package: com.ibm.tx.util; version="[2.0.0,3.0.0)"
+    -> Export-Package: com.ibm.tx.util; bundle-symbolic-name="com.ibm.tx.util"; bundle-version="1.0.23.cl180420181121-0300"; version="2.0.0"; uses:="javax.transaction"
+  Unresolved requirement: Import-Package: com.ibm.tx.util.logging; version="[2.0.0,3.0.0)"
+    -> Export-Package: com.ibm.tx.util.logging; bundle-symbolic-name="com.ibm.tx.util"; bundle-version="1.0.23.cl180420181121-0300"; version="2.0.0"
+  Unresolved requirement: Import-Package: javax.resource.spi; version="[1.6.0,2.0.0)"
+    -> Export-Package: javax.resource.spi; bundle-symbolic-name="com.ibm.websphere.javaee.connector.1.7"; bundle-version="1.0.23.cl180420181121-0300"; version="1.7.0"; uses:="javax.resource,javax.resource.spi.endpoint,javax.resource.spi.work,javax.security.auth,javax.transaction,javax.transaction.xa"
+  Unresolved requirement: Import-Package: com.ibm.tx.util.alarm; version="[1.0.0,2.0.0)"
+    -> Export-Package: com.ibm.tx.util.alarm; bundle-symbolic-name="com.ibm.tx.util"; bundle-version="1.0.23.cl180420181121-0300"; version="1.0.0"
+
+[1/3/19 18:12:57:517 UTC] 0000001b LogService-132-com.ibm.tx.util                               E CWWKE0702E: Could not resolve module: com.ibm.tx.util [132]
+  Unresolved requirement: Import-Package: javax.transaction; version="1.1.0"
+    -> Export-Package: javax.transaction; bundle-symbolic-name="com.ibm.websphere.javaee.transaction.1.2"; bundle-version="1.0.23.cl180420181121-0300"; version="1.2.0"; uses:="javax.enterprise.context,javax.enterprise.util,javax.interceptor,javax.transaction.xa"
+       com.ibm.websphere.javaee.transaction.1.2 [125]
+         Unresolved requirement: Import-Package: javax.enterprise.context
+
+[1/3/19 18:12:57:519 UTC] 0000001b LogService-133-com.ibm.ws.tx.embeddable                      E CWWKE0702E: Could not resolve module: com.ibm.ws.tx.embeddable [133]
+  Unresolved requirement: Import-Package: com.ibm.tx.config; version="[1.1.0,2.0.0)"
+    -> Export-Package: com.ibm.tx.config; bundle-symbolic-name="com.ibm.tx.util"; bundle-version="1.0.23.cl180420181121-0300"; version="1.1.0"; uses:="com.ibm.tx.util.alarm"
+       com.ibm.tx.util [132]
+         Unresolved requirement: Import-Package: javax.transaction; version="1.1.0"
+           -> Export-Package: javax.transaction; bundle-symbolic-name="com.ibm.websphere.javaee.transaction.1.2"; bundle-version="1.0.23.cl180420181121-0300"; version="1.2.0"; uses:="javax.enterprise.context,javax.enterprise.util,javax.interceptor,javax.transaction.xa"
+              com.ibm.websphere.javaee.transaction.1.2 [125]
+                Unresolved requirement: Import-Package: javax.enterprise.context
+  Unresolved requirement: Import-Package: com.ibm.tx.jta; version="[2.1.0,3.0.0)"
+    -> Export-Package: com.ibm.tx.jta; bundle-symbolic-name="com.ibm.tx.jta"; bundle-version="1.0.23.cl180420181121-0300"; version="2.1.0"; uses:="javax.resource.spi,javax.resource.spi.work,javax.transaction,javax.transaction.xa"
+       com.ibm.tx.jta [131]
+         Unresolved requirement: Import-Package: javax.resource.spi.work; version="[1.6.0,2.0.0)"
+           -> Export-Package: javax.resource.spi.work; bundle-symbolic-name="com.ibm.websphere.javaee.connector.1.7"; bundle-version="1.0.23.cl180420181121-0300"; version="1.7.0"; uses:="javax.resource,javax.resource.spi,javax.security.auth,javax.security.auth.callback,javax.transaction.xa"
+              com.ibm.websphere.javaee.connector.1.7 [126]
+                Unresolved requirement: Import-Package: javax.transaction
+                  -> Export-Package: javax.transaction; bundle-symbolic-name="com.ibm.websphere.javaee.transaction.1.2"; bundle-version="1.0.23.cl180420181121-0300"; version="1.2.0"; uses:="javax.enterprise.context,javax.enterprise.util,javax.interceptor,javax.transaction.xa"
+         Unresolved requirement: Import-Package: com.ibm.tx; version="[1.0.0,2.0.0)"
+           -> Export-Package: com.ibm.tx; bundle-symbolic-name="com.ibm.tx.util"; bundle-version="1.0.23.cl180420181121-0300"; version="1.0.0"
+         Unresolved requirement: Import-Package: com.ibm.tx.config; version="[1.1.0,2.0.0)"
+           -> Export-Package: com.ibm.tx.config; bundle-symbolic-name="com.ibm.tx.util"; bundle-version="1.0.23.cl180420181121-0300"; version="1.1.0"; uses:="com.ibm.tx.util.alarm"
+         Unresolved requirement: Import-Package: com.ibm.ws.recoverylog.spi; version="[1.2.0,2.0.0)"
+           -> Export-Package: com.ibm.ws.recoverylog.spi; bundle-symbolic-name="com.ibm.ws.recoverylog"; bundle-version="1.0.23.cl180420181121-0300"; version="1.2.0"; uses:="com.ibm.tx.util.alarm,com.ibm.websphere.ras.annotation,com.ibm.ws.ras.instrument.annotation,com.ibm.wsspi.resource,org.osgi.service.component"
+              com.ibm.ws.recoverylog [134]
+                Unresolved requirement: Import-Package: com.ibm.tx.util; version="[2.0.0,3.0.0)"
+                  -> Export-Package: com.ibm.tx.util; bundle-symbolic-name="com.ibm.tx.util"; bundle-version="1.0.23.cl180420181121-0300"; version="2.0.0"; uses:="javax.transaction"
+                Unresolved requirement: Import-Package: com.ibm.tx.util.logging; version="[2.0.0,3.0.0)"
+                  -> Export-Package: com.ibm.tx.util.logging; bundle-symbolic-name="com.ibm.tx.util"; bundle-version="1.0.23.cl180420181121-0300"; version="2.0.0"
+                Unresolved requirement: Import-Package: com.ibm.tx.util.alarm; version="[1.0.0,2.0.0)"
+                  -> Export-Package: com.ibm.tx.util.alarm; bundle-symbolic-name="com.ibm.tx.util"; bundle-version="1.0.23.cl180420181121-0300"; version="1.0.0"
+         Unresolved requirement: Import-Package: com.ibm.tx.util; version="[2.0.0,3.0.0)"
+           -> Export-Package: com.ibm.tx.util; bundle-symbolic-name="com.ibm.tx.util"; bundle-version="1.0.23.cl180420181121-0300"; version="2.0.0"; uses:="javax.transaction"
+         Unresolved requirement: Import-Package: com.ibm.tx.util.logging; version="[2.0.0,3.0.0)"
+           -> Export-Package: com.ibm.tx.util.logging; bundle-symbolic-name="com.ibm.tx.util"; bundle-version="1.0.23.cl180420181121-0300"; version="2.0.0"
+         Unresolved requirement: Import-Package: javax.resource.spi; version="[1.6.0,2.0.0)"
+           -> Export-Package: javax.resource.spi; bundle-symbolic-name="com.ibm.websphere.javaee.connector.1.7"; bundle-version="1.0.23.cl180420181121-0300"; version="1.7.0"; uses:="javax.resource,javax.resource.spi.endpoint,javax.resource.spi.work,javax.security.auth,javax.transaction,javax.transaction.xa"
+         Unresolved requirement: Import-Package: com.ibm.tx.util.alarm; version="[1.0.0,2.0.0)"
+           -> Export-Package: com.ibm.tx.util.alarm; bundle-symbolic-name="com.ibm.tx.util"; bundle-version="1.0.23.cl180420181121-0300"; version="1.0.0"
+  Unresolved requirement: Import-Package: com.ibm.tx.jta.impl; version="[1.1.0,2.0.0)"
+    -> Export-Package: com.ibm.tx.jta.impl; bundle-symbolic-name="com.ibm.tx.jta"; bundle-version="1.0.23.cl180420181121-0300"; version="1.1.0"; uses:="com.ibm.tx.config,com.ibm.tx.jta,com.ibm.tx.util,com.ibm.tx.util.alarm,com.ibm.ws.Transaction,com.ibm.ws.Transaction.JTA,com.ibm.ws.Transaction.JTS,com.ibm.ws.recoverylog.spi,com.ibm.ws.uow,com.ibm.wsspi.tx,javax.resource.spi,javax.resource.spi.work,javax.transaction,javax.transaction.xa"
+
+[1/3/19 18:12:57:521 UTC] 0000001b LogService-134-com.ibm.ws.recoverylog                        E CWWKE0702E: Could not resolve module: com.ibm.ws.recoverylog [134]
+  Unresolved requirement: Import-Package: com.ibm.tx.util; version="[2.0.0,3.0.0)"
+    -> Export-Package: com.ibm.tx.util; bundle-symbolic-name="com.ibm.tx.util"; bundle-version="1.0.23.cl180420181121-0300"; version="2.0.0"; uses:="javax.transaction"
+       com.ibm.tx.util [132]
+         Unresolved requirement: Import-Package: javax.transaction; version="1.1.0"
+           -> Export-Package: javax.transaction; bundle-symbolic-name="com.ibm.websphere.javaee.transaction.1.2"; bundle-version="1.0.23.cl180420181121-0300"; version="1.2.0"; uses:="javax.enterprise.context,javax.enterprise.util,javax.interceptor,javax.transaction.xa"
+              com.ibm.websphere.javaee.transaction.1.2 [125]
+                Unresolved requirement: Import-Package: javax.enterprise.context
+  Unresolved requirement: Import-Package: com.ibm.tx.util.logging; version="[2.0.0,3.0.0)"
+    -> Export-Package: com.ibm.tx.util.logging; bundle-symbolic-name="com.ibm.tx.util"; bundle-version="1.0.23.cl180420181121-0300"; version="2.0.0"
+  Unresolved requirement: Import-Package: com.ibm.tx.util.alarm; version="[1.0.0,2.0.0)"
+    -> Export-Package: com.ibm.tx.util.alarm; bundle-symbolic-name="com.ibm.tx.util"; bundle-version="1.0.23.cl180420181121-0300"; version="1.0.0"
+
+[1/3/19 18:12:57:533 UTC] 0000001b LogService-135-com.ibm.ws.cdi.interfaces                     E CWWKE0702E: Could not resolve module: com.ibm.ws.cdi.interfaces [135]
+  Unresolved requirement: Import-Package: javax.enterprise.inject.spi; version="[1.1.0,3.0.0)"
+
+[1/3/19 18:12:57:537 UTC] 0000001b LogService-136-com.ibm.tx.ltc                                E CWWKE0702E: Could not resolve module: com.ibm.tx.ltc [136]
+  Unresolved requirement: Import-Package: com.ibm.tx.jta
+    -> Export-Package: com.ibm.tx.jta; bundle-symbolic-name="com.ibm.tx.jta"; bundle-version="1.0.23.cl180420181121-0300"; version="2.1.0"; uses:="javax.resource.spi,javax.resource.spi.work,javax.transaction,javax.transaction.xa"
+       com.ibm.tx.jta [131]
+         Unresolved requirement: Import-Package: javax.resource.spi.work; version="[1.6.0,2.0.0)"
+           -> Export-Package: javax.resource.spi.work; bundle-symbolic-name="com.ibm.websphere.javaee.connector.1.7"; bundle-version="1.0.23.cl180420181121-0300"; version="1.7.0"; uses:="javax.resource,javax.resource.spi,javax.security.auth,javax.security.auth.callback,javax.transaction.xa"
+              com.ibm.websphere.javaee.connector.1.7 [126]
+                Unresolved requirement: Import-Package: javax.transaction
+                  -> Export-Package: javax.transaction; bundle-symbolic-name="com.ibm.websphere.javaee.transaction.1.2"; bundle-version="1.0.23.cl180420181121-0300"; version="1.2.0"; uses:="javax.enterprise.context,javax.enterprise.util,javax.interceptor,javax.transaction.xa"
+                     com.ibm.websphere.javaee.transaction.1.2 [125]
+                       Unresolved requirement: Import-Package: javax.enterprise.context
+         Unresolved requirement: Import-Package: com.ibm.tx; version="[1.0.0,2.0.0)"
+           -> Export-Package: com.ibm.tx; bundle-symbolic-name="com.ibm.tx.util"; bundle-version="1.0.23.cl180420181121-0300"; version="1.0.0"
+              com.ibm.tx.util [132]
+                Unresolved requirement: Import-Package: javax.transaction; version="1.1.0"
+                  -> Export-Package: javax.transaction; bundle-symbolic-name="com.ibm.websphere.javaee.transaction.1.2"; bundle-version="1.0.23.cl180420181121-0300"; version="1.2.0"; uses:="javax.enterprise.context,javax.enterprise.util,javax.interceptor,javax.transaction.xa"
+         Unresolved requirement: Import-Package: com.ibm.tx.config; version="[1.1.0,2.0.0)"
+           -> Export-Package: com.ibm.tx.config; bundle-symbolic-name="com.ibm.tx.util"; bundle-version="1.0.23.cl180420181121-0300"; version="1.1.0"; uses:="com.ibm.tx.util.alarm"
+         Unresolved requirement: Import-Package: com.ibm.ws.recoverylog.spi; version="[1.2.0,2.0.0)"
+           -> Export-Package: com.ibm.ws.recoverylog.spi; bundle-symbolic-name="com.ibm.ws.recoverylog"; bundle-version="1.0.23.cl180420181121-0300"; version="1.2.0"; uses:="com.ibm.tx.util.alarm,com.ibm.websphere.ras.annotation,com.ibm.ws.ras.instrument.annotation,com.ibm.wsspi.resource,org.osgi.service.component"
+              com.ibm.ws.recoverylog [134]
+                Unresolved requirement: Import-Package: com.ibm.tx.util; version="[2.0.0,3.0.0)"
+                  -> Export-Package: com.ibm.tx.util; bundle-symbolic-name="com.ibm.tx.util"; bundle-version="1.0.23.cl180420181121-0300"; version="2.0.0"; uses:="javax.transaction"
+                Unresolved requirement: Import-Package: com.ibm.tx.util.logging; version="[2.0.0,3.0.0)"
+                  -> Export-Package: com.ibm.tx.util.logging; bundle-symbolic-name="com.ibm.tx.util"; bundle-version="1.0.23.cl180420181121-0300"; version="2.0.0"
+                Unresolved requirement: Import-Package: com.ibm.tx.util.alarm; version="[1.0.0,2.0.0)"
+                  -> Export-Package: com.ibm.tx.util.alarm; bundle-symbolic-name="com.ibm.tx.util"; bundle-version="1.0.23.cl180420181121-0300"; version="1.0.0"
+         Unresolved requirement: Import-Package: com.ibm.tx.util; version="[2.0.0,3.0.0)"
+           -> Export-Package: com.ibm.tx.util; bundle-symbolic-name="com.ibm.tx.util"; bundle-version="1.0.23.cl180420181121-0300"; version="2.0.0"; uses:="javax.transaction"
+         Unresolved requirement: Import-Package: com.ibm.tx.util.logging; version="[2.0.0,3.0.0)"
+           -> Export-Package: com.ibm.tx.util.logging; bundle-symbolic-name="com.ibm.tx.util"; bundle-version="1.0.23.cl180420181121-0300"; version="2.0.0"
+         Unresolved requirement: Import-Package: javax.resource.spi; version="[1.6.0,2.0.0)"
+           -> Export-Package: javax.resource.spi; bundle-symbolic-name="com.ibm.websphere.javaee.connector.1.7"; bundle-version="1.0.23.cl180420181121-0300"; version="1.7.0"; uses:="javax.resource,javax.resource.spi.endpoint,javax.resource.spi.work,javax.security.auth,javax.transaction,javax.transaction.xa"
+         Unresolved requirement: Import-Package: com.ibm.tx.util.alarm; version="[1.0.0,2.0.0)"
+           -> Export-Package: com.ibm.tx.util.alarm; bundle-symbolic-name="com.ibm.tx.util"; bundle-version="1.0.23.cl180420181121-0300"; version="1.0.0"
+  Unresolved requirement: Import-Package: com.ibm.ws.Transaction
+    -> Export-Package: com.ibm.ws.Transaction; bundle-symbolic-name="com.ibm.tx.jta"; bundle-version="1.0.23.cl180420181121-0300"; version="1.1.0"; uses:="com.ibm.tx,com.ibm.wsspi.tx,javax.transaction.xa"
+
+[1/3/19 18:12:57:540 UTC] 0000001b LogService-138-com.ibm.ws.ejbcontainer                       E CWWKE0702E: Could not resolve module: com.ibm.ws.ejbcontainer [138]
+  Unresolved requirement: Import-Package: com.ibm.tx.jta.embeddable; version="[1.1.0,2.0.0)"
+    -> Export-Package: com.ibm.tx.jta.embeddable; bundle-symbolic-name="com.ibm.ws.tx.embeddable"; bundle-version="1.0.23.cl180420181121-0300"; version="1.1.0"; uses:="com.ibm.tx.jta,com.ibm.tx.jta.embeddable.impl,com.ibm.ws.LocalTransaction,com.ibm.ws.Transaction,com.ibm.ws.tx.embeddable,javax.naming,javax.transaction"
+       com.ibm.ws.tx.embeddable [133]
+         Unresolved requirement: Import-Package: com.ibm.tx.config; version="[1.1.0,2.0.0)"
+           -> Export-Package: com.ibm.tx.config; bundle-symbolic-name="com.ibm.tx.util"; bundle-version="1.0.23.cl180420181121-0300"; version="1.1.0"; uses:="com.ibm.tx.util.alarm"
+              com.ibm.tx.util [132]
+                Unresolved requirement: Import-Package: javax.transaction; version="1.1.0"
+                  -> Export-Package: javax.transaction; bundle-symbolic-name="com.ibm.websphere.javaee.transaction.1.2"; bundle-version="1.0.23.cl180420181121-0300"; version="1.2.0"; uses:="javax.enterprise.context,javax.enterprise.util,javax.interceptor,javax.transaction.xa"
+                     com.ibm.websphere.javaee.transaction.1.2 [125]
+                       Unresolved requirement: Import-Package: javax.enterprise.context
+         Unresolved requirement: Import-Package: com.ibm.tx.jta; version="[2.1.0,3.0.0)"
+           -> Export-Package: com.ibm.tx.jta; bundle-symbolic-name="com.ibm.tx.jta"; bundle-version="1.0.23.cl180420181121-0300"; version="2.1.0"; uses:="javax.resource.spi,javax.resource.spi.work,javax.transaction,javax.transaction.xa"
+              com.ibm.tx.jta [131]
+                Unresolved requirement: Import-Package: javax.resource.spi.work; version="[1.6.0,2.0.0)"
+                  -> Export-Package: javax.resource.spi.work; bundle-symbolic-name="com.ibm.websphere.javaee.connector.1.7"; bundle-version="1.0.23.cl180420181121-0300"; version="1.7.0"; uses:="javax.resource,javax.resource.spi,javax.security.auth,javax.security.auth.callback,javax.transaction.xa"
+                     com.ibm.websphere.javaee.connector.1.7 [126]
+                       Unresolved requirement: Import-Package: javax.transaction
+                         -> Export-Package: javax.transaction; bundle-symbolic-name="com.ibm.websphere.javaee.transaction.1.2"; bundle-version="1.0.23.cl180420181121-0300"; version="1.2.0"; uses:="javax.enterprise.context,javax.enterprise.util,javax.interceptor,javax.transaction.xa"
+                Unresolved requirement: Import-Package: com.ibm.tx; version="[1.0.0,2.0.0)"
+                  -> Export-Package: com.ibm.tx; bundle-symbolic-name="com.ibm.tx.util"; bundle-version="1.0.23.cl180420181121-0300"; version="1.0.0"
+                Unresolved requirement: Import-Package: com.ibm.tx.config; version="[1.1.0,2.0.0)"
+                  -> Export-Package: com.ibm.tx.config; bundle-symbolic-name="com.ibm.tx.util"; bundle-version="1.0.23.cl180420181121-0300"; version="1.1.0"; uses:="com.ibm.tx.util.alarm"
+                Unresolved requirement: Import-Package: com.ibm.ws.recoverylog.spi; version="[1.2.0,2.0.0)"
+                  -> Export-Package: com.ibm.ws.recoverylog.spi; bundle-symbolic-name="com.ibm.ws.recoverylog"; bundle-version="1.0.23.cl180420181121-0300"; version="1.2.0"; uses:="com.ibm.tx.util.alarm,com.ibm.websphere.ras.annotation,com.ibm.ws.ras.instrument.annotation,com.ibm.wsspi.resource,org.osgi.service.component"
+                     com.ibm.ws.recoverylog [134]
+                       Unresolved requirement: Import-Package: com.ibm.tx.util; version="[2.0.0,3.0.0)"
+                         -> Export-Package: com.ibm.tx.util; bundle-symbolic-name="com.ibm.tx.util"; bundle-version="1.0.23.cl180420181121-0300"; version="2.0.0"; uses:="javax.transaction"
+                       Unresolved requirement: Import-Package: com.ibm.tx.util.logging; version="[2.0.0,3.0.0)"
+                         -> Export-Package: com.ibm.tx.util.logging; bundle-symbolic-name="com.ibm.tx.util"; bundle-version="1.0.23.cl180420181121-0300"; version="2.0.0"
+                       Unresolved requirement: Import-Package: com.ibm.tx.util.alarm; version="[1.0.0,2.0.0)"
+                         -> Export-Package: com.ibm.tx.util.alarm; bundle-symbolic-name="com.ibm.tx.util"; bundle-version="1.0.23.cl180420181121-0300"; version="1.0.0"
+                Unresolved requirement: Import-Package: com.ibm.tx.util; version="[2.0.0,3.0.0)"
+                  -> Export-Package: com.ibm.tx.util; bundle-symbolic-name="com.ibm.tx.util"; bundle-version="1.0.23.cl180420181121-0300"; version="2.0.0"; uses:="javax.transaction"
+                Unresolved requirement: Import-Package: com.ibm.tx.util.logging; version="[2.0.0,3.0.0)"
+                  -> Export-Package: com.ibm.tx.util.logging; bundle-symbolic-name="com.ibm.tx.util"; bundle-version="1.0.23.cl180420181121-0300"; version="2.0.0"
+                Unresolved requirement: Import-Package: javax.resource.spi; version="[1.6.0,2.0.0)"
+                  -> Export-Package: javax.resource.spi; bundle-symbolic-name="com.ibm.websphere.javaee.connector.1.7"; bundle-version="1.0.23.cl180420181121-0300"; version="1.7.0"; uses:="javax.resource,javax.resource.spi.endpoint,javax.resource.spi.work,javax.security.auth,javax.transaction,javax.transaction.xa"
+                Unresolved requirement: Import-Package: com.ibm.tx.util.alarm; version="[1.0.0,2.0.0)"
+                  -> Export-Package: com.ibm.tx.util.alarm; bundle-symbolic-name="com.ibm.tx.util"; bundle-version="1.0.23.cl180420181121-0300"; version="1.0.0"
+  Unresolved requirement: Import-Package: com.ibm.tx.jta; version="[2.1.0,3.0.0)"
+    -> Export-Package: com.ibm.tx.jta; bundle-symbolic-name="com.ibm.tx.jta"; bundle-version="1.0.23.cl180420181121-0300"; version="2.1.0"; uses:="javax.resource.spi,javax.resource.spi.work,javax.transaction,javax.transaction.xa"
+  Unresolved requirement: Import-Package: com.ibm.websphere.uow; version="[1.1.0,2.0.0)"
+    -> Export-Package: com.ibm.websphere.uow; bundle-symbolic-name="com.ibm.ws.tx.embeddable"; bundle-version="1.0.23.cl180420181121-0300"; version="1.1.0"; uses:="javax.transaction"
+
+[1/3/19 18:12:57:572 UTC] 0000001b LogService-142-com.ibm.ws.jca.cm                             E CWWKE0702E: Could not resolve module: com.ibm.ws.jca.cm [142]
+  Unresolved requirement: Import-Package: com.ibm.ws.LocalTransaction; version="[2.0.0,3.0.0)"
+    -> Export-Package: com.ibm.ws.LocalTransaction; bundle-symbolic-name="com.ibm.tx.ltc"; bundle-version="1.0.23.cl180420181121-0300"; version="2.0.0"; uses:="com.ibm.tx.jta,com.ibm.ws.uow,javax.transaction"
+       com.ibm.tx.ltc [136]
+         Unresolved requirement: Import-Package: com.ibm.ws.Transaction
+           -> Export-Package: com.ibm.ws.Transaction; bundle-symbolic-name="com.ibm.tx.jta"; bundle-version="1.0.23.cl180420181121-0300"; version="1.1.0"; uses:="com.ibm.tx,com.ibm.wsspi.tx,javax.transaction.xa"
+              com.ibm.tx.jta [131]
+                Unresolved requirement: Import-Package: javax.resource.spi.work; version="[1.6.0,2.0.0)"
+                  -> Export-Package: javax.resource.spi.work; bundle-symbolic-name="com.ibm.websphere.javaee.connector.1.7"; bundle-version="1.0.23.cl180420181121-0300"; version="1.7.0"; uses:="javax.resource,javax.resource.spi,javax.security.auth,javax.security.auth.callback,javax.transaction.xa"
+                     com.ibm.websphere.javaee.connector.1.7 [126]
+                       Unresolved requirement: Import-Package: javax.transaction
+                         -> Export-Package: javax.transaction; bundle-symbolic-name="com.ibm.websphere.javaee.transaction.1.2"; bundle-version="1.0.23.cl180420181121-0300"; version="1.2.0"; uses:="javax.enterprise.context,javax.enterprise.util,javax.interceptor,javax.transaction.xa"
+                            com.ibm.websphere.javaee.transaction.1.2 [125]
+                              Unresolved requirement: Import-Package: javax.enterprise.context
+                Unresolved requirement: Import-Package: com.ibm.tx; version="[1.0.0,2.0.0)"
+                  -> Export-Package: com.ibm.tx; bundle-symbolic-name="com.ibm.tx.util"; bundle-version="1.0.23.cl180420181121-0300"; version="1.0.0"
+                     com.ibm.tx.util [132]
+                       Unresolved requirement: Import-Package: javax.transaction; version="1.1.0"
+                         -> Export-Package: javax.transaction; bundle-symbolic-name="com.ibm.websphere.javaee.transaction.1.2"; bundle-version="1.0.23.cl180420181121-0300"; version="1.2.0"; uses:="javax.enterprise.context,javax.enterprise.util,javax.interceptor,javax.transaction.xa"
+                Unresolved requirement: Import-Package: com.ibm.tx.config; version="[1.1.0,2.0.0)"
+                  -> Export-Package: com.ibm.tx.config; bundle-symbolic-name="com.ibm.tx.util"; bundle-version="1.0.23.cl180420181121-0300"; version="1.1.0"; uses:="com.ibm.tx.util.alarm"
+                Unresolved requirement: Import-Package: com.ibm.ws.recoverylog.spi; version="[1.2.0,2.0.0)"
+                  -> Export-Package: com.ibm.ws.recoverylog.spi; bundle-symbolic-name="com.ibm.ws.recoverylog"; bundle-version="1.0.23.cl180420181121-0300"; version="1.2.0"; uses:="com.ibm.tx.util.alarm,com.ibm.websphere.ras.annotation,com.ibm.ws.ras.instrument.annotation,com.ibm.wsspi.resource,org.osgi.service.component"
+                     com.ibm.ws.recoverylog [134]
+                       Unresolved requirement: Import-Package: com.ibm.tx.util; version="[2.0.0,3.0.0)"
+                         -> Export-Package: com.ibm.tx.util; bundle-symbolic-name="com.ibm.tx.util"; bundle-version="1.0.23.cl180420181121-0300"; version="2.0.0"; uses:="javax.transaction"
+                       Unresolved requirement: Import-Package: com.ibm.tx.util.logging; version="[2.0.0,3.0.0)"
+                         -> Export-Package: com.ibm.tx.util.logging; bundle-symbolic-name="com.ibm.tx.util"; bundle-version="1.0.23.cl180420181121-0300"; version="2.0.0"
+                       Unresolved requirement: Import-Package: com.ibm.tx.util.alarm; version="[1.0.0,2.0.0)"
+                         -> Export-Package: com.ibm.tx.util.alarm; bundle-symbolic-name="com.ibm.tx.util"; bundle-version="1.0.23.cl180420181121-0300"; version="1.0.0"
+                Unresolved requirement: Import-Package: com.ibm.tx.util; version="[2.0.0,3.0.0)"
+                  -> Export-Package: com.ibm.tx.util; bundle-symbolic-name="com.ibm.tx.util"; bundle-version="1.0.23.cl180420181121-0300"; version="2.0.0"; uses:="javax.transaction"
+                Unresolved requirement: Import-Package: com.ibm.tx.util.logging; version="[2.0.0,3.0.0)"
+                  -> Export-Package: com.ibm.tx.util.logging; bundle-symbolic-name="com.ibm.tx.util"; bundle-version="1.0.23.cl180420181121-0300"; version="2.0.0"
+                Unresolved requirement: Import-Package: javax.resource.spi; version="[1.6.0,2.0.0)"
+                  -> Export-Package: javax.resource.spi; bundle-symbolic-name="com.ibm.websphere.javaee.connector.1.7"; bundle-version="1.0.23.cl180420181121-0300"; version="1.7.0"; uses:="javax.resource,javax.resource.spi.endpoint,javax.resource.spi.work,javax.security.auth,javax.transaction,javax.transaction.xa"
+                Unresolved requirement: Import-Package: com.ibm.tx.util.alarm; version="[1.0.0,2.0.0)"
+                  -> Export-Package: com.ibm.tx.util.alarm; bundle-symbolic-name="com.ibm.tx.util"; bundle-version="1.0.23.cl180420181121-0300"; version="1.0.0"
+  Unresolved requirement: Import-Package: com.ibm.ws.Transaction; version="[1.1.0,2.0.0)"
+    -> Export-Package: com.ibm.ws.Transaction; bundle-symbolic-name="com.ibm.tx.jta"; bundle-version="1.0.23.cl180420181121-0300"; version="1.1.0"; uses:="com.ibm.tx,com.ibm.wsspi.tx,javax.transaction.xa"
+  Unresolved requirement: Import-Package: com.ibm.tx.jta; version="[2.1.0,3.0.0)"
+    -> Export-Package: com.ibm.tx.jta; bundle-symbolic-name="com.ibm.tx.jta"; bundle-version="1.0.23.cl180420181121-0300"; version="2.1.0"; uses:="javax.resource.spi,javax.resource.spi.work,javax.transaction,javax.transaction.xa"
+  Unresolved requirement: Import-Package: com.ibm.tx.jta.embeddable; version="[1.1.0,2.0.0)"
+    -> Export-Package: com.ibm.tx.jta.embeddable; bundle-symbolic-name="com.ibm.ws.tx.embeddable"; bundle-version="1.0.23.cl180420181121-0300"; version="1.1.0"; uses:="com.ibm.tx.jta,com.ibm.tx.jta.embeddable.impl,com.ibm.ws.LocalTransaction,com.ibm.ws.Transaction,com.ibm.ws.tx.embeddable,javax.naming,javax.transaction"
+       com.ibm.ws.tx.embeddable [133]
+         Unresolved requirement: Import-Package: com.ibm.tx.config; version="[1.1.0,2.0.0)"
+           -> Export-Package: com.ibm.tx.config; bundle-symbolic-name="com.ibm.tx.util"; bundle-version="1.0.23.cl180420181121-0300"; version="1.1.0"; uses:="com.ibm.tx.util.alarm"
+         Unresolved requirement: Import-Package: com.ibm.tx.jta; version="[2.1.0,3.0.0)"
+           -> Export-Package: com.ibm.tx.jta; bundle-symbolic-name="com.ibm.tx.jta"; bundle-version="1.0.23.cl180420181121-0300"; version="2.1.0"; uses:="javax.resource.spi,javax.resource.spi.work,javax.transaction,javax.transaction.xa"
+
+[1/3/19 18:12:57:588 UTC] 0000001b LogService-144-com.ibm.ws.jca                                E CWWKE0702E: Could not resolve module: com.ibm.ws.jca [144]
+  Unresolved requirement: Import-Package: com.ibm.ws.jca.utils.xml.metatype; version="[1.0.0,2.0.0)"
+    -> Export-Package: com.ibm.ws.jca.utils.xml.metatype; bundle-symbolic-name="com.ibm.ws.jca.utils"; bundle-version="1.0.23.cl180420181121-0300"; version="1.0.0"; uses:="com.ibm.websphere.metatype,com.ibm.websphere.ras.annotation,com.ibm.ws.jca.utils.xml.ra,org.osgi.service.metatype"
+       com.ibm.ws.jca.utils [146]
+         Unresolved requirement: Import-Package: javax.resource; version="[1.6.0,2.0.0)"
+           -> Export-Package: javax.resource; bundle-symbolic-name="com.ibm.websphere.javaee.connector.1.7"; bundle-version="1.0.23.cl180420181121-0300"; version="1.7.0"; uses:="javax.naming,javax.resource.spi"
+              com.ibm.websphere.javaee.connector.1.7 [126]
+                Unresolved requirement: Import-Package: javax.transaction
+                  -> Export-Package: javax.transaction; bundle-symbolic-name="com.ibm.websphere.javaee.transaction.1.2"; bundle-version="1.0.23.cl180420181121-0300"; version="1.2.0"; uses:="javax.enterprise.context,javax.enterprise.util,javax.interceptor,javax.transaction.xa"
+                     com.ibm.websphere.javaee.transaction.1.2 [125]
+                       Unresolved requirement: Import-Package: javax.enterprise.context
+                Unresolved requirement: Import-Package: javax.transaction.xa
+                  -> Export-Package: javax.transaction.xa; bundle-symbolic-name="com.ibm.websphere.javaee.transaction.1.2"; bundle-version="1.0.23.cl180420181121-0300"; version="1.2.0"
+  Unresolved requirement: Import-Package: com.ibm.ws.jca.utils.metagen; version="[1.0.0,2.0.0)"
+    -> Export-Package: com.ibm.ws.jca.utils.metagen; bundle-symbolic-name="com.ibm.ws.jca.utils"; bundle-version="1.0.23.cl180420181121-0300"; version="1.0.0"; uses:="com.ibm.websphere.metatype,com.ibm.websphere.ras.annotation,com.ibm.ws.container.service.annotations,com.ibm.ws.jca.utils.xml.metatype,com.ibm.ws.jca.utils.xml.ra,com.ibm.ws.jca.utils.xml.wlp.ra,com.ibm.ws.ras.instrument.annotation,com.ibm.wsspi.adaptable.module,javax.resource.spi,javax.xml.parsers,org.xml.sax"
+  Unresolved requirement: Import-Package: javax.resource.spi.endpoint; version="[1.6.0,2.0.0)"
+    -> Export-Package: javax.resource.spi.endpoint; bundle-symbolic-name="com.ibm.websphere.javaee.connector.1.7"; bundle-version="1.0.23.cl180420181121-0300"; version="1.7.0"; uses:="javax.resource,javax.resource.spi,javax.transaction.xa"
+
+[1/3/19 18:12:57:595 UTC] 00000030 com.ibm.ws.tcpchannel.internal.TCPChannel                    I CWWKO0219I: TCP Channel defaultHttpEndpoint-ssl has been started and is now listening for requests on host localhost  (IPv4: 127.0.0.1) port 9443.
+[1/3/19 18:12:57:596 UTC] 0000001b LogService-146-com.ibm.ws.jca.utils                          E CWWKE0702E: Could not resolve module: com.ibm.ws.jca.utils [146]
+  Unresolved requirement: Import-Package: javax.resource; version="[1.6.0,2.0.0)"
+    -> Export-Package: javax.resource; bundle-symbolic-name="com.ibm.websphere.javaee.connector.1.7"; bundle-version="1.0.23.cl180420181121-0300"; version="1.7.0"; uses:="javax.naming,javax.resource.spi"
+       com.ibm.websphere.javaee.connector.1.7 [126]
+         Unresolved requirement: Import-Package: javax.transaction
+           -> Export-Package: javax.transaction; bundle-symbolic-name="com.ibm.websphere.javaee.transaction.1.2"; bundle-version="1.0.23.cl180420181121-0300"; version="1.2.0"; uses:="javax.enterprise.context,javax.enterprise.util,javax.interceptor,javax.transaction.xa"
+              com.ibm.websphere.javaee.transaction.1.2 [125]
+                Unresolved requirement: Import-Package: javax.enterprise.context
+         Unresolved requirement: Import-Package: javax.transaction.xa
+           -> Export-Package: javax.transaction.xa; bundle-symbolic-name="com.ibm.websphere.javaee.transaction.1.2"; bundle-version="1.0.23.cl180420181121-0300"; version="1.2.0"
+  Unresolved requirement: Import-Package: javax.resource.spi; version="[1.6.0,2.0.0)"
+    -> Export-Package: javax.resource.spi; bundle-symbolic-name="com.ibm.websphere.javaee.connector.1.7"; bundle-version="1.0.23.cl180420181121-0300"; version="1.7.0"; uses:="javax.resource,javax.resource.spi.endpoint,javax.resource.spi.work,javax.security.auth,javax.transaction,javax.transaction.xa"
+
+[1/3/19 18:12:57:599 UTC] 0000001b LogService-147-com.ibm.ws.jca.1.7                            E CWWKE0702E: Could not resolve module: com.ibm.ws.jca.1.7 [147]
+  Unresolved requirement: Import-Package: com.ibm.ws.jca.cm; version="[1.0.0,2.0.0)"
+    -> Export-Package: com.ibm.ws.jca.cm; bundle-symbolic-name="com.ibm.ws.jca.cm"; bundle-version="1.0.23.cl180420181121-0300"; version="1.0.16"; uses:="com.ibm.tx.jta,com.ibm.websphere.ras,com.ibm.websphere.ras.annotation,com.ibm.ws.classloading,com.ibm.ws.resource,com.ibm.ws.tx.embeddable,com.ibm.wsspi.kernel.service.location,com.ibm.wsspi.resource,javax.resource,javax.resource.spi,javax.transaction.xa,org.osgi.framework"
+       com.ibm.ws.jca.cm [142]
+         Unresolved requirement: Import-Package: com.ibm.ws.LocalTransaction; version="[2.0.0,3.0.0)"
+           -> Export-Package: com.ibm.ws.LocalTransaction; bundle-symbolic-name="com.ibm.tx.ltc"; bundle-version="1.0.23.cl180420181121-0300"; version="2.0.0"; uses:="com.ibm.tx.jta,com.ibm.ws.uow,javax.transaction"
+              com.ibm.tx.ltc [136]
+                Unresolved requirement: Import-Package: com.ibm.ws.Transaction
+                  -> Export-Package: com.ibm.ws.Transaction; bundle-symbolic-name="com.ibm.tx.jta"; bundle-version="1.0.23.cl180420181121-0300"; version="1.1.0"; uses:="com.ibm.tx,com.ibm.wsspi.tx,javax.transaction.xa"
+                     com.ibm.tx.jta [131]
+                       Unresolved requirement: Import-Package: javax.resource.spi.work; version="[1.6.0,2.0.0)"
+                         -> Export-Package: javax.resource.spi.work; bundle-symbolic-name="com.ibm.websphere.javaee.connector.1.7"; bundle-version="1.0.23.cl180420181121-0300"; version="1.7.0"; uses:="javax.resource,javax.resource.spi,javax.security.auth,javax.security.auth.callback,javax.transaction.xa"
+                            com.ibm.websphere.javaee.connector.1.7 [126]
+                              Unresolved requirement: Import-Package: javax.transaction
+                                -> Export-Package: javax.transaction; bundle-symbolic-name="com.ibm.websphere.javaee.transaction.1.2"; bundle-version="1.0.23.cl180420181121-0300"; version="1.2.0"; uses:="javax.enterprise.context,javax.enterprise.util,javax.interceptor,javax.transaction.xa"
+                                   com.ibm.websphere.javaee.transaction.1.2 [125]
+                                     Unresolved requirement: Import-Package: javax.enterprise.context
+                       Unresolved requirement: Import-Package: com.ibm.tx; version="[1.0.0,2.0.0)"
+                         -> Export-Package: com.ibm.tx; bundle-symbolic-name="com.ibm.tx.util"; bundle-version="1.0.23.cl180420181121-0300"; version="1.0.0"
+                            com.ibm.tx.util [132]
+                              Unresolved requirement: Import-Package: javax.transaction; version="1.1.0"
+                                -> Export-Package: javax.transaction; bundle-symbolic-name="com.ibm.websphere.javaee.transaction.1.2"; bundle-version="1.0.23.cl180420181121-0300"; version="1.2.0"; uses:="javax.enterprise.context,javax.enterprise.util,javax.interceptor,javax.transaction.xa"
+                       Unresolved requirement: Import-Package: com.ibm.tx.config; version="[1.1.0,2.0.0)"
+                         -> Export-Package: com.ibm.tx.config; bundle-symbolic-name="com.ibm.tx.util"; bundle-version="1.0.23.cl180420181121-0300"; version="1.1.0"; uses:="com.ibm.tx.util.alarm"
+                       Unresolved requirement: Import-Package: com.ibm.ws.recoverylog.spi; version="[1.2.0,2.0.0)"
+                         -> Export-Package: com.ibm.ws.recoverylog.spi; bundle-symbolic-name="com.ibm.ws.recoverylog"; bundle-version="1.0.23.cl180420181121-0300"; version="1.2.0"; uses:="com.ibm.tx.util.alarm,com.ibm.websphere.ras.annotation,com.ibm.ws.ras.instrument.annotation,com.ibm.wsspi.resource,org.osgi.service.component"
+                            com.ibm.ws.recoverylog [134]
+                              Unresolved requirement: Import-Package: com.ibm.tx.util; version="[2.0.0,3.0.0)"
+                                -> Export-Package: com.ibm.tx.util; bundle-symbolic-name="com.ibm.tx.util"; bundle-version="1.0.23.cl180420181121-0300"; version="2.0.0"; uses:="javax.transaction"
+                              Unresolved requirement: Import-Package: com.ibm.tx.util.logging; version="[2.0.0,3.0.0)"
+                                -> Export-Package: com.ibm.tx.util.logging; bundle-symbolic-name="com.ibm.tx.util"; bundle-version="1.0.23.cl180420181121-0300"; version="2.0.0"
+                              Unresolved requirement: Import-Package: com.ibm.tx.util.alarm; version="[1.0.0,2.0.0)"
+                                -> Export-Package: com.ibm.tx.util.alarm; bundle-symbolic-name="com.ibm.tx.util"; bundle-version="1.0.23.cl180420181121-0300"; version="1.0.0"
+                       Unresolved requirement: Import-Package: com.ibm.tx.util; version="[2.0.0,3.0.0)"
+                         -> Export-Package: com.ibm.tx.util; bundle-symbolic-name="com.ibm.tx.util"; bundle-version="1.0.23.cl180420181121-0300"; version="2.0.0"; uses:="javax.transaction"
+                       Unresolved requirement: Import-Package: com.ibm.tx.util.logging; version="[2.0.0,3.0.0)"
+                         -> Export-Package: com.ibm.tx.util.logging; bundle-symbolic-name="com.ibm.tx.util"; bundle-version="1.0.23.cl180420181121-0300"; version="2.0.0"
+                       Unresolved requirement: Import-Package: javax.resource.spi; version="[1.6.0,2.0.0)"
+                         -> Export-Package: javax.resource.spi; bundle-symbolic-name="com.ibm.websphere.javaee.connector.1.7"; bundle-version="1.0.23.cl180420181121-0300"; version="1.7.0"; uses:="javax.resource,javax.resource.spi.endpoint,javax.resource.spi.work,javax.security.auth,javax.transaction,javax.transaction.xa"
+                       Unresolved requirement: Import-Package: com.ibm.tx.util.alarm; version="[1.0.0,2.0.0)"
+                         -> Export-Package: com.ibm.tx.util.alarm; bundle-symbolic-name="com.ibm.tx.util"; bundle-version="1.0.23.cl180420181121-0300"; version="1.0.0"
+         Unresolved requirement: Import-Package: com.ibm.ws.Transaction; version="[1.1.0,2.0.0)"
+           -> Export-Package: com.ibm.ws.Transaction; bundle-symbolic-name="com.ibm.tx.jta"; bundle-version="1.0.23.cl180420181121-0300"; version="1.1.0"; uses:="com.ibm.tx,com.ibm.wsspi.tx,javax.transaction.xa"
+         Unresolved requirement: Import-Package: com.ibm.tx.jta; version="[2.1.0,3.0.0)"
+           -> Export-Package: com.ibm.tx.jta; bundle-symbolic-name="com.ibm.tx.jta"; bundle-version="1.0.23.cl180420181121-0300"; version="2.1.0"; uses:="javax.resource.spi,javax.resource.spi.work,javax.transaction,javax.transaction.xa"
+         Unresolved requirement: Import-Package: com.ibm.tx.jta.embeddable; version="[1.1.0,2.0.0)"
+           -> Export-Package: com.ibm.tx.jta.embeddable; bundle-symbolic-name="com.ibm.ws.tx.embeddable"; bundle-version="1.0.23.cl180420181121-0300"; version="1.1.0"; uses:="com.ibm.tx.jta,com.ibm.tx.jta.embeddable.impl,com.ibm.ws.LocalTransaction,com.ibm.ws.Transaction,com.ibm.ws.tx.embeddable,javax.naming,javax.transaction"
+              com.ibm.ws.tx.embeddable [133]
+                Unresolved requirement: Import-Package: com.ibm.tx.config; version="[1.1.0,2.0.0)"
+                  -> Export-Package: com.ibm.tx.config; bundle-symbolic-name="com.ibm.tx.util"; bundle-version="1.0.23.cl180420181121-0300"; version="1.1.0"; uses:="com.ibm.tx.util.alarm"
+                Unresolved requirement: Import-Package: com.ibm.tx.jta; version="[2.1.0,3.0.0)"
+                  -> Export-Package: com.ibm.tx.jta; bundle-symbolic-name="com.ibm.tx.jta"; bundle-version="1.0.23.cl180420181121-0300"; version="2.1.0"; uses:="javax.resource.spi,javax.resource.spi.work,javax.transaction,javax.transaction.xa"
+  Unresolved requirement: Import-Package: com.ibm.ws.jca.service; version="[1.0.0,2.0.0)"
+    -> Export-Package: com.ibm.ws.jca.service; bundle-symbolic-name="com.ibm.ws.jca"; bundle-version="1.0.23.cl180420181121-0300"; version="1.0.0"; uses:="com.ibm.tx.jta,com.ibm.websphere.csi,com.ibm.websphere.ras.annotation,com.ibm.ws.jca.cm,com.ibm.ws.jca.osgi,com.ibm.ws.ras.instrument.annotation,com.ibm.ws.tx.embeddable,com.ibm.ws.tx.rrs,com.ibm.wsspi.application.lifecycle,com.ibm.wsspi.kernel.service.utils,com.ibm.wsspi.resource,javax.resource,javax.resource.spi,javax.resource.spi.endpoint,javax.transaction.xa,org.osgi.framework,org.osgi.service.component"
+       com.ibm.ws.jca [144]
+         Unresolved requirement: Import-Package: javax.resource.spi.endpoint; version="[1.6.0,2.0.0)"
+           -> Export-Package: javax.resource.spi.endpoint; bundle-symbolic-name="com.ibm.websphere.javaee.connector.1.7"; bundle-version="1.0.23.cl180420181121-0300"; version="1.7.0"; uses:="javax.resource,javax.resource.spi,javax.transaction.xa"
+  Unresolved requirement: Import-Package: com.ibm.ws.jca.osgi; version="[1.0.0,2.0.0)"
+    -> Export-Package: com.ibm.ws.jca.osgi; bundle-symbolic-name="com.ibm.ws.jca"; bundle-version="1.0.23.cl180420181121-0300"; version="1.0.16"; uses:="com.ibm.websphere.ras.annotation,com.ibm.ws.ras.instrument.annotation,org.osgi.framework"
+
+[1/3/19 18:12:57:601 UTC] 0000001b LogService-148-com.ibm.ws.app.manager.rar                    E CWWKE0702E: Could not resolve module: com.ibm.ws.app.manager.rar [148]
+  Unresolved requirement: Import-Package: com.ibm.ws.jca.metadata; version="[1.0.0,2.0.0)"
+    -> Export-Package: com.ibm.ws.jca.metadata; bundle-symbolic-name="com.ibm.ws.jca"; bundle-version="1.0.23.cl180420181121-0300"; version="1.0.16"; uses:="com.ibm.ws.runtime.metadata"
+       com.ibm.ws.jca [144]
+         Unresolved requirement: Import-Package: com.ibm.ws.jca.utils.xml.metatype; version="[1.0.0,2.0.0)"
+           -> Export-Package: com.ibm.ws.jca.utils.xml.metatype; bundle-symbolic-name="com.ibm.ws.jca.utils"; bundle-version="1.0.23.cl180420181121-0300"; version="1.0.0"; uses:="com.ibm.websphere.metatype,com.ibm.websphere.ras.annotation,com.ibm.ws.jca.utils.xml.ra,org.osgi.service.metatype"
+              com.ibm.ws.jca.utils [146]
+                Unresolved requirement: Import-Package: javax.resource; version="[1.6.0,2.0.0)"
+                  -> Export-Package: javax.resource; bundle-symbolic-name="com.ibm.websphere.javaee.connector.1.7"; bundle-version="1.0.23.cl180420181121-0300"; version="1.7.0"; uses:="javax.naming,javax.resource.spi"
+                     com.ibm.websphere.javaee.connector.1.7 [126]
+                       Unresolved requirement: Import-Package: javax.transaction
+                         -> Export-Package: javax.transaction; bundle-symbolic-name="com.ibm.websphere.javaee.transaction.1.2"; bundle-version="1.0.23.cl180420181121-0300"; version="1.2.0"; uses:="javax.enterprise.context,javax.enterprise.util,javax.interceptor,javax.transaction.xa"
+                            com.ibm.websphere.javaee.transaction.1.2 [125]
+                              Unresolved requirement: Import-Package: javax.enterprise.context
+                       Unresolved requirement: Import-Package: javax.transaction.xa
+                         -> Export-Package: javax.transaction.xa; bundle-symbolic-name="com.ibm.websphere.javaee.transaction.1.2"; bundle-version="1.0.23.cl180420181121-0300"; version="1.2.0"
+         Unresolved requirement: Import-Package: com.ibm.ws.jca.utils.metagen; version="[1.0.0,2.0.0)"
+           -> Export-Package: com.ibm.ws.jca.utils.metagen; bundle-symbolic-name="com.ibm.ws.jca.utils"; bundle-version="1.0.23.cl180420181121-0300"; version="1.0.0"; uses:="com.ibm.websphere.metatype,com.ibm.websphere.ras.annotation,com.ibm.ws.container.service.annotations,com.ibm.ws.jca.utils.xml.metatype,com.ibm.ws.jca.utils.xml.ra,com.ibm.ws.jca.utils.xml.wlp.ra,com.ibm.ws.ras.instrument.annotation,com.ibm.wsspi.adaptable.module,javax.resource.spi,javax.xml.parsers,org.xml.sax"
+         Unresolved requirement: Import-Package: javax.resource.spi.endpoint; version="[1.6.0,2.0.0)"
+           -> Export-Package: javax.resource.spi.endpoint; bundle-symbolic-name="com.ibm.websphere.javaee.connector.1.7"; bundle-version="1.0.23.cl180420181121-0300"; version="1.7.0"; uses:="javax.resource,javax.resource.spi,javax.transaction.xa"
+
+[1/3/19 18:12:57:603 UTC] 0000001b LogService-149-com.ibm.websphere.javaee.ejb.3.2              E CWWKE0702E: Could not resolve module: com.ibm.websphere.javaee.ejb.3.2 [149]
+  Unresolved requirement: Import-Package: javax.transaction; version="1.2.0"
+    -> Export-Package: javax.transaction; bundle-symbolic-name="com.ibm.websphere.javaee.transaction.1.2"; bundle-version="1.0.23.cl180420181121-0300"; version="1.2.0"; uses:="javax.enterprise.context,javax.enterprise.util,javax.interceptor,javax.transaction.xa"
+       com.ibm.websphere.javaee.transaction.1.2 [125]
+         Unresolved requirement: Import-Package: javax.enterprise.context
+
+[1/3/19 18:12:57:605 UTC] 0000001b LogService-151-com.ibm.ws.ejbcontainer.v32                   E CWWKE0702E: Could not resolve module: com.ibm.ws.ejbcontainer.v32 [151]
+  Unresolved requirement: Import-Package: com.ibm.ws.ejbcontainer.osgi; version="[1.0.0,2.0.0)"
+    -> Export-Package: com.ibm.ws.ejbcontainer.osgi; bundle-symbolic-name="com.ibm.ws.ejbcontainer"; bundle-version="1.0.23.cl180420181121-0300"; version="1.0.9"; uses:="com.ibm.ejs.container,com.ibm.tx.jta,com.ibm.websphere.ras.annotation,com.ibm.ws.container.service.app.deploy,com.ibm.ws.container.service.metadata,com.ibm.ws.container.service.state,com.ibm.ws.ejbcontainer,com.ibm.ws.ejbcontainer.util,com.ibm.ws.exception,com.ibm.ws.managedobject,com.ibm.ws.metadata.ejb,com.ibm.ws.ras.instrument.annotation,com.ibm.ws.runtime.metadata,com.ibm.wsspi.adaptable.module,com.ibm.wsspi.ejbcontainer,javax.ejb,javax.transaction.xa,org.omg.PortableServer,org.osgi.framework"
+       com.ibm.ws.ejbcontainer [138]
+         Unresolved requirement: Import-Package: com.ibm.tx.jta.embeddable; version="[1.1.0,2.0.0)"
+           -> Export-Package: com.ibm.tx.jta.embeddable; bundle-symbolic-name="com.ibm.ws.tx.embeddable"; bundle-version="1.0.23.cl180420181121-0300"; version="1.1.0"; uses:="com.ibm.tx.jta,com.ibm.tx.jta.embeddable.impl,com.ibm.ws.LocalTransaction,com.ibm.ws.Transaction,com.ibm.ws.tx.embeddable,javax.naming,javax.transaction"
+              com.ibm.ws.tx.embeddable [133]
+                Unresolved requirement: Import-Package: com.ibm.tx.config; version="[1.1.0,2.0.0)"
+                  -> Export-Package: com.ibm.tx.config; bundle-symbolic-name="com.ibm.tx.util"; bundle-version="1.0.23.cl180420181121-0300"; version="1.1.0"; uses:="com.ibm.tx.util.alarm"
+                     com.ibm.tx.util [132]
+                       Unresolved requirement: Import-Package: javax.transaction; version="1.1.0"
+                         -> Export-Package: javax.transaction; bundle-symbolic-name="com.ibm.websphere.javaee.transaction.1.2"; bundle-version="1.0.23.cl180420181121-0300"; version="1.2.0"; uses:="javax.enterprise.context,javax.enterprise.util,javax.interceptor,javax.transaction.xa"
+                            com.ibm.websphere.javaee.transaction.1.2 [125]
+                              Unresolved requirement: Import-Package: javax.enterprise.context
+                Unresolved requirement: Import-Package: com.ibm.tx.jta; version="[2.1.0,3.0.0)"
+                  -> Export-Package: com.ibm.tx.jta; bundle-symbolic-name="com.ibm.tx.jta"; bundle-version="1.0.23.cl180420181121-0300"; version="2.1.0"; uses:="javax.resource.spi,javax.resource.spi.work,javax.transaction,javax.transaction.xa"
+                     com.ibm.tx.jta [131]
+                       Unresolved requirement: Import-Package: javax.resource.spi.work; version="[1.6.0,2.0.0)"
+                         -> Export-Package: javax.resource.spi.work; bundle-symbolic-name="com.ibm.websphere.javaee.connector.1.7"; bundle-version="1.0.23.cl180420181121-0300"; version="1.7.0"; uses:="javax.resource,javax.resource.spi,javax.security.auth,javax.security.auth.callback,javax.transaction.xa"
+                            com.ibm.websphere.javaee.connector.1.7 [126]
+                              Unresolved requirement: Import-Package: javax.transaction
+                                -> Export-Package: javax.transaction; bundle-symbolic-name="com.ibm.websphere.javaee.transaction.1.2"; bundle-version="1.0.23.cl180420181121-0300"; version="1.2.0"; uses:="javax.enterprise.context,javax.enterprise.util,javax.interceptor,javax.transaction.xa"
+                       Unresolved requirement: Import-Package: com.ibm.tx; version="[1.0.0,2.0.0)"
+                         -> Export-Package: com.ibm.tx; bundle-symbolic-name="com.ibm.tx.util"; bundle-version="1.0.23.cl180420181121-0300"; version="1.0.0"
+                       Unresolved requirement: Import-Package: com.ibm.tx.config; version="[1.1.0,2.0.0)"
+                         -> Export-Package: com.ibm.tx.config; bundle-symbolic-name="com.ibm.tx.util"; bundle-version="1.0.23.cl180420181121-0300"; version="1.1.0"; uses:="com.ibm.tx.util.alarm"
+                       Unresolved requirement: Import-Package: com.ibm.ws.recoverylog.spi; version="[1.2.0,2.0.0)"
+                         -> Export-Package: com.ibm.ws.recoverylog.spi; bundle-symbolic-name="com.ibm.ws.recoverylog"; bundle-version="1.0.23.cl180420181121-0300"; version="1.2.0"; uses:="com.ibm.tx.util.alarm,com.ibm.websphere.ras.annotation,com.ibm.ws.ras.instrument.annotation,com.ibm.wsspi.resource,org.osgi.service.component"
+                            com.ibm.ws.recoverylog [134]
+                              Unresolved requirement: Import-Package: com.ibm.tx.util; version="[2.0.0,3.0.0)"
+                                -> Export-Package: com.ibm.tx.util; bundle-symbolic-name="com.ibm.tx.util"; bundle-version="1.0.23.cl180420181121-0300"; version="2.0.0"; uses:="javax.transaction"
+                              Unresolved requirement: Import-Package: com.ibm.tx.util.logging; version="[2.0.0,3.0.0)"
+                                -> Export-Package: com.ibm.tx.util.logging; bundle-symbolic-name="com.ibm.tx.util"; bundle-version="1.0.23.cl180420181121-0300"; version="2.0.0"
+                              Unresolved requirement: Import-Package: com.ibm.tx.util.alarm; version="[1.0.0,2.0.0)"
+                                -> Export-Package: com.ibm.tx.util.alarm; bundle-symbolic-name="com.ibm.tx.util"; bundle-version="1.0.23.cl180420181121-0300"; version="1.0.0"
+                       Unresolved requirement: Import-Package: com.ibm.tx.util; version="[2.0.0,3.0.0)"
+                         -> Export-Package: com.ibm.tx.util; bundle-symbolic-name="com.ibm.tx.util"; bundle-version="1.0.23.cl180420181121-0300"; version="2.0.0"; uses:="javax.transaction"
+                       Unresolved requirement: Import-Package: com.ibm.tx.util.logging; version="[2.0.0,3.0.0)"
+                         -> Export-Package: com.ibm.tx.util.logging; bundle-symbolic-name="com.ibm.tx.util"; bundle-version="1.0.23.cl180420181121-0300"; version="2.0.0"
+                       Unresolved requirement: Import-Package: javax.resource.spi; version="[1.6.0,2.0.0)"
+                         -> Export-Package: javax.resource.spi; bundle-symbolic-name="com.ibm.websphere.javaee.connector.1.7"; bundle-version="1.0.23.cl180420181121-0300"; version="1.7.0"; uses:="javax.resource,javax.resource.spi.endpoint,javax.resource.spi.work,javax.security.auth,javax.transaction,javax.transaction.xa"
+                       Unresolved requirement: Import-Package: com.ibm.tx.util.alarm; version="[1.0.0,2.0.0)"
+                         -> Export-Package: com.ibm.tx.util.alarm; bundle-symbolic-name="com.ibm.tx.util"; bundle-version="1.0.23.cl180420181121-0300"; version="1.0.0"
+         Unresolved requirement: Import-Package: com.ibm.tx.jta; version="[2.1.0,3.0.0)"
+           -> Export-Package: com.ibm.tx.jta; bundle-symbolic-name="com.ibm.tx.jta"; bundle-version="1.0.23.cl180420181121-0300"; version="2.1.0"; uses:="javax.resource.spi,javax.resource.spi.work,javax.transaction,javax.transaction.xa"
+         Unresolved requirement: Import-Package: com.ibm.websphere.uow; version="[1.1.0,2.0.0)"
+           -> Export-Package: com.ibm.websphere.uow; bundle-symbolic-name="com.ibm.ws.tx.embeddable"; bundle-version="1.0.23.cl180420181121-0300"; version="1.1.0"; uses:="javax.transaction"
+
+[1/3/19 18:12:57:608 UTC] 0000001b LogService-152-com.ibm.ws.ejbcontainer.mdb                   E CWWKE0702E: Could not resolve module: com.ibm.ws.ejbcontainer.mdb [152]
+  Unresolved requirement: Import-Package: com.ibm.ejs.container; version="[3.0.0,4.0.0)"
+    -> Export-Package: com.ibm.ejs.container; bundle-symbolic-name="com.ibm.ws.ejbcontainer"; bundle-version="1.0.23.cl180420181121-0300"; version="3.0.0"; uses:="com.ibm.ejs.container.interceptors,com.ibm.ejs.container.util,com.ibm.ejs.j2c,com.ibm.ejs.util,com.ibm.tx.jta.embeddable,com.ibm.websphere.ejbcontainer,com.ibm.websphere.ras.annotation,com.ibm.ws.LocalTransaction,com.ibm.ws.Transaction,com.ibm.ws.ejbcontainer,com.ibm.ws.ejbcontainer.runtime,com.ibm.ws.ejbcontainer.util,com.ibm.ws.ffdc,com.ibm.ws.managedobject,com.ibm.ws.metadata.ejb,com.ibm.ws.resource,com.ibm.ws.runtime.metadata,com.ibm.ws.uow.embeddable,com.ibm.ws.util,com.ibm.wsspi.ejbcontainer,com.ibm.wsspi.injectionengine,javax.ejb,javax.naming,javax.rmi.CORBA,javax.transaction,javax.xml.rpc.handler"
+       com.ibm.ws.ejbcontainer [138]
+         Unresolved requirement: Import-Package: com.ibm.tx.jta.embeddable; version="[1.1.0,2.0.0)"
+           -> Export-Package: com.ibm.tx.jta.embeddable; bundle-symbolic-name="com.ibm.ws.tx.embeddable"; bundle-version="1.0.23.cl180420181121-0300"; version="1.1.0"; uses:="com.ibm.tx.jta,com.ibm.tx.jta.embeddable.impl,com.ibm.ws.LocalTransaction,com.ibm.ws.Transaction,com.ibm.ws.tx.embeddable,javax.naming,javax.transaction"
+              com.ibm.ws.tx.embeddable [133]
+                Unresolved requirement: Import-Package: com.ibm.tx.config; version="[1.1.0,2.0.0)"
+                  -> Export-Package: com.ibm.tx.config; bundle-symbolic-name="com.ibm.tx.util"; bundle-version="1.0.23.cl180420181121-0300"; version="1.1.0"; uses:="com.ibm.tx.util.alarm"
+                     com.ibm.tx.util [132]
+                       Unresolved requirement: Import-Package: javax.transaction; version="1.1.0"
+                         -> Export-Package: javax.transaction; bundle-symbolic-name="com.ibm.websphere.javaee.transaction.1.2"; bundle-version="1.0.23.cl180420181121-0300"; version="1.2.0"; uses:="javax.enterprise.context,javax.enterprise.util,javax.interceptor,javax.transaction.xa"
+                            com.ibm.websphere.javaee.transaction.1.2 [125]
+                              Unresolved requirement: Import-Package: javax.enterprise.context
+                Unresolved requirement: Import-Package: com.ibm.tx.jta; version="[2.1.0,3.0.0)"
+                  -> Export-Package: com.ibm.tx.jta; bundle-symbolic-name="com.ibm.tx.jta"; bundle-version="1.0.23.cl180420181121-0300"; version="2.1.0"; uses:="javax.resource.spi,javax.resource.spi.work,javax.transaction,javax.transaction.xa"
+                     com.ibm.tx.jta [131]
+                       Unresolved requirement: Import-Package: javax.resource.spi.work; version="[1.6.0,2.0.0)"
+                         -> Export-Package: javax.resource.spi.work; bundle-symbolic-name="com.ibm.websphere.javaee.connector.1.7"; bundle-version="1.0.23.cl180420181121-0300"; version="1.7.0"; uses:="javax.resource,javax.resource.spi,javax.security.auth,javax.security.auth.callback,javax.transaction.xa"
+                            com.ibm.websphere.javaee.connector.1.7 [126]
+                              Unresolved requirement: Import-Package: javax.transaction
+                                -> Export-Package: javax.transaction; bundle-symbolic-name="com.ibm.websphere.javaee.transaction.1.2"; bundle-version="1.0.23.cl180420181121-0300"; version="1.2.0"; uses:="javax.enterprise.context,javax.enterprise.util,javax.interceptor,javax.transaction.xa"
+                       Unresolved requirement: Import-Package: com.ibm.tx; version="[1.0.0,2.0.0)"
+                         -> Export-Package: com.ibm.tx; bundle-symbolic-name="com.ibm.tx.util"; bundle-version="1.0.23.cl180420181121-0300"; version="1.0.0"
+                       Unresolved requirement: Import-Package: com.ibm.tx.config; version="[1.1.0,2.0.0)"
+                         -> Export-Package: com.ibm.tx.config; bundle-symbolic-name="com.ibm.tx.util"; bundle-version="1.0.23.cl180420181121-0300"; version="1.1.0"; uses:="com.ibm.tx.util.alarm"
+                       Unresolved requirement: Import-Package: com.ibm.ws.recoverylog.spi; version="[1.2.0,2.0.0)"
+                         -> Export-Package: com.ibm.ws.recoverylog.spi; bundle-symbolic-name="com.ibm.ws.recoverylog"; bundle-version="1.0.23.cl180420181121-0300"; version="1.2.0"; uses:="com.ibm.tx.util.alarm,com.ibm.websphere.ras.annotation,com.ibm.ws.ras.instrument.annotation,com.ibm.wsspi.resource,org.osgi.service.component"
+                            com.ibm.ws.recoverylog [134]
+                              Unresolved requirement: Import-Package: com.ibm.tx.util; version="[2.0.0,3.0.0)"
+                                -> Export-Package: com.ibm.tx.util; bundle-symbolic-name="com.ibm.tx.util"; bundle-version="1.0.23.cl180420181121-0300"; version="2.0.0"; uses:="javax.transaction"
+                              Unresolved requirement: Import-Package: com.ibm.tx.util.logging; version="[2.0.0,3.0.0)"
+                                -> Export-Package: com.ibm.tx.util.logging; bundle-symbolic-name="com.ibm.tx.util"; bundle-version="1.0.23.cl180420181121-0300"; version="2.0.0"
+                              Unresolved requirement: Import-Package: com.ibm.tx.util.alarm; version="[1.0.0,2.0.0)"
+                                -> Export-Package: com.ibm.tx.util.alarm; bundle-symbolic-name="com.ibm.tx.util"; bundle-version="1.0.23.cl180420181121-0300"; version="1.0.0"
+                       Unresolved requirement: Import-Package: com.ibm.tx.util; version="[2.0.0,3.0.0)"
+                         -> Export-Package: com.ibm.tx.util; bundle-symbolic-name="com.ibm.tx.util"; bundle-version="1.0.23.cl180420181121-0300"; version="2.0.0"; uses:="javax.transaction"
+                       Unresolved requirement: Import-Package: com.ibm.tx.util.logging; version="[2.0.0,3.0.0)"
+                         -> Export-Package: com.ibm.tx.util.logging; bundle-symbolic-name="com.ibm.tx.util"; bundle-version="1.0.23.cl180420181121-0300"; version="2.0.0"
+                       Unresolved requirement: Import-Package: javax.resource.spi; version="[1.6.0,2.0.0)"
+                         -> Export-Package: javax.resource.spi; bundle-symbolic-name="com.ibm.websphere.javaee.connector.1.7"; bundle-version="1.0.23.cl180420181121-0300"; version="1.7.0"; uses:="javax.resource,javax.resource.spi.endpoint,javax.resource.spi.work,javax.security.auth,javax.transaction,javax.transaction.xa"
+                       Unresolved requirement: Import-Package: com.ibm.tx.util.alarm; version="[1.0.0,2.0.0)"
+                         -> Export-Package: com.ibm.tx.util.alarm; bundle-symbolic-name="com.ibm.tx.util"; bundle-version="1.0.23.cl180420181121-0300"; version="1.0.0"
+         Unresolved requirement: Import-Package: com.ibm.tx.jta; version="[2.1.0,3.0.0)"
+           -> Export-Package: com.ibm.tx.jta; bundle-symbolic-name="com.ibm.tx.jta"; bundle-version="1.0.23.cl180420181121-0300"; version="2.1.0"; uses:="javax.resource.spi,javax.resource.spi.work,javax.transaction,javax.transaction.xa"
+         Unresolved requirement: Import-Package: com.ibm.websphere.uow; version="[1.1.0,2.0.0)"
+           -> Export-Package: com.ibm.websphere.uow; bundle-symbolic-name="com.ibm.ws.tx.embeddable"; bundle-version="1.0.23.cl180420181121-0300"; version="1.1.0"; uses:="javax.transaction"
+  Unresolved requirement: Import-Package: com.ibm.ejs.container.util; version="[3.0.0,4.0.0)"
+    -> Export-Package: com.ibm.ejs.container.util; bundle-symbolic-name="com.ibm.ws.ejbcontainer"; bundle-version="1.0.23.cl180420181121-0300"; version="3.0.0"; uses:="com.ibm.ejs.container,com.ibm.ejs.util,com.ibm.websphere.ras,com.ibm.ws.ejbcontainer,com.ibm.ws.ejbcontainer.jitdeploy,com.ibm.ws.ejbcontainer.util,com.ibm.ws.javaee.dd.ejb,javax.ejb"
+
+[1/3/19 18:12:57:612 UTC] 0000001b ce-156-com.ibm.websphere.org.eclipse.microprofile.config.1.3 E CWWKE0702E: Could not resolve module: com.ibm.websphere.org.eclipse.microprofile.config.1.3 [156]
+  Unresolved requirement: Import-Package: javax.enterprise.util; version="[1.1.0,3.0.0)"
+
+[1/3/19 18:12:57:614 UTC] 0000001b LogService-157-com.ibm.ws.microprofile.config.1.3            E CWWKE0702E: Could not resolve module: com.ibm.ws.microprofile.config.1.3 [157]
+  Unresolved requirement: Import-Package: org.eclipse.microprofile.config; version="[1.0.0,2.0.0)"
+    -> Export-Package: org.eclipse.microprofile.config; bundle-symbolic-name="com.ibm.websphere.org.eclipse.microprofile.config.1.3"; bundle-version="1.0.23.cl180420181121-0300"; version="1.0.1"; uses:="org.eclipse.microprofile.config.spi"
+       com.ibm.websphere.org.eclipse.microprofile.config.1.3 [156]
+         Unresolved requirement: Import-Package: javax.enterprise.util; version="[1.1.0,3.0.0)"
+  Unresolved requirement: Import-Package: org.eclipse.microprofile.config.spi; version="[1.2.0,2.0.0)"
+    -> Export-Package: org.eclipse.microprofile.config.spi; bundle-symbolic-name="com.ibm.websphere.org.eclipse.microprofile.config.1.3"; bundle-version="1.0.23.cl180420181121-0300"; version="1.3.0"; uses:="org.eclipse.microprofile.config"
+
+[1/3/19 18:12:57:616 UTC] 0000001b LogService-162-com.ibm.websphere.javaee.jsf.2.2              E CWWKE0702E: Could not resolve module: com.ibm.websphere.javaee.jsf.2.2 [162]
+  Unresolved requirement: Import-Package: javax.enterprise.context; version="[1.1.0,2.0.0)"
+
+[1/3/19 18:12:57:620 UTC] 0000001b LogService-168-com.ibm.ws.cdi.1.2.weld                       E CWWKE0702E: Could not resolve module: com.ibm.ws.cdi.1.2.weld [168]
+  Unresolved requirement: Import-Package: javax.enterprise.context.spi; version="[1.1.0,2.0.0)"
+  Unresolved requirement: Import-Package: com.ibm.ws.cdi.internal.interfaces; version="[1.0.0,2.0.0)"
+    -> Export-Package: com.ibm.ws.cdi.internal.interfaces; bundle-symbolic-name="com.ibm.ws.cdi.internal"; bundle-version="1.0.23.cl180420181121-0300"; version="1.0.0"; uses:="com.ibm.websphere.csi,com.ibm.websphere.ras.annotation,com.ibm.ws.cdi,com.ibm.ws.cdi.extension,com.ibm.ws.ras.instrument.annotation,com.ibm.ws.resource,com.ibm.ws.runtime.metadata,com.ibm.wsspi.injectionengine,com.ibm.wsspi.kernel.service.utils,javax.ejb,javax.enterprise.inject.spi,javax.transaction,org.jboss.weld.bootstrap,org.jboss.weld.bootstrap.spi,org.jboss.weld.ejb.spi,org.jboss.weld.injection.spi,org.jboss.weld.security.spi,org.jboss.weld.serialization.spi,org.osgi.framework"
+       com.ibm.ws.cdi.internal [171]
+         Unresolved requirement: Import-Package: javax.decorator; version="[1.1.0,3.0.0)"
+
+[1/3/19 18:12:57:623 UTC] 0000001b LogService-169-com.ibm.ws.org.jboss.weld.2.4.8               E CWWKE0702E: Could not resolve module: com.ibm.ws.org.jboss.weld.2.4.8 [169]
+  Unresolved requirement: Import-Package: sun.misc; resolution:="optional"
+  Unresolved requirement: Import-Package: sun.reflect; resolution:="optional"
+  Unresolved requirement: Import-Package: javax.decorator; version="[1.1.0,2.0.0)"
+  Unresolved requirement: Import-Package: javax.transaction; version="1.1.0"; resolution:="optional"
+    -> Export-Package: javax.transaction; bundle-symbolic-name="com.ibm.websphere.javaee.transaction.1.2"; bundle-version="1.0.23.cl180420181121-0300"; version="1.2.0"; uses:="javax.enterprise.context,javax.enterprise.util,javax.interceptor,javax.transaction.xa"
+       com.ibm.websphere.javaee.transaction.1.2 [125]
+         Unresolved requirement: Import-Package: javax.enterprise.context
+  Unresolved requirement: Import-Package: javax.faces.context; resolution:="optional"
+    -> Export-Package: javax.faces.context; bundle-symbolic-name="com.ibm.websphere.javaee.jsf.2.2"; bundle-version="1.0.23.cl180420181121-0300"; version="1.0.16"; uses:="javax.el,javax.faces,javax.faces.application,javax.faces.component,javax.faces.event,javax.faces.lifecycle,javax.faces.render"
+       com.ibm.websphere.javaee.jsf.2.2 [162]
+         Unresolved requirement: Import-Package: javax.enterprise.context; version="[1.1.0,2.0.0)"
+  Unresolved requirement: Import-Package: javax.faces.application; resolution:="optional"
+    -> Export-Package: javax.faces.application; bundle-symbolic-name="com.ibm.websphere.javaee.jsf.2.2"; bundle-version="1.0.23.cl180420181121-0300"; version="1.0.16"; uses:="javax.el,javax.faces,javax.faces.component,javax.faces.component.behavior,javax.faces.context,javax.faces.convert,javax.faces.el,javax.faces.event,javax.faces.flow,javax.faces.validator,javax.faces.view,org.w3c.dom"
+
+[1/3/19 18:12:57:625 UTC] 0000001b LogService-170-com.ibm.ws.cdi.weld                           E CWWKE0702E: Could not resolve module: com.ibm.ws.cdi.weld [170]
+  Unresolved requirement: Import-Package: javax.enterprise.context; version="[1.1.0,3.0.0)"
+
+[1/3/19 18:12:57:627 UTC] 0000001b LogService-171-com.ibm.ws.cdi.internal                       E CWWKE0702E: Could not resolve module: com.ibm.ws.cdi.internal [171]
+  Unresolved requirement: Import-Package: javax.decorator; version="[1.1.0,3.0.0)"
+
+[1/3/19 18:12:57:629 UTC] 0000001b LogService-174-com.ibm.ws.security.mp.jwt.cdi                E CWWKE0702E: Could not resolve module: com.ibm.ws.security.mp.jwt.cdi [174]
+  Unresolved requirement: Import-Package: javax.enterprise.context; version="[1.1.0,3.0.0)"
+
+[1/3/19 18:12:57:632 UTC] 0000001b LogService-175-com.ibm.ws.security.mp.jwt.1.1.config         E CWWKE0702E: Could not resolve module: com.ibm.ws.security.mp.jwt.1.1.config [175]
+  Unresolved requirement: Import-Package: org.eclipse.microprofile.config; version="[1.0.0,2.0.0)"
+    -> Export-Package: org.eclipse.microprofile.config; bundle-symbolic-name="com.ibm.websphere.org.eclipse.microprofile.config.1.3"; bundle-version="1.0.23.cl180420181121-0300"; version="1.0.1"; uses:="org.eclipse.microprofile.config.spi"
+       com.ibm.websphere.org.eclipse.microprofile.config.1.3 [156]
+         Unresolved requirement: Import-Package: javax.enterprise.util; version="[1.1.0,3.0.0)"
+
+[1/3/19 18:12:57:634 UTC] 0000001b LogService-177-com.ibm.websphere.javaee.jms.2.0              E CWWKE0702E: Could not resolve module: com.ibm.websphere.javaee.jms.2.0 [177]
+  Unresolved requirement: Import-Package: javax.transaction.xa
+    -> Export-Package: javax.transaction.xa; bundle-symbolic-name="com.ibm.websphere.javaee.transaction.1.2"; bundle-version="1.0.23.cl180420181121-0300"; version="1.2.0"
+       com.ibm.websphere.javaee.transaction.1.2 [125]
+         Unresolved requirement: Import-Package: javax.enterprise.context
+
+[1/3/19 18:12:57:727 UTC] 0000001b 0-com.ibm.websphere.org.eclipse.microprofile.rest.client.1.1 E CWWKE0702E: Could not resolve module: com.ibm.websphere.org.eclipse.microprofile.rest.client.1.1 [190]
+  Unresolved requirement: Import-Package: javax.enterprise.context; version="[1.1.0,2.1.0)"
+
+[1/3/19 18:12:57:730 UTC] 0000001b LogService-192-com.ibm.ws.ejbcontainer.session               E CWWKE0702E: Could not resolve module: com.ibm.ws.ejbcontainer.session [192]
+  Unresolved requirement: Import-Package: com.ibm.ws.ejbcontainer.osgi; version="[1.0.0,2.0.0)"
+    -> Export-Package: com.ibm.ws.ejbcontainer.osgi; bundle-symbolic-name="com.ibm.ws.ejbcontainer"; bundle-version="1.0.23.cl180420181121-0300"; version="1.0.9"; uses:="com.ibm.ejs.container,com.ibm.tx.jta,com.ibm.websphere.ras.annotation,com.ibm.ws.container.service.app.deploy,com.ibm.ws.container.service.metadata,com.ibm.ws.container.service.state,com.ibm.ws.ejbcontainer,com.ibm.ws.ejbcontainer.util,com.ibm.ws.exception,com.ibm.ws.managedobject,com.ibm.ws.metadata.ejb,com.ibm.ws.ras.instrument.annotation,com.ibm.ws.runtime.metadata,com.ibm.wsspi.adaptable.module,com.ibm.wsspi.ejbcontainer,javax.ejb,javax.transaction.xa,org.omg.PortableServer,org.osgi.framework"
+       com.ibm.ws.ejbcontainer [138]
+         Unresolved requirement: Import-Package: com.ibm.tx.jta.embeddable; version="[1.1.0,2.0.0)"
+           -> Export-Package: com.ibm.tx.jta.embeddable; bundle-symbolic-name="com.ibm.ws.tx.embeddable"; bundle-version="1.0.23.cl180420181121-0300"; version="1.1.0"; uses:="com.ibm.tx.jta,com.ibm.tx.jta.embeddable.impl,com.ibm.ws.LocalTransaction,com.ibm.ws.Transaction,com.ibm.ws.tx.embeddable,javax.naming,javax.transaction"
+              com.ibm.ws.tx.embeddable [133]
+                Unresolved requirement: Import-Package: com.ibm.tx.config; version="[1.1.0,2.0.0)"
+                  -> Export-Package: com.ibm.tx.config; bundle-symbolic-name="com.ibm.tx.util"; bundle-version="1.0.23.cl180420181121-0300"; version="1.1.0"; uses:="com.ibm.tx.util.alarm"
+                     com.ibm.tx.util [132]
+                       Unresolved requirement: Import-Package: javax.transaction; version="1.1.0"
+                         -> Export-Package: javax.transaction; bundle-symbolic-name="com.ibm.websphere.javaee.transaction.1.2"; bundle-version="1.0.23.cl180420181121-0300"; version="1.2.0"; uses:="javax.enterprise.context,javax.enterprise.util,javax.interceptor,javax.transaction.xa"
+                            com.ibm.websphere.javaee.transaction.1.2 [125]
+                              Unresolved requirement: Import-Package: javax.enterprise.context
+                Unresolved requirement: Import-Package: com.ibm.tx.jta; version="[2.1.0,3.0.0)"
+                  -> Export-Package: com.ibm.tx.jta; bundle-symbolic-name="com.ibm.tx.jta"; bundle-version="1.0.23.cl180420181121-0300"; version="2.1.0"; uses:="javax.resource.spi,javax.resource.spi.work,javax.transaction,javax.transaction.xa"
+                     com.ibm.tx.jta [131]
+                       Unresolved requirement: Import-Package: javax.resource.spi.work; version="[1.6.0,2.0.0)"
+                         -> Export-Package: javax.resource.spi.work; bundle-symbolic-name="com.ibm.websphere.javaee.connector.1.7"; bundle-version="1.0.23.cl180420181121-0300"; version="1.7.0"; uses:="javax.resource,javax.resource.spi,javax.security.auth,javax.security.auth.callback,javax.transaction.xa"
+                            com.ibm.websphere.javaee.connector.1.7 [126]
+                              Unresolved requirement: Import-Package: javax.transaction
+                                -> Export-Package: javax.transaction; bundle-symbolic-name="com.ibm.websphere.javaee.transaction.1.2"; bundle-version="1.0.23.cl180420181121-0300"; version="1.2.0"; uses:="javax.enterprise.context,javax.enterprise.util,javax.interceptor,javax.transaction.xa"
+                       Unresolved requirement: Import-Package: com.ibm.tx; version="[1.0.0,2.0.0)"
+                         -> Export-Package: com.ibm.tx; bundle-symbolic-name="com.ibm.tx.util"; bundle-version="1.0.23.cl180420181121-0300"; version="1.0.0"
+                       Unresolved requirement: Import-Package: com.ibm.tx.config; version="[1.1.0,2.0.0)"
+                         -> Export-Package: com.ibm.tx.config; bundle-symbolic-name="com.ibm.tx.util"; bundle-version="1.0.23.cl180420181121-0300"; version="1.1.0"; uses:="com.ibm.tx.util.alarm"
+                       Unresolved requirement: Import-Package: com.ibm.ws.recoverylog.spi; version="[1.2.0,2.0.0)"
+                         -> Export-Package: com.ibm.ws.recoverylog.spi; bundle-symbolic-name="com.ibm.ws.recoverylog"; bundle-version="1.0.23.cl180420181121-0300"; version="1.2.0"; uses:="com.ibm.tx.util.alarm,com.ibm.websphere.ras.annotation,com.ibm.ws.ras.instrument.annotation,com.ibm.wsspi.resource,org.osgi.service.component"
+                            com.ibm.ws.recoverylog [134]
+                              Unresolved requirement: Import-Package: com.ibm.tx.util; version="[2.0.0,3.0.0)"
+                                -> Export-Package: com.ibm.tx.util; bundle-symbolic-name="com.ibm.tx.util"; bundle-version="1.0.23.cl180420181121-0300"; version="2.0.0"; uses:="javax.transaction"
+                              Unresolved requirement: Import-Package: com.ibm.tx.util.logging; version="[2.0.0,3.0.0)"
+                                -> Export-Package: com.ibm.tx.util.logging; bundle-symbolic-name="com.ibm.tx.util"; bundle-version="1.0.23.cl180420181121-0300"; version="2.0.0"
+                              Unresolved requirement: Import-Package: com.ibm.tx.util.alarm; version="[1.0.0,2.0.0)"
+                                -> Export-Package: com.ibm.tx.util.alarm; bundle-symbolic-name="com.ibm.tx.util"; bundle-version="1.0.23.cl180420181121-0300"; version="1.0.0"
+                       Unresolved requirement: Import-Package: com.ibm.tx.util; version="[2.0.0,3.0.0)"
+                         -> Export-Package: com.ibm.tx.util; bundle-symbolic-name="com.ibm.tx.util"; bundle-version="1.0.23.cl180420181121-0300"; version="2.0.0"; uses:="javax.transaction"
+                       Unresolved requirement: Import-Package: com.ibm.tx.util.logging; version="[2.0.0,3.0.0)"
+                         -> Export-Package: com.ibm.tx.util.logging; bundle-symbolic-name="com.ibm.tx.util"; bundle-version="1.0.23.cl180420181121-0300"; version="2.0.0"
+                       Unresolved requirement: Import-Package: javax.resource.spi; version="[1.6.0,2.0.0)"
+                         -> Export-Package: javax.resource.spi; bundle-symbolic-name="com.ibm.websphere.javaee.connector.1.7"; bundle-version="1.0.23.cl180420181121-0300"; version="1.7.0"; uses:="javax.resource,javax.resource.spi.endpoint,javax.resource.spi.work,javax.security.auth,javax.transaction,javax.transaction.xa"
+                       Unresolved requirement: Import-Package: com.ibm.tx.util.alarm; version="[1.0.0,2.0.0)"
+                         -> Export-Package: com.ibm.tx.util.alarm; bundle-symbolic-name="com.ibm.tx.util"; bundle-version="1.0.23.cl180420181121-0300"; version="1.0.0"
+         Unresolved requirement: Import-Package: com.ibm.tx.jta; version="[2.1.0,3.0.0)"
+           -> Export-Package: com.ibm.tx.jta; bundle-symbolic-name="com.ibm.tx.jta"; bundle-version="1.0.23.cl180420181121-0300"; version="2.1.0"; uses:="javax.resource.spi,javax.resource.spi.work,javax.transaction,javax.transaction.xa"
+         Unresolved requirement: Import-Package: com.ibm.websphere.uow; version="[1.1.0,2.0.0)"
+           -> Export-Package: com.ibm.websphere.uow; bundle-symbolic-name="com.ibm.ws.tx.embeddable"; bundle-version="1.0.23.cl180420181121-0300"; version="1.1.0"; uses:="javax.transaction"
+
+[1/3/19 18:12:57:737 UTC] 0000001b LogService-193-com.ibm.ws.ejbcontainer.async                 E CWWKE0702E: Could not resolve module: com.ibm.ws.ejbcontainer.async [193]
+  Unresolved requirement: Import-Package: com.ibm.ejs.container; version="[3.0.0,4.0.0)"
+    -> Export-Package: com.ibm.ejs.container; bundle-symbolic-name="com.ibm.ws.ejbcontainer"; bundle-version="1.0.23.cl180420181121-0300"; version="3.0.0"; uses:="com.ibm.ejs.container.interceptors,com.ibm.ejs.container.util,com.ibm.ejs.j2c,com.ibm.ejs.util,com.ibm.tx.jta.embeddable,com.ibm.websphere.ejbcontainer,com.ibm.websphere.ras.annotation,com.ibm.ws.LocalTransaction,com.ibm.ws.Transaction,com.ibm.ws.ejbcontainer,com.ibm.ws.ejbcontainer.runtime,com.ibm.ws.ejbcontainer.util,com.ibm.ws.ffdc,com.ibm.ws.managedobject,com.ibm.ws.metadata.ejb,com.ibm.ws.resource,com.ibm.ws.runtime.metadata,com.ibm.ws.uow.embeddable,com.ibm.ws.util,com.ibm.wsspi.ejbcontainer,com.ibm.wsspi.injectionengine,javax.ejb,javax.naming,javax.rmi.CORBA,javax.transaction,javax.xml.rpc.handler"
+       com.ibm.ws.ejbcontainer [138]
+         Unresolved requirement: Import-Package: com.ibm.tx.jta.embeddable; version="[1.1.0,2.0.0)"
+           -> Export-Package: com.ibm.tx.jta.embeddable; bundle-symbolic-name="com.ibm.ws.tx.embeddable"; bundle-version="1.0.23.cl180420181121-0300"; version="1.1.0"; uses:="com.ibm.tx.jta,com.ibm.tx.jta.embeddable.impl,com.ibm.ws.LocalTransaction,com.ibm.ws.Transaction,com.ibm.ws.tx.embeddable,javax.naming,javax.transaction"
+              com.ibm.ws.tx.embeddable [133]
+                Unresolved requirement: Import-Package: com.ibm.tx.config; version="[1.1.0,2.0.0)"
+                  -> Export-Package: com.ibm.tx.config; bundle-symbolic-name="com.ibm.tx.util"; bundle-version="1.0.23.cl180420181121-0300"; version="1.1.0"; uses:="com.ibm.tx.util.alarm"
+                     com.ibm.tx.util [132]
+                       Unresolved requirement: Import-Package: javax.transaction; version="1.1.0"
+                         -> Export-Package: javax.transaction; bundle-symbolic-name="com.ibm.websphere.javaee.transaction.1.2"; bundle-version="1.0.23.cl180420181121-0300"; version="1.2.0"; uses:="javax.enterprise.context,javax.enterprise.util,javax.interceptor,javax.transaction.xa"
+                            com.ibm.websphere.javaee.transaction.1.2 [125]
+                              Unresolved requirement: Import-Package: javax.enterprise.context
+                Unresolved requirement: Import-Package: com.ibm.tx.jta; version="[2.1.0,3.0.0)"
+                  -> Export-Package: com.ibm.tx.jta; bundle-symbolic-name="com.ibm.tx.jta"; bundle-version="1.0.23.cl180420181121-0300"; version="2.1.0"; uses:="javax.resource.spi,javax.resource.spi.work,javax.transaction,javax.transaction.xa"
+                     com.ibm.tx.jta [131]
+                       Unresolved requirement: Import-Package: javax.resource.spi.work; version="[1.6.0,2.0.0)"
+                         -> Export-Package: javax.resource.spi.work; bundle-symbolic-name="com.ibm.websphere.javaee.connector.1.7"; bundle-version="1.0.23.cl180420181121-0300"; version="1.7.0"; uses:="javax.resource,javax.resource.spi,javax.security.auth,javax.security.auth.callback,javax.transaction.xa"
+                            com.ibm.websphere.javaee.connector.1.7 [126]
+                              Unresolved requirement: Import-Package: javax.transaction
+                                -> Export-Package: javax.transaction; bundle-symbolic-name="com.ibm.websphere.javaee.transaction.1.2"; bundle-version="1.0.23.cl180420181121-0300"; version="1.2.0"; uses:="javax.enterprise.context,javax.enterprise.util,javax.interceptor,javax.transaction.xa"
+                       Unresolved requirement: Import-Package: com.ibm.tx; version="[1.0.0,2.0.0)"
+                         -> Export-Package: com.ibm.tx; bundle-symbolic-name="com.ibm.tx.util"; bundle-version="1.0.23.cl180420181121-0300"; version="1.0.0"
+                       Unresolved requirement: Import-Package: com.ibm.tx.config; version="[1.1.0,2.0.0)"
+                         -> Export-Package: com.ibm.tx.config; bundle-symbolic-name="com.ibm.tx.util"; bundle-version="1.0.23.cl180420181121-0300"; version="1.1.0"; uses:="com.ibm.tx.util.alarm"
+                       Unresolved requirement: Import-Package: com.ibm.ws.recoverylog.spi; version="[1.2.0,2.0.0)"
+                         -> Export-Package: com.ibm.ws.recoverylog.spi; bundle-symbolic-name="com.ibm.ws.recoverylog"; bundle-version="1.0.23.cl180420181121-0300"; version="1.2.0"; uses:="com.ibm.tx.util.alarm,com.ibm.websphere.ras.annotation,com.ibm.ws.ras.instrument.annotation,com.ibm.wsspi.resource,org.osgi.service.component"
+                            com.ibm.ws.recoverylog [134]
+                              Unresolved requirement: Import-Package: com.ibm.tx.util; version="[2.0.0,3.0.0)"
+                                -> Export-Package: com.ibm.tx.util; bundle-symbolic-name="com.ibm.tx.util"; bundle-version="1.0.23.cl180420181121-0300"; version="2.0.0"; uses:="javax.transaction"
+                              Unresolved requirement: Import-Package: com.ibm.tx.util.logging; version="[2.0.0,3.0.0)"
+                                -> Export-Package: com.ibm.tx.util.logging; bundle-symbolic-name="com.ibm.tx.util"; bundle-version="1.0.23.cl180420181121-0300"; version="2.0.0"
+                              Unresolved requirement: Import-Package: com.ibm.tx.util.alarm; version="[1.0.0,2.0.0)"
+                                -> Export-Package: com.ibm.tx.util.alarm; bundle-symbolic-name="com.ibm.tx.util"; bundle-version="1.0.23.cl180420181121-0300"; version="1.0.0"
+                       Unresolved requirement: Import-Package: com.ibm.tx.util; version="[2.0.0,3.0.0)"
+                         -> Export-Package: com.ibm.tx.util; bundle-symbolic-name="com.ibm.tx.util"; bundle-version="1.0.23.cl180420181121-0300"; version="2.0.0"; uses:="javax.transaction"
+                       Unresolved requirement: Import-Package: com.ibm.tx.util.logging; version="[2.0.0,3.0.0)"
+                         -> Export-Package: com.ibm.tx.util.logging; bundle-symbolic-name="com.ibm.tx.util"; bundle-version="1.0.23.cl180420181121-0300"; version="2.0.0"
+                       Unresolved requirement: Import-Package: javax.resource.spi; version="[1.6.0,2.0.0)"
+                         -> Export-Package: javax.resource.spi; bundle-symbolic-name="com.ibm.websphere.javaee.connector.1.7"; bundle-version="1.0.23.cl180420181121-0300"; version="1.7.0"; uses:="javax.resource,javax.resource.spi.endpoint,javax.resource.spi.work,javax.security.auth,javax.transaction,javax.transaction.xa"
+                       Unresolved requirement: Import-Package: com.ibm.tx.util.alarm; version="[1.0.0,2.0.0)"
+                         -> Export-Package: com.ibm.tx.util.alarm; bundle-symbolic-name="com.ibm.tx.util"; bundle-version="1.0.23.cl180420181121-0300"; version="1.0.0"
+         Unresolved requirement: Import-Package: com.ibm.tx.jta; version="[2.1.0,3.0.0)"
+           -> Export-Package: com.ibm.tx.jta; bundle-symbolic-name="com.ibm.tx.jta"; bundle-version="1.0.23.cl180420181121-0300"; version="2.1.0"; uses:="javax.resource.spi,javax.resource.spi.work,javax.transaction,javax.transaction.xa"
+         Unresolved requirement: Import-Package: com.ibm.websphere.uow; version="[1.1.0,2.0.0)"
+           -> Export-Package: com.ibm.websphere.uow; bundle-symbolic-name="com.ibm.ws.tx.embeddable"; bundle-version="1.0.23.cl180420181121-0300"; version="1.1.0"; uses:="javax.transaction"
+  Unresolved requirement: Import-Package: com.ibm.ejs.container.util; version="[3.0.0,4.0.0)"
+    -> Export-Package: com.ibm.ejs.container.util; bundle-symbolic-name="com.ibm.ws.ejbcontainer"; bundle-version="1.0.23.cl180420181121-0300"; version="3.0.0"; uses:="com.ibm.ejs.container,com.ibm.ejs.util,com.ibm.websphere.ras,com.ibm.ws.ejbcontainer,com.ibm.ws.ejbcontainer.jitdeploy,com.ibm.ws.ejbcontainer.util,com.ibm.ws.javaee.dd.ejb,javax.ejb"
+
+[1/3/19 18:12:57:740 UTC] 0000001b LogService-194-com.ibm.ws.ejbcontainer.timer                 E CWWKE0702E: Could not resolve module: com.ibm.ws.ejbcontainer.timer [194]
+  Unresolved requirement: Import-Package: com.ibm.ejs.container; version="[3.0.0,4.0.0)"
+    -> Export-Package: com.ibm.ejs.container; bundle-symbolic-name="com.ibm.ws.ejbcontainer"; bundle-version="1.0.23.cl180420181121-0300"; version="3.0.0"; uses:="com.ibm.ejs.container.interceptors,com.ibm.ejs.container.util,com.ibm.ejs.j2c,com.ibm.ejs.util,com.ibm.tx.jta.embeddable,com.ibm.websphere.ejbcontainer,com.ibm.websphere.ras.annotation,com.ibm.ws.LocalTransaction,com.ibm.ws.Transaction,com.ibm.ws.ejbcontainer,com.ibm.ws.ejbcontainer.runtime,com.ibm.ws.ejbcontainer.util,com.ibm.ws.ffdc,com.ibm.ws.managedobject,com.ibm.ws.metadata.ejb,com.ibm.ws.resource,com.ibm.ws.runtime.metadata,com.ibm.ws.uow.embeddable,com.ibm.ws.util,com.ibm.wsspi.ejbcontainer,com.ibm.wsspi.injectionengine,javax.ejb,javax.naming,javax.rmi.CORBA,javax.transaction,javax.xml.rpc.handler"
+       com.ibm.ws.ejbcontainer [138]
+         Unresolved requirement: Import-Package: com.ibm.tx.jta.embeddable; version="[1.1.0,2.0.0)"
+           -> Export-Package: com.ibm.tx.jta.embeddable; bundle-symbolic-name="com.ibm.ws.tx.embeddable"; bundle-version="1.0.23.cl180420181121-0300"; version="1.1.0"; uses:="com.ibm.tx.jta,com.ibm.tx.jta.embeddable.impl,com.ibm.ws.LocalTransaction,com.ibm.ws.Transaction,com.ibm.ws.tx.embeddable,javax.naming,javax.transaction"
+              com.ibm.ws.tx.embeddable [133]
+                Unresolved requirement: Import-Package: com.ibm.tx.config; version="[1.1.0,2.0.0)"
+                  -> Export-Package: com.ibm.tx.config; bundle-symbolic-name="com.ibm.tx.util"; bundle-version="1.0.23.cl180420181121-0300"; version="1.1.0"; uses:="com.ibm.tx.util.alarm"
+                     com.ibm.tx.util [132]
+                       Unresolved requirement: Import-Package: javax.transaction; version="1.1.0"
+                         -> Export-Package: javax.transaction; bundle-symbolic-name="com.ibm.websphere.javaee.transaction.1.2"; bundle-version="1.0.23.cl180420181121-0300"; version="1.2.0"; uses:="javax.enterprise.context,javax.enterprise.util,javax.interceptor,javax.transaction.xa"
+                            com.ibm.websphere.javaee.transaction.1.2 [125]
+                              Unresolved requirement: Import-Package: javax.enterprise.context
+                Unresolved requirement: Import-Package: com.ibm.tx.jta; version="[2.1.0,3.0.0)"
+                  -> Export-Package: com.ibm.tx.jta; bundle-symbolic-name="com.ibm.tx.jta"; bundle-version="1.0.23.cl180420181121-0300"; version="2.1.0"; uses:="javax.resource.spi,javax.resource.spi.work,javax.transaction,javax.transaction.xa"
+                     com.ibm.tx.jta [131]
+                       Unresolved requirement: Import-Package: javax.resource.spi.work; version="[1.6.0,2.0.0)"
+                         -> Export-Package: javax.resource.spi.work; bundle-symbolic-name="com.ibm.websphere.javaee.connector.1.7"; bundle-version="1.0.23.cl180420181121-0300"; version="1.7.0"; uses:="javax.resource,javax.resource.spi,javax.security.auth,javax.security.auth.callback,javax.transaction.xa"
+                            com.ibm.websphere.javaee.connector.1.7 [126]
+                              Unresolved requirement: Import-Package: javax.transaction
+                                -> Export-Package: javax.transaction; bundle-symbolic-name="com.ibm.websphere.javaee.transaction.1.2"; bundle-version="1.0.23.cl180420181121-0300"; version="1.2.0"; uses:="javax.enterprise.context,javax.enterprise.util,javax.interceptor,javax.transaction.xa"
+                       Unresolved requirement: Import-Package: com.ibm.tx; version="[1.0.0,2.0.0)"
+                         -> Export-Package: com.ibm.tx; bundle-symbolic-name="com.ibm.tx.util"; bundle-version="1.0.23.cl180420181121-0300"; version="1.0.0"
+                       Unresolved requirement: Import-Package: com.ibm.tx.config; version="[1.1.0,2.0.0)"
+                         -> Export-Package: com.ibm.tx.config; bundle-symbolic-name="com.ibm.tx.util"; bundle-version="1.0.23.cl180420181121-0300"; version="1.1.0"; uses:="com.ibm.tx.util.alarm"
+                       Unresolved requirement: Import-Package: com.ibm.ws.recoverylog.spi; version="[1.2.0,2.0.0)"
+                         -> Export-Package: com.ibm.ws.recoverylog.spi; bundle-symbolic-name="com.ibm.ws.recoverylog"; bundle-version="1.0.23.cl180420181121-0300"; version="1.2.0"; uses:="com.ibm.tx.util.alarm,com.ibm.websphere.ras.annotation,com.ibm.ws.ras.instrument.annotation,com.ibm.wsspi.resource,org.osgi.service.component"
+                            com.ibm.ws.recoverylog [134]
+                              Unresolved requirement: Import-Package: com.ibm.tx.util; version="[2.0.0,3.0.0)"
+                                -> Export-Package: com.ibm.tx.util; bundle-symbolic-name="com.ibm.tx.util"; bundle-version="1.0.23.cl180420181121-0300"; version="2.0.0"; uses:="javax.transaction"
+                              Unresolved requirement: Import-Package: com.ibm.tx.util.logging; version="[2.0.0,3.0.0)"
+                                -> Export-Package: com.ibm.tx.util.logging; bundle-symbolic-name="com.ibm.tx.util"; bundle-version="1.0.23.cl180420181121-0300"; version="2.0.0"
+                              Unresolved requirement: Import-Package: com.ibm.tx.util.alarm; version="[1.0.0,2.0.0)"
+                                -> Export-Package: com.ibm.tx.util.alarm; bundle-symbolic-name="com.ibm.tx.util"; bundle-version="1.0.23.cl180420181121-0300"; version="1.0.0"
+                       Unresolved requirement: Import-Package: com.ibm.tx.util; version="[2.0.0,3.0.0)"
+                         -> Export-Package: com.ibm.tx.util; bundle-symbolic-name="com.ibm.tx.util"; bundle-version="1.0.23.cl180420181121-0300"; version="2.0.0"; uses:="javax.transaction"
+                       Unresolved requirement: Import-Package: com.ibm.tx.util.logging; version="[2.0.0,3.0.0)"
+                         -> Export-Package: com.ibm.tx.util.logging; bundle-symbolic-name="com.ibm.tx.util"; bundle-version="1.0.23.cl180420181121-0300"; version="2.0.0"
+                       Unresolved requirement: Import-Package: javax.resource.spi; version="[1.6.0,2.0.0)"
+                         -> Export-Package: javax.resource.spi; bundle-symbolic-name="com.ibm.websphere.javaee.connector.1.7"; bundle-version="1.0.23.cl180420181121-0300"; version="1.7.0"; uses:="javax.resource,javax.resource.spi.endpoint,javax.resource.spi.work,javax.security.auth,javax.transaction,javax.transaction.xa"
+                       Unresolved requirement: Import-Package: com.ibm.tx.util.alarm; version="[1.0.0,2.0.0)"
+                         -> Export-Package: com.ibm.tx.util.alarm; bundle-symbolic-name="com.ibm.tx.util"; bundle-version="1.0.23.cl180420181121-0300"; version="1.0.0"
+         Unresolved requirement: Import-Package: com.ibm.tx.jta; version="[2.1.0,3.0.0)"
+           -> Export-Package: com.ibm.tx.jta; bundle-symbolic-name="com.ibm.tx.jta"; bundle-version="1.0.23.cl180420181121-0300"; version="2.1.0"; uses:="javax.resource.spi,javax.resource.spi.work,javax.transaction,javax.transaction.xa"
+         Unresolved requirement: Import-Package: com.ibm.websphere.uow; version="[1.1.0,2.0.0)"
+           -> Export-Package: com.ibm.websphere.uow; bundle-symbolic-name="com.ibm.ws.tx.embeddable"; bundle-version="1.0.23.cl180420181121-0300"; version="1.1.0"; uses:="javax.transaction"
+  Unresolved requirement: Import-Package: com.ibm.ws.ejbcontainer.osgi; version="[1.0.0,2.0.0)"
+    -> Export-Package: com.ibm.ws.ejbcontainer.osgi; bundle-symbolic-name="com.ibm.ws.ejbcontainer"; bundle-version="1.0.23.cl180420181121-0300"; version="1.0.9"; uses:="com.ibm.ejs.container,com.ibm.tx.jta,com.ibm.websphere.ras.annotation,com.ibm.ws.container.service.app.deploy,com.ibm.ws.container.service.metadata,com.ibm.ws.container.service.state,com.ibm.ws.ejbcontainer,com.ibm.ws.ejbcontainer.util,com.ibm.ws.exception,com.ibm.ws.managedobject,com.ibm.ws.metadata.ejb,com.ibm.ws.ras.instrument.annotation,com.ibm.ws.runtime.metadata,com.ibm.wsspi.adaptable.module,com.ibm.wsspi.ejbcontainer,javax.ejb,javax.transaction.xa,org.omg.PortableServer,org.osgi.framework"
+
+[1/3/19 18:12:57:758 UTC] 0000001b LogService-197-com.ibm.ws.cdi.web                            E CWWKE0702E: Could not resolve module: com.ibm.ws.cdi.web [197]
+  Unresolved requirement: Import-Package: javax.enterprise.inject.spi; version="[1.1.0,3.0.0)"
+
+[1/3/19 18:12:57:761 UTC] 0000001b LogService-198-com.ibm.ws.cdi.1.2.web                        E CWWKE0702E: Could not resolve module: com.ibm.ws.cdi.1.2.web [198]
+  Unresolved requirement: Import-Package: org.jboss.weld.el; version="[2.4.0,3.0.0)"
+    -> Export-Package: org.jboss.weld.el; bundle-symbolic-name="com.ibm.ws.org.jboss.weld.2.4.8"; bundle-version="1.0.23.cl180420181121-0300"; version="2.4.8.Final"; uses:="javax.el,org.jboss.weld.manager,org.jboss.weld.util.el"
+       com.ibm.ws.org.jboss.weld.2.4.8 [169]
+         Unresolved requirement: Import-Package: sun.misc; resolution:="optional"
+         Unresolved requirement: Import-Package: sun.reflect; resolution:="optional"
+         Unresolved requirement: Import-Package: javax.decorator; version="[1.1.0,2.0.0)"
+         Unresolved requirement: Import-Package: javax.transaction; version="1.1.0"; resolution:="optional"
+           -> Export-Package: javax.transaction; bundle-symbolic-name="com.ibm.websphere.javaee.transaction.1.2"; bundle-version="1.0.23.cl180420181121-0300"; version="1.2.0"; uses:="javax.enterprise.context,javax.enterprise.util,javax.interceptor,javax.transaction.xa"
+              com.ibm.websphere.javaee.transaction.1.2 [125]
+                Unresolved requirement: Import-Package: javax.enterprise.context
+         Unresolved requirement: Import-Package: javax.faces.context; resolution:="optional"
+           -> Export-Package: javax.faces.context; bundle-symbolic-name="com.ibm.websphere.javaee.jsf.2.2"; bundle-version="1.0.23.cl180420181121-0300"; version="1.0.16"; uses:="javax.el,javax.faces,javax.faces.application,javax.faces.component,javax.faces.event,javax.faces.lifecycle,javax.faces.render"
+              com.ibm.websphere.javaee.jsf.2.2 [162]
+                Unresolved requirement: Import-Package: javax.enterprise.context; version="[1.1.0,2.0.0)"
+         Unresolved requirement: Import-Package: javax.faces.application; resolution:="optional"
+           -> Export-Package: javax.faces.application; bundle-symbolic-name="com.ibm.websphere.javaee.jsf.2.2"; bundle-version="1.0.23.cl180420181121-0300"; version="1.0.16"; uses:="javax.el,javax.faces,javax.faces.component,javax.faces.component.behavior,javax.faces.context,javax.faces.convert,javax.faces.el,javax.faces.event,javax.faces.flow,javax.faces.validator,javax.faces.view,org.w3c.dom"
+  Unresolved requirement: Import-Package: org.jboss.weld.manager; version="[2.4.0,3.0.0)"
+    -> Export-Package: org.jboss.weld.manager; bundle-symbolic-name="com.ibm.ws.org.jboss.weld.2.4.8"; bundle-version="1.0.23.cl180420181121-0300"; version="2.4.8.Final"; uses:="javax.el,javax.enterprise.context.spi,javax.enterprise.inject,javax.enterprise.inject.spi,org.jboss.weld.annotated.enhanced,org.jboss.weld.annotated.slim,org.jboss.weld.bean,org.jboss.weld.bean.proxy,org.jboss.weld.bootstrap.api,org.jboss.weld.bootstrap.enablement,org.jboss.weld.bootstrap.events,org.jboss.weld.bootstrap.spi,org.jboss.weld.construction.api,org.jboss.weld.context,org.jboss.weld.ejb,org.jboss.weld.ejb.spi,org.jboss.weld.event,org.jboss.weld.events,org.jboss.weld.inject,org.jboss.weld.injection.attributes,org.jboss.weld.injection.producer,org.jboss.weld.interceptor.reader,org.jboss.weld.interceptor.spi.model,org.jboss.weld.manager.api,org.jboss.weld.resolution,org.jboss.weld.serialization.spi,org.jboss.weld.util"
+
+[1/3/19 18:12:57:762 UTC] 0000001b LogService-199-com.ibm.ws.microprofile.rest.client.ssl       E CWWKE0702E: Could not resolve module: com.ibm.ws.microprofile.rest.client.ssl [199]
+  Unresolved requirement: Import-Package: com.ibm.ws.microprofile.rest.client.component; version="[1.0.0,2.0.0)"
+    -> Export-Package: com.ibm.ws.microprofile.rest.client.component; bundle-symbolic-name="com.ibm.ws.org.apache.cxf.cxf.rt.rs.mp.client.3.2"; bundle-version="1.0.23.cl180420181121-0300"; version="1.0.0"; uses:="org.apache.cxf.microprofile.client.proxy"
+       com.ibm.ws.org.apache.cxf.cxf.rt.rs.mp.client.3.2 [191]
+         Unresolved requirement: Import-Package: javax.enterprise.context; version="[1.1.0,2.1.0)"
+  Unresolved requirement: Import-Package: org.apache.cxf.microprofile.client.proxy; version="[3.2.0,4.0.0)"
+    -> Export-Package: org.apache.cxf.microprofile.client.proxy; bundle-symbolic-name="com.ibm.ws.org.apache.cxf.cxf.rt.rs.mp.client.3.2"; bundle-version="1.0.23.cl180420181121-0300"; version="3.2.6"; uses:="javax.ws.rs.client,javax.ws.rs.core,org.apache.cxf.interceptor,org.apache.cxf.jaxrs.client,org.apache.cxf.jaxrs.model,org.apache.cxf.message,org.apache.cxf.phase,org.eclipse.microprofile.rest.client.ext"
+
+[1/3/19 18:12:57:765 UTC] 0000001b LogService-200-com.ibm.ws.cdi.security                       E CWWKE0702E: Could not resolve module: com.ibm.ws.cdi.security [200]
+  Unresolved requirement: Import-Package: com.ibm.ws.cdi.internal.interfaces; version="[1.0.0,2.0.0)"
+    -> Export-Package: com.ibm.ws.cdi.internal.interfaces; bundle-symbolic-name="com.ibm.ws.cdi.internal"; bundle-version="1.0.23.cl180420181121-0300"; version="1.0.0"; uses:="com.ibm.websphere.csi,com.ibm.websphere.ras.annotation,com.ibm.ws.cdi,com.ibm.ws.cdi.extension,com.ibm.ws.ras.instrument.annotation,com.ibm.ws.resource,com.ibm.ws.runtime.metadata,com.ibm.wsspi.injectionengine,com.ibm.wsspi.kernel.service.utils,javax.ejb,javax.enterprise.inject.spi,javax.transaction,org.jboss.weld.bootstrap,org.jboss.weld.bootstrap.spi,org.jboss.weld.ejb.spi,org.jboss.weld.injection.spi,org.jboss.weld.security.spi,org.jboss.weld.serialization.spi,org.osgi.framework"
+       com.ibm.ws.cdi.internal [171]
+         Unresolved requirement: Import-Package: javax.decorator; version="[1.1.0,3.0.0)"
+
+[1/3/19 18:12:57:795 UTC] 0000001b LogService-204-com.ibm.ws.microprofile.rest.client.cdi       E CWWKE0702E: Could not resolve module: com.ibm.ws.microprofile.rest.client.cdi [204]
+  Unresolved requirement: Import-Package: org.apache.cxf.microprofile.client; version="[3.1.0,4.0.0)"
+    -> Export-Package: org.apache.cxf.microprofile.client; bundle-symbolic-name="com.ibm.ws.org.apache.cxf.cxf.rt.rs.mp.client.3.2"; bundle-version="1.0.23.cl180420181121-0300"; version="3.2.6"; uses:="javax.annotation,javax.enterprise.inject,javax.ws.rs.client,javax.ws.rs.core,org.apache.cxf,org.apache.cxf.endpoint,org.apache.cxf.jaxrs.client,org.apache.cxf.jaxrs.impl,org.apache.cxf.jaxrs.model,org.apache.cxf.jaxrs.provider,org.apache.cxf.message,org.eclipse.microprofile.rest.client,org.eclipse.microprofile.rest.client.ext"
+       com.ibm.ws.org.apache.cxf.cxf.rt.rs.mp.client.3.2 [191]
+         Unresolved requirement: Import-Package: javax.enterprise.context; version="[1.1.0,2.1.0)"
+  Unresolved requirement: Import-Package: org.apache.cxf.microprofile.client.cdi; version="[3.1.0,4.0.0)"
+    -> Export-Package: org.apache.cxf.microprofile.client.cdi; bundle-symbolic-name="com.ibm.ws.org.apache.cxf.cxf.rt.rs.mp.client.3.2"; bundle-version="1.0.23.cl180420181121-0300"; version="3.2.6"
+
+[1/3/19 18:12:57:797 UTC] 0000001b LogService-205-com.ibm.ws.cdi.jndi                           E CWWKE0702E: Could not resolve module: com.ibm.ws.cdi.jndi [205]
+  Unresolved requirement: Import-Package: javax.enterprise.inject.spi; version="[1.1.0,3.0.0)"
+
+[1/3/19 18:12:57:808 UTC] 0000001b LogService-207-com.ibm.ws.microprofile.config.1.2.cdi        E CWWKE0702E: Could not resolve module: com.ibm.ws.microprofile.config.1.2.cdi [207]
+  Unresolved requirement: Import-Package: javax.enterprise.context; version="[1.1.0,3.0.0)"
+
+[1/3/19 18:12:58:185 UTC] 0000001b LogService-211-com.ibm.ws.cdi.1.2.ejb                        E CWWKE0702E: Could not resolve module: com.ibm.ws.cdi.1.2.ejb [211]
+  Unresolved requirement: Import-Package: com.ibm.ws.cdi.internal.archive.liberty; version="[1.0.0,2.0.0)"
+    -> Export-Package: com.ibm.ws.cdi.internal.archive.liberty; bundle-symbolic-name="com.ibm.ws.cdi.internal"; bundle-version="1.0.23.cl180420181121-0300"; version="1.0.0"; uses:="com.ibm.websphere.csi,com.ibm.websphere.ras.annotation,com.ibm.ws.cdi,com.ibm.ws.cdi.internal.archive,com.ibm.ws.cdi.internal.interfaces,com.ibm.ws.container.service.app.deploy,com.ibm.ws.container.service.app.deploy.extended,com.ibm.ws.ras.instrument.annotation,com.ibm.ws.runtime.metadata,com.ibm.wsspi.adaptable.module,com.ibm.wsspi.artifact.factory,org.osgi.framework"
+       com.ibm.ws.cdi.internal [171]
+         Unresolved requirement: Import-Package: javax.decorator; version="[1.1.0,3.0.0)"
+  Unresolved requirement: Import-Package: com.ibm.ws.cdi.ejb.impl; version="[1.0.0,2.0.0)"
+    -> Export-Package: com.ibm.ws.cdi.ejb.impl; bundle-symbolic-name="com.ibm.ws.cdi.ejb.common"; bundle-version="1.0.23.cl180420181121-0300"; version="1.0.0"; uses:="com.ibm.websphere.csi,com.ibm.websphere.ras.annotation,com.ibm.ws.cdi,com.ibm.ws.cdi.internal.interfaces,com.ibm.ws.ejbcontainer,com.ibm.ws.ras.instrument.annotation,javax.annotation,javax.ejb,javax.enterprise.inject.spi,javax.interceptor,org.jboss.weld.ejb.api,org.jboss.weld.ejb.spi,org.jboss.weld.serialization.spi"
+       com.ibm.ws.cdi.ejb.common [212]
+         Unresolved requirement: Import-Package: javax.enterprise.context.spi; version="[1.1.0,3.0.0)"
+  Unresolved requirement: Import-Package: com.ibm.ws.cdi; version="[1.0.0,2.0.0)"
+    -> Export-Package: com.ibm.ws.cdi; bundle-symbolic-name="com.ibm.ws.cdi.interfaces"; bundle-version="1.0.23.cl180420181121-0300"; version="1.0.0"; uses:="com.ibm.websphere.ras.annotation,com.ibm.ws.exception,com.ibm.ws.ras.instrument.annotation,com.ibm.ws.runtime.metadata,com.ibm.wsspi.adaptable.module,javax.enterprise.inject.spi"
+       com.ibm.ws.cdi.interfaces [135]
+         Unresolved requirement: Import-Package: javax.enterprise.inject.spi; version="[1.1.0,3.0.0)"
+  Unresolved requirement: Import-Package: com.ibm.ws.cdi.internal.interfaces; version="[1.0.0,2.0.0)"
+    -> Export-Package: com.ibm.ws.cdi.internal.interfaces; bundle-symbolic-name="com.ibm.ws.cdi.internal"; bundle-version="1.0.23.cl180420181121-0300"; version="1.0.0"; uses:="com.ibm.websphere.csi,com.ibm.websphere.ras.annotation,com.ibm.ws.cdi,com.ibm.ws.cdi.extension,com.ibm.ws.ras.instrument.annotation,com.ibm.ws.resource,com.ibm.ws.runtime.metadata,com.ibm.wsspi.injectionengine,com.ibm.wsspi.kernel.service.utils,javax.ejb,javax.enterprise.inject.spi,javax.transaction,org.jboss.weld.bootstrap,org.jboss.weld.bootstrap.spi,org.jboss.weld.ejb.spi,org.jboss.weld.injection.spi,org.jboss.weld.security.spi,org.jboss.weld.serialization.spi,org.osgi.framework"
+
+[1/3/19 18:12:58:187 UTC] 0000001b LogService-212-com.ibm.ws.cdi.ejb.common                     E CWWKE0702E: Could not resolve module: com.ibm.ws.cdi.ejb.common [212]
+  Unresolved requirement: Import-Package: javax.enterprise.context.spi; version="[1.1.0,3.0.0)"
+
+[1/3/19 18:12:58:192 UTC] 0000001b LogService-213-com.ibm.ws.ejbcontainer.war                   E CWWKE0702E: Could not resolve module: com.ibm.ws.ejbcontainer.war [213]
+  Unresolved requirement: Import-Package: com.ibm.ws.ejbcontainer.osgi; version="[1.0.0,2.0.0)"
+    -> Export-Package: com.ibm.ws.ejbcontainer.osgi; bundle-symbolic-name="com.ibm.ws.ejbcontainer"; bundle-version="1.0.23.cl180420181121-0300"; version="1.0.9"; uses:="com.ibm.ejs.container,com.ibm.tx.jta,com.ibm.websphere.ras.annotation,com.ibm.ws.container.service.app.deploy,com.ibm.ws.container.service.metadata,com.ibm.ws.container.service.state,com.ibm.ws.ejbcontainer,com.ibm.ws.ejbcontainer.util,com.ibm.ws.exception,com.ibm.ws.managedobject,com.ibm.ws.metadata.ejb,com.ibm.ws.ras.instrument.annotation,com.ibm.ws.runtime.metadata,com.ibm.wsspi.adaptable.module,com.ibm.wsspi.ejbcontainer,javax.ejb,javax.transaction.xa,org.omg.PortableServer,org.osgi.framework"
+       com.ibm.ws.ejbcontainer [138]
+         Unresolved requirement: Import-Package: com.ibm.tx.jta.embeddable; version="[1.1.0,2.0.0)"
+           -> Export-Package: com.ibm.tx.jta.embeddable; bundle-symbolic-name="com.ibm.ws.tx.embeddable"; bundle-version="1.0.23.cl180420181121-0300"; version="1.1.0"; uses:="com.ibm.tx.jta,com.ibm.tx.jta.embeddable.impl,com.ibm.ws.LocalTransaction,com.ibm.ws.Transaction,com.ibm.ws.tx.embeddable,javax.naming,javax.transaction"
+              com.ibm.ws.tx.embeddable [133]
+                Unresolved requirement: Import-Package: com.ibm.tx.config; version="[1.1.0,2.0.0)"
+                  -> Export-Package: com.ibm.tx.config; bundle-symbolic-name="com.ibm.tx.util"; bundle-version="1.0.23.cl180420181121-0300"; version="1.1.0"; uses:="com.ibm.tx.util.alarm"
+                     com.ibm.tx.util [132]
+                       Unresolved requirement: Import-Package: javax.transaction; version="1.1.0"
+                         -> Export-Package: javax.transaction; bundle-symbolic-name="com.ibm.websphere.javaee.transaction.1.2"; bundle-version="1.0.23.cl180420181121-0300"; version="1.2.0"; uses:="javax.enterprise.context,javax.enterprise.util,javax.interceptor,javax.transaction.xa"
+                            com.ibm.websphere.javaee.transaction.1.2 [125]
+                              Unresolved requirement: Import-Package: javax.enterprise.context
+                Unresolved requirement: Import-Package: com.ibm.tx.jta; version="[2.1.0,3.0.0)"
+                  -> Export-Package: com.ibm.tx.jta; bundle-symbolic-name="com.ibm.tx.jta"; bundle-version="1.0.23.cl180420181121-0300"; version="2.1.0"; uses:="javax.resource.spi,javax.resource.spi.work,javax.transaction,javax.transaction.xa"
+                     com.ibm.tx.jta [131]
+                       Unresolved requirement: Import-Package: javax.resource.spi.work; version="[1.6.0,2.0.0)"
+                         -> Export-Package: javax.resource.spi.work; bundle-symbolic-name="com.ibm.websphere.javaee.connector.1.7"; bundle-version="1.0.23.cl180420181121-0300"; version="1.7.0"; uses:="javax.resource,javax.resource.spi,javax.security.auth,javax.security.auth.callback,javax.transaction.xa"
+                            com.ibm.websphere.javaee.connector.1.7 [126]
+                              Unresolved requirement: Import-Package: javax.transaction
+                                -> Export-Package: javax.transaction; bundle-symbolic-name="com.ibm.websphere.javaee.transaction.1.2"; bundle-version="1.0.23.cl180420181121-0300"; version="1.2.0"; uses:="javax.enterprise.context,javax.enterprise.util,javax.interceptor,javax.transaction.xa"
+                       Unresolved requirement: Import-Package: com.ibm.tx; version="[1.0.0,2.0.0)"
+                         -> Export-Package: com.ibm.tx; bundle-symbolic-name="com.ibm.tx.util"; bundle-version="1.0.23.cl180420181121-0300"; version="1.0.0"
+                       Unresolved requirement: Import-Package: com.ibm.tx.config; version="[1.1.0,2.0.0)"
+                         -> Export-Package: com.ibm.tx.config; bundle-symbolic-name="com.ibm.tx.util"; bundle-version="1.0.23.cl180420181121-0300"; version="1.1.0"; uses:="com.ibm.tx.util.alarm"
+                       Unresolved requirement: Import-Package: com.ibm.ws.recoverylog.spi; version="[1.2.0,2.0.0)"
+                         -> Export-Package: com.ibm.ws.recoverylog.spi; bundle-symbolic-name="com.ibm.ws.recoverylog"; bundle-version="1.0.23.cl180420181121-0300"; version="1.2.0"; uses:="com.ibm.tx.util.alarm,com.ibm.websphere.ras.annotation,com.ibm.ws.ras.instrument.annotation,com.ibm.wsspi.resource,org.osgi.service.component"
+                            com.ibm.ws.recoverylog [134]
+                              Unresolved requirement: Import-Package: com.ibm.tx.util; version="[2.0.0,3.0.0)"
+                                -> Export-Package: com.ibm.tx.util; bundle-symbolic-name="com.ibm.tx.util"; bundle-version="1.0.23.cl180420181121-0300"; version="2.0.0"; uses:="javax.transaction"
+                              Unresolved requirement: Import-Package: com.ibm.tx.util.logging; version="[2.0.0,3.0.0)"
+                                -> Export-Package: com.ibm.tx.util.logging; bundle-symbolic-name="com.ibm.tx.util"; bundle-version="1.0.23.cl180420181121-0300"; version="2.0.0"
+                              Unresolved requirement: Import-Package: com.ibm.tx.util.alarm; version="[1.0.0,2.0.0)"
+                                -> Export-Package: com.ibm.tx.util.alarm; bundle-symbolic-name="com.ibm.tx.util"; bundle-version="1.0.23.cl180420181121-0300"; version="1.0.0"
+                       Unresolved requirement: Import-Package: com.ibm.tx.util; version="[2.0.0,3.0.0)"
+                         -> Export-Package: com.ibm.tx.util; bundle-symbolic-name="com.ibm.tx.util"; bundle-version="1.0.23.cl180420181121-0300"; version="2.0.0"; uses:="javax.transaction"
+                       Unresolved requirement: Import-Package: com.ibm.tx.util.logging; version="[2.0.0,3.0.0)"
+                         -> Export-Package: com.ibm.tx.util.logging; bundle-symbolic-name="com.ibm.tx.util"; bundle-version="1.0.23.cl180420181121-0300"; version="2.0.0"
+                       Unresolved requirement: Import-Package: javax.resource.spi; version="[1.6.0,2.0.0)"
+                         -> Export-Package: javax.resource.spi; bundle-symbolic-name="com.ibm.websphere.javaee.connector.1.7"; bundle-version="1.0.23.cl180420181121-0300"; version="1.7.0"; uses:="javax.resource,javax.resource.spi.endpoint,javax.resource.spi.work,javax.security.auth,javax.transaction,javax.transaction.xa"
+                       Unresolved requirement: Import-Package: com.ibm.tx.util.alarm; version="[1.0.0,2.0.0)"
+                         -> Export-Package: com.ibm.tx.util.alarm; bundle-symbolic-name="com.ibm.tx.util"; bundle-version="1.0.23.cl180420181121-0300"; version="1.0.0"
+         Unresolved requirement: Import-Package: com.ibm.tx.jta; version="[2.1.0,3.0.0)"
+           -> Export-Package: com.ibm.tx.jta; bundle-symbolic-name="com.ibm.tx.jta"; bundle-version="1.0.23.cl180420181121-0300"; version="2.1.0"; uses:="javax.resource.spi,javax.resource.spi.work,javax.transaction,javax.transaction.xa"
+         Unresolved requirement: Import-Package: com.ibm.websphere.uow; version="[1.1.0,2.0.0)"
+           -> Export-Package: com.ibm.websphere.uow; bundle-symbolic-name="com.ibm.ws.tx.embeddable"; bundle-version="1.0.23.cl180420181121-0300"; version="1.1.0"; uses:="javax.transaction"
+
+[1/3/19 18:12:58:207 UTC] 0000001b LogService-216-com.ibm.ws.transaction.context                E CWWKE0702E: Could not resolve module: com.ibm.ws.transaction.context [216]
+  Unresolved requirement: Import-Package: com.ibm.tx.jta.embeddable; version="[1.1.0,2.0.0)"
+    -> Export-Package: com.ibm.tx.jta.embeddable; bundle-symbolic-name="com.ibm.ws.tx.embeddable"; bundle-version="1.0.23.cl180420181121-0300"; version="1.1.0"; uses:="com.ibm.tx.jta,com.ibm.tx.jta.embeddable.impl,com.ibm.ws.LocalTransaction,com.ibm.ws.Transaction,com.ibm.ws.tx.embeddable,javax.naming,javax.transaction"
+       com.ibm.ws.tx.embeddable [133]
+         Unresolved requirement: Import-Package: com.ibm.tx.config; version="[1.1.0,2.0.0)"
+           -> Export-Package: com.ibm.tx.config; bundle-symbolic-name="com.ibm.tx.util"; bundle-version="1.0.23.cl180420181121-0300"; version="1.1.0"; uses:="com.ibm.tx.util.alarm"
+              com.ibm.tx.util [132]
+                Unresolved requirement: Import-Package: javax.transaction; version="1.1.0"
+                  -> Export-Package: javax.transaction; bundle-symbolic-name="com.ibm.websphere.javaee.transaction.1.2"; bundle-version="1.0.23.cl180420181121-0300"; version="1.2.0"; uses:="javax.enterprise.context,javax.enterprise.util,javax.interceptor,javax.transaction.xa"
+                     com.ibm.websphere.javaee.transaction.1.2 [125]
+                       Unresolved requirement: Import-Package: javax.enterprise.context
+         Unresolved requirement: Import-Package: com.ibm.tx.jta; version="[2.1.0,3.0.0)"
+           -> Export-Package: com.ibm.tx.jta; bundle-symbolic-name="com.ibm.tx.jta"; bundle-version="1.0.23.cl180420181121-0300"; version="2.1.0"; uses:="javax.resource.spi,javax.resource.spi.work,javax.transaction,javax.transaction.xa"
+              com.ibm.tx.jta [131]
+                Unresolved requirement: Import-Package: javax.resource.spi.work; version="[1.6.0,2.0.0)"
+                  -> Export-Package: javax.resource.spi.work; bundle-symbolic-name="com.ibm.websphere.javaee.connector.1.7"; bundle-version="1.0.23.cl180420181121-0300"; version="1.7.0"; uses:="javax.resource,javax.resource.spi,javax.security.auth,javax.security.auth.callback,javax.transaction.xa"
+                     com.ibm.websphere.javaee.connector.1.7 [126]
+                       Unresolved requirement: Import-Package: javax.transaction
+                         -> Export-Package: javax.transaction; bundle-symbolic-name="com.ibm.websphere.javaee.transaction.1.2"; bundle-version="1.0.23.cl180420181121-0300"; version="1.2.0"; uses:="javax.enterprise.context,javax.enterprise.util,javax.interceptor,javax.transaction.xa"
+                Unresolved requirement: Import-Package: com.ibm.tx; version="[1.0.0,2.0.0)"
+                  -> Export-Package: com.ibm.tx; bundle-symbolic-name="com.ibm.tx.util"; bundle-version="1.0.23.cl180420181121-0300"; version="1.0.0"
+                Unresolved requirement: Import-Package: com.ibm.tx.config; version="[1.1.0,2.0.0)"
+                  -> Export-Package: com.ibm.tx.config; bundle-symbolic-name="com.ibm.tx.util"; bundle-version="1.0.23.cl180420181121-0300"; version="1.1.0"; uses:="com.ibm.tx.util.alarm"
+                Unresolved requirement: Import-Package: com.ibm.ws.recoverylog.spi; version="[1.2.0,2.0.0)"
+                  -> Export-Package: com.ibm.ws.recoverylog.spi; bundle-symbolic-name="com.ibm.ws.recoverylog"; bundle-version="1.0.23.cl180420181121-0300"; version="1.2.0"; uses:="com.ibm.tx.util.alarm,com.ibm.websphere.ras.annotation,com.ibm.ws.ras.instrument.annotation,com.ibm.wsspi.resource,org.osgi.service.component"
+                     com.ibm.ws.recoverylog [134]
+                       Unresolved requirement: Import-Package: com.ibm.tx.util; version="[2.0.0,3.0.0)"
+                         -> Export-Package: com.ibm.tx.util; bundle-symbolic-name="com.ibm.tx.util"; bundle-version="1.0.23.cl180420181121-0300"; version="2.0.0"; uses:="javax.transaction"
+                       Unresolved requirement: Import-Package: com.ibm.tx.util.logging; version="[2.0.0,3.0.0)"
+                         -> Export-Package: com.ibm.tx.util.logging; bundle-symbolic-name="com.ibm.tx.util"; bundle-version="1.0.23.cl180420181121-0300"; version="2.0.0"
+                       Unresolved requirement: Import-Package: com.ibm.tx.util.alarm; version="[1.0.0,2.0.0)"
+                         -> Export-Package: com.ibm.tx.util.alarm; bundle-symbolic-name="com.ibm.tx.util"; bundle-version="1.0.23.cl180420181121-0300"; version="1.0.0"
+                Unresolved requirement: Import-Package: com.ibm.tx.util; version="[2.0.0,3.0.0)"
+                  -> Export-Package: com.ibm.tx.util; bundle-symbolic-name="com.ibm.tx.util"; bundle-version="1.0.23.cl180420181121-0300"; version="2.0.0"; uses:="javax.transaction"
+                Unresolved requirement: Import-Package: com.ibm.tx.util.logging; version="[2.0.0,3.0.0)"
+                  -> Export-Package: com.ibm.tx.util.logging; bundle-symbolic-name="com.ibm.tx.util"; bundle-version="1.0.23.cl180420181121-0300"; version="2.0.0"
+                Unresolved requirement: Import-Package: javax.resource.spi; version="[1.6.0,2.0.0)"
+                  -> Export-Package: javax.resource.spi; bundle-symbolic-name="com.ibm.websphere.javaee.connector.1.7"; bundle-version="1.0.23.cl180420181121-0300"; version="1.7.0"; uses:="javax.resource,javax.resource.spi.endpoint,javax.resource.spi.work,javax.security.auth,javax.transaction,javax.transaction.xa"
+                Unresolved requirement: Import-Package: com.ibm.tx.util.alarm; version="[1.0.0,2.0.0)"
+                  -> Export-Package: com.ibm.tx.util.alarm; bundle-symbolic-name="com.ibm.tx.util"; bundle-version="1.0.23.cl180420181121-0300"; version="1.0.0"
+  Unresolved requirement: Import-Package: com.ibm.ws.Transaction; version="[1.1.0,2.0.0)"
+    -> Export-Package: com.ibm.ws.Transaction; bundle-symbolic-name="com.ibm.tx.jta"; bundle-version="1.0.23.cl180420181121-0300"; version="1.1.0"; uses:="com.ibm.tx,com.ibm.wsspi.tx,javax.transaction.xa"
+  Unresolved requirement: Import-Package: com.ibm.ws.LocalTransaction; version="[2.0.0,3.0.0)"
+    -> Export-Package: com.ibm.ws.LocalTransaction; bundle-symbolic-name="com.ibm.tx.ltc"; bundle-version="1.0.23.cl180420181121-0300"; version="2.0.0"; uses:="com.ibm.tx.jta,com.ibm.ws.uow,javax.transaction"
+       com.ibm.tx.ltc [136]
+         Unresolved requirement: Import-Package: com.ibm.ws.Transaction
+           -> Export-Package: com.ibm.ws.Transaction; bundle-symbolic-name="com.ibm.tx.jta"; bundle-version="1.0.23.cl180420181121-0300"; version="1.1.0"; uses:="com.ibm.tx,com.ibm.wsspi.tx,javax.transaction.xa"
+  Unresolved requirement: Import-Package: com.ibm.tx.jta; version="[2.1.0,3.0.0)"
+    -> Export-Package: com.ibm.tx.jta; bundle-symbolic-name="com.ibm.tx.jta"; bundle-version="1.0.23.cl180420181121-0300"; version="2.1.0"; uses:="javax.resource.spi,javax.resource.spi.work,javax.transaction,javax.transaction.xa"
+
+[1/3/19 18:12:58:212 UTC] 0000001b LogService-217-com.ibm.ws.jca.resourcedefinition.jms.2.0     E CWWKE0702E: Could not resolve module: com.ibm.ws.jca.resourcedefinition.jms.2.0 [217]
+  Unresolved requirement: Import-Package: com.ibm.ws.jca.cm; version="[1.0.0,2.0.0)"
+    -> Export-Package: com.ibm.ws.jca.cm; bundle-symbolic-name="com.ibm.ws.jca.cm"; bundle-version="1.0.23.cl180420181121-0300"; version="1.0.16"; uses:="com.ibm.tx.jta,com.ibm.websphere.ras,com.ibm.websphere.ras.annotation,com.ibm.ws.classloading,com.ibm.ws.resource,com.ibm.ws.tx.embeddable,com.ibm.wsspi.kernel.service.location,com.ibm.wsspi.resource,javax.resource,javax.resource.spi,javax.transaction.xa,org.osgi.framework"
+       com.ibm.ws.jca.cm [142]
+         Unresolved requirement: Import-Package: com.ibm.ws.LocalTransaction; version="[2.0.0,3.0.0)"
+           -> Export-Package: com.ibm.ws.LocalTransaction; bundle-symbolic-name="com.ibm.tx.ltc"; bundle-version="1.0.23.cl180420181121-0300"; version="2.0.0"; uses:="com.ibm.tx.jta,com.ibm.ws.uow,javax.transaction"
+              com.ibm.tx.ltc [136]
+                Unresolved requirement: Import-Package: com.ibm.ws.Transaction
+                  -> Export-Package: com.ibm.ws.Transaction; bundle-symbolic-name="com.ibm.tx.jta"; bundle-version="1.0.23.cl180420181121-0300"; version="1.1.0"; uses:="com.ibm.tx,com.ibm.wsspi.tx,javax.transaction.xa"
+                     com.ibm.tx.jta [131]
+                       Unresolved requirement: Import-Package: javax.resource.spi.work; version="[1.6.0,2.0.0)"
+                         -> Export-Package: javax.resource.spi.work; bundle-symbolic-name="com.ibm.websphere.javaee.connector.1.7"; bundle-version="1.0.23.cl180420181121-0300"; version="1.7.0"; uses:="javax.resource,javax.resource.spi,javax.security.auth,javax.security.auth.callback,javax.transaction.xa"
+                            com.ibm.websphere.javaee.connector.1.7 [126]
+                              Unresolved requirement: Import-Package: javax.transaction
+                                -> Export-Package: javax.transaction; bundle-symbolic-name="com.ibm.websphere.javaee.transaction.1.2"; bundle-version="1.0.23.cl180420181121-0300"; version="1.2.0"; uses:="javax.enterprise.context,javax.enterprise.util,javax.interceptor,javax.transaction.xa"
+                                   com.ibm.websphere.javaee.transaction.1.2 [125]
+                                     Unresolved requirement: Import-Package: javax.enterprise.context
+                       Unresolved requirement: Import-Package: com.ibm.tx; version="[1.0.0,2.0.0)"
+                         -> Export-Package: com.ibm.tx; bundle-symbolic-name="com.ibm.tx.util"; bundle-version="1.0.23.cl180420181121-0300"; version="1.0.0"
+                            com.ibm.tx.util [132]
+                              Unresolved requirement: Import-Package: javax.transaction; version="1.1.0"
+                                -> Export-Package: javax.transaction; bundle-symbolic-name="com.ibm.websphere.javaee.transaction.1.2"; bundle-version="1.0.23.cl180420181121-0300"; version="1.2.0"; uses:="javax.enterprise.context,javax.enterprise.util,javax.interceptor,javax.transaction.xa"
+                       Unresolved requirement: Import-Package: com.ibm.tx.config; version="[1.1.0,2.0.0)"
+                         -> Export-Package: com.ibm.tx.config; bundle-symbolic-name="com.ibm.tx.util"; bundle-version="1.0.23.cl180420181121-0300"; version="1.1.0"; uses:="com.ibm.tx.util.alarm"
+                       Unresolved requirement: Import-Package: com.ibm.ws.recoverylog.spi; version="[1.2.0,2.0.0)"
+                         -> Export-Package: com.ibm.ws.recoverylog.spi; bundle-symbolic-name="com.ibm.ws.recoverylog"; bundle-version="1.0.23.cl180420181121-0300"; version="1.2.0"; uses:="com.ibm.tx.util.alarm,com.ibm.websphere.ras.annotation,com.ibm.ws.ras.instrument.annotation,com.ibm.wsspi.resource,org.osgi.service.component"
+                            com.ibm.ws.recoverylog [134]
+                              Unresolved requirement: Import-Package: com.ibm.tx.util; version="[2.0.0,3.0.0)"
+                                -> Export-Package: com.ibm.tx.util; bundle-symbolic-name="com.ibm.tx.util"; bundle-version="1.0.23.cl180420181121-0300"; version="2.0.0"; uses:="javax.transaction"
+                              Unresolved requirement: Import-Package: com.ibm.tx.util.logging; version="[2.0.0,3.0.0)"
+                                -> Export-Package: com.ibm.tx.util.logging; bundle-symbolic-name="com.ibm.tx.util"; bundle-version="1.0.23.cl180420181121-0300"; version="2.0.0"
+                              Unresolved requirement: Import-Package: com.ibm.tx.util.alarm; version="[1.0.0,2.0.0)"
+                                -> Export-Package: com.ibm.tx.util.alarm; bundle-symbolic-name="com.ibm.tx.util"; bundle-version="1.0.23.cl180420181121-0300"; version="1.0.0"
+                       Unresolved requirement: Import-Package: com.ibm.tx.util; version="[2.0.0,3.0.0)"
+                         -> Export-Package: com.ibm.tx.util; bundle-symbolic-name="com.ibm.tx.util"; bundle-version="1.0.23.cl180420181121-0300"; version="2.0.0"; uses:="javax.transaction"
+                       Unresolved requirement: Import-Package: com.ibm.tx.util.logging; version="[2.0.0,3.0.0)"
+                         -> Export-Package: com.ibm.tx.util.logging; bundle-symbolic-name="com.ibm.tx.util"; bundle-version="1.0.23.cl180420181121-0300"; version="2.0.0"
+                       Unresolved requirement: Import-Package: javax.resource.spi; version="[1.6.0,2.0.0)"
+                         -> Export-Package: javax.resource.spi; bundle-symbolic-name="com.ibm.websphere.javaee.connector.1.7"; bundle-version="1.0.23.cl180420181121-0300"; version="1.7.0"; uses:="javax.resource,javax.resource.spi.endpoint,javax.resource.spi.work,javax.security.auth,javax.transaction,javax.transaction.xa"
+                       Unresolved requirement: Import-Package: com.ibm.tx.util.alarm; version="[1.0.0,2.0.0)"
+                         -> Export-Package: com.ibm.tx.util.alarm; bundle-symbolic-name="com.ibm.tx.util"; bundle-version="1.0.23.cl180420181121-0300"; version="1.0.0"
+         Unresolved requirement: Import-Package: com.ibm.ws.Transaction; version="[1.1.0,2.0.0)"
+           -> Export-Package: com.ibm.ws.Transaction; bundle-symbolic-name="com.ibm.tx.jta"; bundle-version="1.0.23.cl180420181121-0300"; version="1.1.0"; uses:="com.ibm.tx,com.ibm.wsspi.tx,javax.transaction.xa"
+         Unresolved requirement: Import-Package: com.ibm.tx.jta; version="[2.1.0,3.0.0)"
+           -> Export-Package: com.ibm.tx.jta; bundle-symbolic-name="com.ibm.tx.jta"; bundle-version="1.0.23.cl180420181121-0300"; version="2.1.0"; uses:="javax.resource.spi,javax.resource.spi.work,javax.transaction,javax.transaction.xa"
+         Unresolved requirement: Import-Package: com.ibm.tx.jta.embeddable; version="[1.1.0,2.0.0)"
+           -> Export-Package: com.ibm.tx.jta.embeddable; bundle-symbolic-name="com.ibm.ws.tx.embeddable"; bundle-version="1.0.23.cl180420181121-0300"; version="1.1.0"; uses:="com.ibm.tx.jta,com.ibm.tx.jta.embeddable.impl,com.ibm.ws.LocalTransaction,com.ibm.ws.Transaction,com.ibm.ws.tx.embeddable,javax.naming,javax.transaction"
+              com.ibm.ws.tx.embeddable [133]
+                Unresolved requirement: Import-Package: com.ibm.tx.config; version="[1.1.0,2.0.0)"
+                  -> Export-Package: com.ibm.tx.config; bundle-symbolic-name="com.ibm.tx.util"; bundle-version="1.0.23.cl180420181121-0300"; version="1.1.0"; uses:="com.ibm.tx.util.alarm"
+                Unresolved requirement: Import-Package: com.ibm.tx.jta; version="[2.1.0,3.0.0)"
+                  -> Export-Package: com.ibm.tx.jta; bundle-symbolic-name="com.ibm.tx.jta"; bundle-version="1.0.23.cl180420181121-0300"; version="2.1.0"; uses:="javax.resource.spi,javax.resource.spi.work,javax.transaction,javax.transaction.xa"
+  Unresolved requirement: Import-Package: com.ibm.ws.jca.rar; version="[1.0.0,2.0.0)"
+    -> Export-Package: com.ibm.ws.jca.rar; bundle-symbolic-name="com.ibm.ws.jca"; bundle-version="1.0.23.cl180420181121-0300"; version="1.0.16"; uses:="com.ibm.wsspi.classloading"
+       com.ibm.ws.jca [144]
+         Unresolved requirement: Import-Package: javax.resource.spi.endpoint; version="[1.6.0,2.0.0)"
+           -> Export-Package: javax.resource.spi.endpoint; bundle-symbolic-name="com.ibm.websphere.javaee.connector.1.7"; bundle-version="1.0.23.cl180420181121-0300"; version="1.7.0"; uses:="javax.resource,javax.resource.spi,javax.transaction.xa"
+  Unresolved requirement: Import-Package: com.ibm.ws.jca.service; version="[1.0.0,2.0.0)"
+    -> Export-Package: com.ibm.ws.jca.service; bundle-symbolic-name="com.ibm.ws.jca"; bundle-version="1.0.23.cl180420181121-0300"; version="1.0.0"; uses:="com.ibm.tx.jta,com.ibm.websphere.csi,com.ibm.websphere.ras.annotation,com.ibm.ws.jca.cm,com.ibm.ws.jca.osgi,com.ibm.ws.ras.instrument.annotation,com.ibm.ws.tx.embeddable,com.ibm.ws.tx.rrs,com.ibm.wsspi.application.lifecycle,com.ibm.wsspi.kernel.service.utils,com.ibm.wsspi.resource,javax.resource,javax.resource.spi,javax.resource.spi.endpoint,javax.transaction.xa,org.osgi.framework,org.osgi.service.component"
+
+[1/3/19 18:12:58:214 UTC] 0000001b LogService-218-com.ibm.ws.cdi.transaction                    E CWWKE0702E: Could not resolve module: com.ibm.ws.cdi.transaction [218]
+  Unresolved requirement: Import-Package: com.ibm.ws.cdi.internal.interfaces; version="[1.0.0,2.0.0)"
+    -> Export-Package: com.ibm.ws.cdi.internal.interfaces; bundle-symbolic-name="com.ibm.ws.cdi.internal"; bundle-version="1.0.23.cl180420181121-0300"; version="1.0.0"; uses:="com.ibm.websphere.csi,com.ibm.websphere.ras.annotation,com.ibm.ws.cdi,com.ibm.ws.cdi.extension,com.ibm.ws.ras.instrument.annotation,com.ibm.ws.resource,com.ibm.ws.runtime.metadata,com.ibm.wsspi.injectionengine,com.ibm.wsspi.kernel.service.utils,javax.ejb,javax.enterprise.inject.spi,javax.transaction,org.jboss.weld.bootstrap,org.jboss.weld.bootstrap.spi,org.jboss.weld.ejb.spi,org.jboss.weld.injection.spi,org.jboss.weld.security.spi,org.jboss.weld.serialization.spi,org.osgi.framework"
+       com.ibm.ws.cdi.internal [171]
+         Unresolved requirement: Import-Package: javax.decorator; version="[1.1.0,3.0.0)"
+  Unresolved requirement: Import-Package: com.ibm.tx.jta.impl; version="[1.1.0,2.0.0)"
+    -> Export-Package: com.ibm.tx.jta.impl; bundle-symbolic-name="com.ibm.tx.jta"; bundle-version="1.0.23.cl180420181121-0300"; version="1.1.0"; uses:="com.ibm.tx.config,com.ibm.tx.jta,com.ibm.tx.util,com.ibm.tx.util.alarm,com.ibm.ws.Transaction,com.ibm.ws.Transaction.JTA,com.ibm.ws.Transaction.JTS,com.ibm.ws.recoverylog.spi,com.ibm.ws.uow,com.ibm.wsspi.tx,javax.resource.spi,javax.resource.spi.work,javax.transaction,javax.transaction.xa"
+       com.ibm.tx.jta [131]
+         Unresolved requirement: Import-Package: javax.resource.spi.work; version="[1.6.0,2.0.0)"
+           -> Export-Package: javax.resource.spi.work; bundle-symbolic-name="com.ibm.websphere.javaee.connector.1.7"; bundle-version="1.0.23.cl180420181121-0300"; version="1.7.0"; uses:="javax.resource,javax.resource.spi,javax.security.auth,javax.security.auth.callback,javax.transaction.xa"
+              com.ibm.websphere.javaee.connector.1.7 [126]
+                Unresolved requirement: Import-Package: javax.transaction
+                  -> Export-Package: javax.transaction; bundle-symbolic-name="com.ibm.websphere.javaee.transaction.1.2"; bundle-version="1.0.23.cl180420181121-0300"; version="1.2.0"; uses:="javax.enterprise.context,javax.enterprise.util,javax.interceptor,javax.transaction.xa"
+                     com.ibm.websphere.javaee.transaction.1.2 [125]
+                       Unresolved requirement: Import-Package: javax.enterprise.context
+         Unresolved requirement: Import-Package: com.ibm.tx; version="[1.0.0,2.0.0)"
+           -> Export-Package: com.ibm.tx; bundle-symbolic-name="com.ibm.tx.util"; bundle-version="1.0.23.cl180420181121-0300"; version="1.0.0"
+              com.ibm.tx.util [132]
+                Unresolved requirement: Import-Package: javax.transaction; version="1.1.0"
+                  -> Export-Package: javax.transaction; bundle-symbolic-name="com.ibm.websphere.javaee.transaction.1.2"; bundle-version="1.0.23.cl180420181121-0300"; version="1.2.0"; uses:="javax.enterprise.context,javax.enterprise.util,javax.interceptor,javax.transaction.xa"
+         Unresolved requirement: Import-Package: com.ibm.tx.config; version="[1.1.0,2.0.0)"
+           -> Export-Package: com.ibm.tx.config; bundle-symbolic-name="com.ibm.tx.util"; bundle-version="1.0.23.cl180420181121-0300"; version="1.1.0"; uses:="com.ibm.tx.util.alarm"
+         Unresolved requirement: Import-Package: com.ibm.ws.recoverylog.spi; version="[1.2.0,2.0.0)"
+           -> Export-Package: com.ibm.ws.recoverylog.spi; bundle-symbolic-name="com.ibm.ws.recoverylog"; bundle-version="1.0.23.cl180420181121-0300"; version="1.2.0"; uses:="com.ibm.tx.util.alarm,com.ibm.websphere.ras.annotation,com.ibm.ws.ras.instrument.annotation,com.ibm.wsspi.resource,org.osgi.service.component"
+              com.ibm.ws.recoverylog [134]
+                Unresolved requirement: Import-Package: com.ibm.tx.util; version="[2.0.0,3.0.0)"
+                  -> Export-Package: com.ibm.tx.util; bundle-symbolic-name="com.ibm.tx.util"; bundle-version="1.0.23.cl180420181121-0300"; version="2.0.0"; uses:="javax.transaction"
+                Unresolved requirement: Import-Package: com.ibm.tx.util.logging; version="[2.0.0,3.0.0)"
+                  -> Export-Package: com.ibm.tx.util.logging; bundle-symbolic-name="com.ibm.tx.util"; bundle-version="1.0.23.cl180420181121-0300"; version="2.0.0"
+                Unresolved requirement: Import-Package: com.ibm.tx.util.alarm; version="[1.0.0,2.0.0)"
+                  -> Export-Package: com.ibm.tx.util.alarm; bundle-symbolic-name="com.ibm.tx.util"; bundle-version="1.0.23.cl180420181121-0300"; version="1.0.0"
+         Unresolved requirement: Import-Package: com.ibm.tx.util; version="[2.0.0,3.0.0)"
+           -> Export-Package: com.ibm.tx.util; bundle-symbolic-name="com.ibm.tx.util"; bundle-version="1.0.23.cl180420181121-0300"; version="2.0.0"; uses:="javax.transaction"
+         Unresolved requirement: Import-Package: com.ibm.tx.util.logging; version="[2.0.0,3.0.0)"
+           -> Export-Package: com.ibm.tx.util.logging; bundle-symbolic-name="com.ibm.tx.util"; bundle-version="1.0.23.cl180420181121-0300"; version="2.0.0"
+         Unresolved requirement: Import-Package: javax.resource.spi; version="[1.6.0,2.0.0)"
+           -> Export-Package: javax.resource.spi; bundle-symbolic-name="com.ibm.websphere.javaee.connector.1.7"; bundle-version="1.0.23.cl180420181121-0300"; version="1.7.0"; uses:="javax.resource,javax.resource.spi.endpoint,javax.resource.spi.work,javax.security.auth,javax.transaction,javax.transaction.xa"
+         Unresolved requirement: Import-Package: com.ibm.tx.util.alarm; version="[1.0.0,2.0.0)"
+           -> Export-Package: com.ibm.tx.util.alarm; bundle-symbolic-name="com.ibm.tx.util"; bundle-version="1.0.23.cl180420181121-0300"; version="1.0.0"
+  Unresolved requirement: Import-Package: javax.transaction; version="[1.1.0,2.0.0)"
+    -> Export-Package: javax.transaction; bundle-symbolic-name="com.ibm.websphere.javaee.transaction.1.2"; bundle-version="1.0.23.cl180420181121-0300"; version="1.2.0"; uses:="javax.enterprise.context,javax.enterprise.util,javax.interceptor,javax.transaction.xa"
+
+[1/3/19 18:12:58:219 UTC] 0000001b LogService-222-com.ibm.ws.messaging.jms.2.0.cdi              E CWWKE0702E: Could not resolve module: com.ibm.ws.messaging.jms.2.0.cdi [222]
+  Unresolved requirement: Import-Package: javax.enterprise.event; version="[1.1.0,3.0.0)"
+
+[1/3/19 18:12:58:224 UTC] 0000001b LogService-224-com.ibm.ws.ejbcontainer.security              E CWWKE0702E: Could not resolve module: com.ibm.ws.ejbcontainer.security [224]
+  Unresolved requirement: Import-Package: com.ibm.ejs.container
+    -> Export-Package: com.ibm.ejs.container; bundle-symbolic-name="com.ibm.ws.ejbcontainer"; bundle-version="1.0.23.cl180420181121-0300"; version="3.0.0"; uses:="com.ibm.ejs.container.interceptors,com.ibm.ejs.container.util,com.ibm.ejs.j2c,com.ibm.ejs.util,com.ibm.tx.jta.embeddable,com.ibm.websphere.ejbcontainer,com.ibm.websphere.ras.annotation,com.ibm.ws.LocalTransaction,com.ibm.ws.Transaction,com.ibm.ws.ejbcontainer,com.ibm.ws.ejbcontainer.runtime,com.ibm.ws.ejbcontainer.util,com.ibm.ws.ffdc,com.ibm.ws.managedobject,com.ibm.ws.metadata.ejb,com.ibm.ws.resource,com.ibm.ws.runtime.metadata,com.ibm.ws.uow.embeddable,com.ibm.ws.util,com.ibm.wsspi.ejbcontainer,com.ibm.wsspi.injectionengine,javax.ejb,javax.naming,javax.rmi.CORBA,javax.transaction,javax.xml.rpc.handler"
+       com.ibm.ws.ejbcontainer [138]
+         Unresolved requirement: Import-Package: com.ibm.tx.jta.embeddable; version="[1.1.0,2.0.0)"
+           -> Export-Package: com.ibm.tx.jta.embeddable; bundle-symbolic-name="com.ibm.ws.tx.embeddable"; bundle-version="1.0.23.cl180420181121-0300"; version="1.1.0"; uses:="com.ibm.tx.jta,com.ibm.tx.jta.embeddable.impl,com.ibm.ws.LocalTransaction,com.ibm.ws.Transaction,com.ibm.ws.tx.embeddable,javax.naming,javax.transaction"
+              com.ibm.ws.tx.embeddable [133]
+                Unresolved requirement: Import-Package: com.ibm.tx.config; version="[1.1.0,2.0.0)"
+                  -> Export-Package: com.ibm.tx.config; bundle-symbolic-name="com.ibm.tx.util"; bundle-version="1.0.23.cl180420181121-0300"; version="1.1.0"; uses:="com.ibm.tx.util.alarm"
+                     com.ibm.tx.util [132]
+                       Unresolved requirement: Import-Package: javax.transaction; version="1.1.0"
+                         -> Export-Package: javax.transaction; bundle-symbolic-name="com.ibm.websphere.javaee.transaction.1.2"; bundle-version="1.0.23.cl180420181121-0300"; version="1.2.0"; uses:="javax.enterprise.context,javax.enterprise.util,javax.interceptor,javax.transaction.xa"
+                            com.ibm.websphere.javaee.transaction.1.2 [125]
+                              Unresolved requirement: Import-Package: javax.enterprise.context
+                Unresolved requirement: Import-Package: com.ibm.tx.jta; version="[2.1.0,3.0.0)"
+                  -> Export-Package: com.ibm.tx.jta; bundle-symbolic-name="com.ibm.tx.jta"; bundle-version="1.0.23.cl180420181121-0300"; version="2.1.0"; uses:="javax.resource.spi,javax.resource.spi.work,javax.transaction,javax.transaction.xa"
+                     com.ibm.tx.jta [131]
+                       Unresolved requirement: Import-Package: javax.resource.spi.work; version="[1.6.0,2.0.0)"
+                         -> Export-Package: javax.resource.spi.work; bundle-symbolic-name="com.ibm.websphere.javaee.connector.1.7"; bundle-version="1.0.23.cl180420181121-0300"; version="1.7.0"; uses:="javax.resource,javax.resource.spi,javax.security.auth,javax.security.auth.callback,javax.transaction.xa"
+                            com.ibm.websphere.javaee.connector.1.7 [126]
+                              Unresolved requirement: Import-Package: javax.transaction
+                                -> Export-Package: javax.transaction; bundle-symbolic-name="com.ibm.websphere.javaee.transaction.1.2"; bundle-version="1.0.23.cl180420181121-0300"; version="1.2.0"; uses:="javax.enterprise.context,javax.enterprise.util,javax.interceptor,javax.transaction.xa"
+                       Unresolved requirement: Import-Package: com.ibm.tx; version="[1.0.0,2.0.0)"
+                         -> Export-Package: com.ibm.tx; bundle-symbolic-name="com.ibm.tx.util"; bundle-version="1.0.23.cl180420181121-0300"; version="1.0.0"
+                       Unresolved requirement: Import-Package: com.ibm.tx.config; version="[1.1.0,2.0.0)"
+                         -> Export-Package: com.ibm.tx.config; bundle-symbolic-name="com.ibm.tx.util"; bundle-version="1.0.23.cl180420181121-0300"; version="1.1.0"; uses:="com.ibm.tx.util.alarm"
+                       Unresolved requirement: Import-Package: com.ibm.ws.recoverylog.spi; version="[1.2.0,2.0.0)"
+                         -> Export-Package: com.ibm.ws.recoverylog.spi; bundle-symbolic-name="com.ibm.ws.recoverylog"; bundle-version="1.0.23.cl180420181121-0300"; version="1.2.0"; uses:="com.ibm.tx.util.alarm,com.ibm.websphere.ras.annotation,com.ibm.ws.ras.instrument.annotation,com.ibm.wsspi.resource,org.osgi.service.component"
+                            com.ibm.ws.recoverylog [134]
+                              Unresolved requirement: Import-Package: com.ibm.tx.util; version="[2.0.0,3.0.0)"
+                                -> Export-Package: com.ibm.tx.util; bundle-symbolic-name="com.ibm.tx.util"; bundle-version="1.0.23.cl180420181121-0300"; version="2.0.0"; uses:="javax.transaction"
+                              Unresolved requirement: Import-Package: com.ibm.tx.util.logging; version="[2.0.0,3.0.0)"
+                                -> Export-Package: com.ibm.tx.util.logging; bundle-symbolic-name="com.ibm.tx.util"; bundle-version="1.0.23.cl180420181121-0300"; version="2.0.0"
+                              Unresolved requirement: Import-Package: com.ibm.tx.util.alarm; version="[1.0.0,2.0.0)"
+                                -> Export-Package: com.ibm.tx.util.alarm; bundle-symbolic-name="com.ibm.tx.util"; bundle-version="1.0.23.cl180420181121-0300"; version="1.0.0"
+                       Unresolved requirement: Import-Package: com.ibm.tx.util; version="[2.0.0,3.0.0)"
+                         -> Export-Package: com.ibm.tx.util; bundle-symbolic-name="com.ibm.tx.util"; bundle-version="1.0.23.cl180420181121-0300"; version="2.0.0"; uses:="javax.transaction"
+                       Unresolved requirement: Import-Package: com.ibm.tx.util.logging; version="[2.0.0,3.0.0)"
+                         -> Export-Package: com.ibm.tx.util.logging; bundle-symbolic-name="com.ibm.tx.util"; bundle-version="1.0.23.cl180420181121-0300"; version="2.0.0"
+                       Unresolved requirement: Import-Package: javax.resource.spi; version="[1.6.0,2.0.0)"
+                         -> Export-Package: javax.resource.spi; bundle-symbolic-name="com.ibm.websphere.javaee.connector.1.7"; bundle-version="1.0.23.cl180420181121-0300"; version="1.7.0"; uses:="javax.resource,javax.resource.spi.endpoint,javax.resource.spi.work,javax.security.auth,javax.transaction,javax.transaction.xa"
+                       Unresolved requirement: Import-Package: com.ibm.tx.util.alarm; version="[1.0.0,2.0.0)"
+                         -> Export-Package: com.ibm.tx.util.alarm; bundle-symbolic-name="com.ibm.tx.util"; bundle-version="1.0.23.cl180420181121-0300"; version="1.0.0"
+         Unresolved requirement: Import-Package: com.ibm.tx.jta; version="[2.1.0,3.0.0)"
+           -> Export-Package: com.ibm.tx.jta; bundle-symbolic-name="com.ibm.tx.jta"; bundle-version="1.0.23.cl180420181121-0300"; version="2.1.0"; uses:="javax.resource.spi,javax.resource.spi.work,javax.transaction,javax.transaction.xa"
+         Unresolved requirement: Import-Package: com.ibm.websphere.uow; version="[1.1.0,2.0.0)"
+           -> Export-Package: com.ibm.websphere.uow; bundle-symbolic-name="com.ibm.ws.tx.embeddable"; bundle-version="1.0.23.cl180420181121-0300"; version="1.1.0"; uses:="javax.transaction"
+  Unresolved requirement: Import-Package: com.ibm.ws.ejbcontainer
+    -> Export-Package: com.ibm.ws.ejbcontainer; bundle-symbolic-name="com.ibm.ws.ejbcontainer"; bundle-version="1.0.23.cl180420181121-0300"; version="2.1.0"; uses:="com.ibm.ejs.container,com.ibm.ws.managedobject,com.ibm.ws.runtime.metadata,javax.ejb"
+
+[1/3/19 18:12:58:227 UTC] 0000001b LogService-225-com.ibm.ws.javaee.metadata.context.ejb        E CWWKE0702E: Could not resolve module: com.ibm.ws.javaee.metadata.context.ejb [225]
+  Unresolved requirement: Import-Package: com.ibm.ws.ejbcontainer
+    -> Export-Package: com.ibm.ws.ejbcontainer; bundle-symbolic-name="com.ibm.ws.ejbcontainer"; bundle-version="1.0.23.cl180420181121-0300"; version="2.1.0"; uses:="com.ibm.ejs.container,com.ibm.ws.managedobject,com.ibm.ws.runtime.metadata,javax.ejb"
+       com.ibm.ws.ejbcontainer [138]
+         Unresolved requirement: Import-Package: com.ibm.tx.jta.embeddable; version="[1.1.0,2.0.0)"
+           -> Export-Package: com.ibm.tx.jta.embeddable; bundle-symbolic-name="com.ibm.ws.tx.embeddable"; bundle-version="1.0.23.cl180420181121-0300"; version="1.1.0"; uses:="com.ibm.tx.jta,com.ibm.tx.jta.embeddable.impl,com.ibm.ws.LocalTransaction,com.ibm.ws.Transaction,com.ibm.ws.tx.embeddable,javax.naming,javax.transaction"
+              com.ibm.ws.tx.embeddable [133]
+                Unresolved requirement: Import-Package: com.ibm.tx.config; version="[1.1.0,2.0.0)"
+                  -> Export-Package: com.ibm.tx.config; bundle-symbolic-name="com.ibm.tx.util"; bundle-version="1.0.23.cl180420181121-0300"; version="1.1.0"; uses:="com.ibm.tx.util.alarm"
+                     com.ibm.tx.util [132]
+                       Unresolved requirement: Import-Package: javax.transaction; version="1.1.0"
+                         -> Export-Package: javax.transaction; bundle-symbolic-name="com.ibm.websphere.javaee.transaction.1.2"; bundle-version="1.0.23.cl180420181121-0300"; version="1.2.0"; uses:="javax.enterprise.context,javax.enterprise.util,javax.interceptor,javax.transaction.xa"
+                            com.ibm.websphere.javaee.transaction.1.2 [125]
+                              Unresolved requirement: Import-Package: javax.enterprise.context
+                Unresolved requirement: Import-Package: com.ibm.tx.jta; version="[2.1.0,3.0.0)"
+                  -> Export-Package: com.ibm.tx.jta; bundle-symbolic-name="com.ibm.tx.jta"; bundle-version="1.0.23.cl180420181121-0300"; version="2.1.0"; uses:="javax.resource.spi,javax.resource.spi.work,javax.transaction,javax.transaction.xa"
+                     com.ibm.tx.jta [131]
+                       Unresolved requirement: Import-Package: javax.resource.spi.work; version="[1.6.0,2.0.0)"
+                         -> Export-Package: javax.resource.spi.work; bundle-symbolic-name="com.ibm.websphere.javaee.connector.1.7"; bundle-version="1.0.23.cl180420181121-0300"; version="1.7.0"; uses:="javax.resource,javax.resource.spi,javax.security.auth,javax.security.auth.callback,javax.transaction.xa"
+                            com.ibm.websphere.javaee.connector.1.7 [126]
+                              Unresolved requirement: Import-Package: javax.transaction
+                                -> Export-Package: javax.transaction; bundle-symbolic-name="com.ibm.websphere.javaee.transaction.1.2"; bundle-version="1.0.23.cl180420181121-0300"; version="1.2.0"; uses:="javax.enterprise.context,javax.enterprise.util,javax.interceptor,javax.transaction.xa"
+                       Unresolved requirement: Import-Package: com.ibm.tx; version="[1.0.0,2.0.0)"
+                         -> Export-Package: com.ibm.tx; bundle-symbolic-name="com.ibm.tx.util"; bundle-version="1.0.23.cl180420181121-0300"; version="1.0.0"
+                       Unresolved requirement: Import-Package: com.ibm.tx.config; version="[1.1.0,2.0.0)"
+                         -> Export-Package: com.ibm.tx.config; bundle-symbolic-name="com.ibm.tx.util"; bundle-version="1.0.23.cl180420181121-0300"; version="1.1.0"; uses:="com.ibm.tx.util.alarm"
+                       Unresolved requirement: Import-Package: com.ibm.ws.recoverylog.spi; version="[1.2.0,2.0.0)"
+                         -> Export-Package: com.ibm.ws.recoverylog.spi; bundle-symbolic-name="com.ibm.ws.recoverylog"; bundle-version="1.0.23.cl180420181121-0300"; version="1.2.0"; uses:="com.ibm.tx.util.alarm,com.ibm.websphere.ras.annotation,com.ibm.ws.ras.instrument.annotation,com.ibm.wsspi.resource,org.osgi.service.component"
+                            com.ibm.ws.recoverylog [134]
+                              Unresolved requirement: Import-Package: com.ibm.tx.util; version="[2.0.0,3.0.0)"
+                                -> Export-Package: com.ibm.tx.util; bundle-symbolic-name="com.ibm.tx.util"; bundle-version="1.0.23.cl180420181121-0300"; version="2.0.0"; uses:="javax.transaction"
+                              Unresolved requirement: Import-Package: com.ibm.tx.util.logging; version="[2.0.0,3.0.0)"
+                                -> Export-Package: com.ibm.tx.util.logging; bundle-symbolic-name="com.ibm.tx.util"; bundle-version="1.0.23.cl180420181121-0300"; version="2.0.0"
+                              Unresolved requirement: Import-Package: com.ibm.tx.util.alarm; version="[1.0.0,2.0.0)"
+                                -> Export-Package: com.ibm.tx.util.alarm; bundle-symbolic-name="com.ibm.tx.util"; bundle-version="1.0.23.cl180420181121-0300"; version="1.0.0"
+                       Unresolved requirement: Import-Package: com.ibm.tx.util; version="[2.0.0,3.0.0)"
+                         -> Export-Package: com.ibm.tx.util; bundle-symbolic-name="com.ibm.tx.util"; bundle-version="1.0.23.cl180420181121-0300"; version="2.0.0"; uses:="javax.transaction"
+                       Unresolved requirement: Import-Package: com.ibm.tx.util.logging; version="[2.0.0,3.0.0)"
+                         -> Export-Package: com.ibm.tx.util.logging; bundle-symbolic-name="com.ibm.tx.util"; bundle-version="1.0.23.cl180420181121-0300"; version="2.0.0"
+                       Unresolved requirement: Import-Package: javax.resource.spi; version="[1.6.0,2.0.0)"
+                         -> Export-Package: javax.resource.spi; bundle-symbolic-name="com.ibm.websphere.javaee.connector.1.7"; bundle-version="1.0.23.cl180420181121-0300"; version="1.7.0"; uses:="javax.resource,javax.resource.spi.endpoint,javax.resource.spi.work,javax.security.auth,javax.transaction,javax.transaction.xa"
+                       Unresolved requirement: Import-Package: com.ibm.tx.util.alarm; version="[1.0.0,2.0.0)"
+                         -> Export-Package: com.ibm.tx.util.alarm; bundle-symbolic-name="com.ibm.tx.util"; bundle-version="1.0.23.cl180420181121-0300"; version="1.0.0"
+         Unresolved requirement: Import-Package: com.ibm.tx.jta; version="[2.1.0,3.0.0)"
+           -> Export-Package: com.ibm.tx.jta; bundle-symbolic-name="com.ibm.tx.jta"; bundle-version="1.0.23.cl180420181121-0300"; version="2.1.0"; uses:="javax.resource.spi,javax.resource.spi.work,javax.transaction,javax.transaction.xa"
+         Unresolved requirement: Import-Package: com.ibm.websphere.uow; version="[1.1.0,2.0.0)"
+           -> Export-Package: com.ibm.websphere.uow; bundle-symbolic-name="com.ibm.ws.tx.embeddable"; bundle-version="1.0.23.cl180420181121-0300"; version="1.1.0"; uses:="javax.transaction"
+
+[1/3/19 18:12:58:349 UTC] 0000002b com.ibm.ws.app.manager.AppMessageHelper                      W CWWKZ0014W: The application Messaging could not be started as it could not be found at location Messaging.ear.
+[1/3/19 18:12:58:760 UTC] 00000032 com.ibm.ws.webcontainer.osgi.webapp.WebGroup                 I SRVE0169I: Loading Web Module: com.ibm.ws.security.jwt.
+[1/3/19 18:12:58:763 UTC] 00000032 com.ibm.ws.webcontainer                                      I SRVE0250I: Web Module com.ibm.ws.security.jwt has been bound to default_host.
+[1/3/19 18:12:58:766 UTC] 00000032 com.ibm.ws.http.internal.VirtualHostImpl                     A CWWKT0016I: Web application available (default_host): http://localhost:9080/jwt/
+[1/3/19 18:12:58:817 UTC] 0000002f com.ibm.ws.session.WASSessionCore                            I SESN8501I: The session manager did not find a persistent storage location; HttpSession objects will be stored in the local application server's memory.
+[1/3/19 18:12:58:822 UTC] 0000002f com.ibm.ws.session.WASSessionCore                            I SESN0176I: A new session context will be created for application key default_host/jwt
+[1/3/19 18:12:58:836 UTC] 0000002f com.ibm.ws.util                                              I SESN0172I: The session manager is using the Java default SecureRandom implementation for session ID generation.
+[1/3/19 18:12:58:874 UTC] 0000002f com.ibm.ws.cache.CacheServiceImpl                            I DYNA1056I: Dynamic Cache (object cache) initialized successfully.
+[1/3/19 18:13:28:472 UTC] 0000002a com.ibm.ws.kernel.feature.internal.FeatureManager            A CWWKF0012I: The server installed the following features: [jsonb-1.0, ejbLite-3.2, servlet-3.1, ssl-1.0, jndi-1.0, logstashCollector-1.0, jca-1.7, jms-2.0, jsonp-1.1, appSecurity-2.0, mpConfig-1.3, jaxrsClient-2.0, jwt-1.0, mpRestClient-1.1, mdb-3.2, mpJwt-1.1, json-1.0, cdi-1.2, distributedMap-1.0, jwtSso-1.0].
+[1/3/19 18:13:28:475 UTC] 0000002a com.ibm.ws.kernel.feature.internal.FeatureManager            I CWWKF0008I: Feature update completed in 36.502 seconds.
+[1/3/19 18:13:28:475 UTC] 0000002a com.ibm.ws.kernel.feature.internal.FeatureManager            A CWWKF0011I: The server defaultServer is ready to run a smarter planet.
+[1/3/19 18:21:27:583 UTC] 0000001d com.ibm.ws.kernel.launch.internal.ServerCommandListener      A CWWKE0055I: Server shutdown requested on Thursday, January 3, 2019 at 6:21 PM. The server defaultServer is shutting down.
+[1/3/19 18:21:27:588 UTC] 00000256 com.ibm.ws.runtime.update.internal.RuntimeUpdateManagerImpl  A CWWKE1100I: Waiting for up to 30 seconds for the server to quiesce.
+[1/3/19 18:21:27:596 UTC] 000001ea com.ibm.ws.tcpchannel.internal.TCPChannel                    I CWWKO0220I: TCP Channel defaultHttpEndpoint-ssl has stopped listening for requests on host localhost  (IPv4: 127.0.0.1) port 9443.
+[1/3/19 18:21:27:600 UTC] 000001ea com.ibm.ws.tcpchannel.internal.TCPChannel                    I CWWKO0220I: TCP Channel defaultHttpEndpoint has stopped listening for requests on host localhost  (IPv4: 127.0.0.1) port 9080.
+[1/3/19 18:21:27:600 UTC] 000001ea com.ibm.ws.http.internal.VirtualHostImpl                     A CWWKT0017I: Web application removed (default_host): http://localhost:9080/jwt/
+[1/3/19 18:21:28:601 UTC] 00000256 com.ibm.ws.runtime.update.internal.RuntimeUpdateManagerImpl  I CWWKE1101I: Server quiesce complete.
+[1/3/19 18:21:28:773 UTC] 00000256 com.ibm.ws.security.mp.jwt.impl.MicroProfileJwtConfigImpl    I CWWKS5502I: The MicroProfile JWT configuration [defaultMpJwt] was successfully deactivated.
+[1/3/19 18:21:28:774 UTC] 00000256 com.ibm.ws.security.mp.jwt.impl.MicroProfileJwtServiceImpl   I CWWKS5502I: The MicroProfile JWT configuration [MicroProfileJwtService] was successfully deactivated.
+[1/3/19 18:21:28:819 UTC] 00000256 com.ibm.ws.security.ready.internal.SecurityReadyServiceImpl  I CWWKS0009I: The security service has stopped.
+[1/3/19 18:21:28:877 UTC] 00000256 ibm.ws.security.authentication.internal.jaas.JAASServiceImpl I CWWKS1124I: The collective authentication plugin with class name NullCollectiveAuthenticationPlugin has been deactivated. 
+[1/3/19 18:21:29:226 UTC] 00000001 com.ibm.ws.kernel.launch.internal.FrameworkManager           A CWWKE0036I: The server defaultServer stopped after 8 minutes, 39.241 seconds.

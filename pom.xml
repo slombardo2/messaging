@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<!--
+<!-- 
        Copyright 2017 IBM Corp All Rights Reserved
    Licensed under the Apache License, Version 2.0 (the "License");
    you may not use this file except in compliance with the License.
@@ -22,6 +22,13 @@
     <packaging>pom</packaging>
 
     <name>StockTrader - messaging</name>
+
+    <!-- Parent needed for MC to build properly -->
+    <parent>
+        <groupId>net.wasdev.wlp.maven.parent</groupId>
+        <artifactId>liberty-maven-app-parent</artifactId>
+        <version>2.1</version>
+    </parent>
 
     <modules> <!-- child modules to be executed as part of this build -->
         <module>messaging-ejb</module>

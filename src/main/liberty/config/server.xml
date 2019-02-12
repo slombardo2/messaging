@@ -24,8 +24,7 @@
         <feature>ssl-1.0</feature>
 <!--    <feature>wasJmsClient-2.0</feature> -->
         <feature>appSecurity-2.0</feature>
-        <feature>jwtSso-1.0</feature>
-        <feature>mpJwt-1.1</feature>
+        <feature>jwt-1.0</feature>
         <feature>logstashCollector-1.0</feature>
     </featureManager>
 
@@ -38,7 +37,6 @@
 
     <ssl id="RpSSLConfig" keyStoreRef="defaultKeyStore" />
 
-    <jwtSso jwtBuilderRef="myBuilder"/>
     <jwtBuilder id="myBuilder" keyStoreRef="defaultKeyStore" keyAlias="default" issuer="${env.JWT_ISSUER}" audiences="${env.JWT_AUDIENCE}" />
 
     <authData id="MQ-Credentials" user="${env.MQ_ID}" password="${env.MQ_PASSWORD}" />

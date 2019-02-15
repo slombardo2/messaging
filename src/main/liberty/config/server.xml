@@ -21,14 +21,15 @@
         <feature>jca-1.7</feature>
         <feature>jms-2.0</feature>
         <feature>mpRestClient-1.1</feature>
+        <feature>cdi-2.0</feature>
         <feature>ssl-1.0</feature>
 <!--    <feature>wasJmsClient-2.0</feature> -->
-        <feature>appSecurity-2.0</feature>
+        <feature>appSecurity-3.0</feature>
         <feature>jwt-1.0</feature>
         <feature>logstashCollector-1.0</feature>
     </featureManager>
 
-    <logging traceSpecification="*=info:com.ibm.hybrid.cloud.sample.stocktrader.messaging.*=fine" consoleLogLevel="INFO"/>
+    <logging traceSpecification="*=info:com.ibm.hybrid.cloud.sample.stocktrader.messaging.*=fine:com.ibm.ws.microprofile.rest.client.cdi=all" consoleLogLevel="INFO"/>
 
     <keyStore id="defaultKeyStore" password="passw0rd" type="jks"
          location="${server.config.dir}/resources/security/key.jks" />

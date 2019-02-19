@@ -21,6 +21,7 @@
         <feature>jca-1.7</feature>
         <feature>jms-2.0</feature>
         <feature>mpRestClient-1.1</feature>
+        <feature>mpConfig-1.3</feature>
         <feature>cdi-2.0</feature>
         <feature>ssl-1.0</feature>
 <!--    <feature>wasJmsClient-2.0</feature> -->

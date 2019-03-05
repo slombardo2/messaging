@@ -17,6 +17,11 @@ apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:
   name: messaging
+  labels:
+    solution: stock-trader
+  annotations: { 
+    prism.subkind: Liberty
+  }
 # namespace: stock-trader
 spec:
   replicas: 1
@@ -103,3 +108,18 @@ spec:
             cpu: 100m
             memory: 128Mi
 ---
+#Deploy the autoscaler
+apiVersion: autoscaling/v1
+kind: HorizontalPodAutoscaler
+metadata:
+  name: messaging
+  labels:
+    solution: stock-trader
+spec:
+  scaleTargetRef:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: messaging
+  maxReplicas: 10
+  minReplicas: 2
+  targetCPUUtilizationPercentage: 50

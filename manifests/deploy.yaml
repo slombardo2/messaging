@@ -84,6 +84,12 @@ spec:
               secretKeyRef:
                 name: jwt
                 key: issuer
+          - name: NOTIFICATION_URL
+            valueFrom:
+              configMapKeyRef:
+                name: urls
+                key: stock-quote
+                optional: true
         ports:
           - containerPort: 9080
           - containerPort: 9443
@@ -109,18 +115,19 @@ spec:
             memory: 128Mi
 ---
 #Deploy the autoscaler
-apiVersion: autoscaling/v1
-kind: HorizontalPodAutoscaler
-metadata:
-  name: messaging
-  labels:
-    solution: stock-trader
-spec:
-  scaleTargetRef:
-    apiVersion: apps/v1
-    kind: Deployment
-    name: messaging
-  maxReplicas: 10
-  minReplicas: 2
-  targetCPUUtilizationPercentage: 50
+#Commented out - don't want multiple MDB instances concurrently subscribed to the same MQ destination
+#apiVersion: autoscaling/v1
+#kind: HorizontalPodAutoscaler
+#metadata:
+#  name: messaging
+#  labels:
+#    solution: stock-trader
+#spec:
+#  scaleTargetRef:
+#    apiVersion: apps/v1
+#    kind: Deployment
+#    name: messaging
+#  maxReplicas: 10
+#  minReplicas: 2
+#  targetCPUUtilizationPercentage: 50
 ---

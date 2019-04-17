@@ -33,7 +33,7 @@ import java.io.StringWriter;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-//CDI 1.2
+//CDI 2.0
 import javax.inject.Inject;
 import javax.enterprise.context.ApplicationScoped;
 
@@ -49,7 +49,7 @@ import javax.jms.TextMessage;
 import javax.json.bind.Jsonb;
 import javax.json.bind.JsonbBuilder;
 
-//mpRestClient 1.0
+//mpRestClient 1.2
 import org.eclipse.microprofile.rest.client.inject.RestClient;
 
 
@@ -63,6 +63,17 @@ public class MessagingMDB implements MessageListener {
 
 	private @Inject @RestClient NotificationClient notificationClient;
 
+	// Override Notification Client URL if config map is configured to provide URL
+	static {
+		String mpUrlPropName = NotificationClient.class.getName() + "/mp-rest/url";
+		String notificationURL = System.getenv("NOTIFICATION_URL");
+		if ((notificationURL != null) && !notificationURL.isEmpty()) {
+			logger.info("Using Notification URL from config map: " + notificationURL);
+			System.setProperty(mpUrlPropName, notificationURL);
+		} else {
+			logger.info("Notification URL not found from env var from config map, so defaulting to value in jvm.options: " + System.getProperty(mpUrlPropName));
+		}
+	}
 
 	/**
 	 * @see MessageListener#onMessage(Message)

@@ -1,4 +1,4 @@
-#       Copyright 2017 IBM Corp All Rights Reserved
+#       Copyright 2017-2019 IBM Corp All Rights Reserved
 
 #   Licensed under the Apache License, Version 2.0 (the "License");
 #   you may not use this file except in compliance with the License.
@@ -12,15 +12,10 @@
 #   See the License for the specific language governing permissions and
 #   limitations under the License.
 
-FROM websphere-liberty:javaee8
-COPY src/main/liberty/config /config/
-COPY messaging-ear/target/messaging-ear-1.0-SNAPSHOT.ear /config/apps/Messaging.ear
+# FROM websphere-liberty:microProfile2
+FROM open-liberty:microProfile2
 
-#apt-get needs root access
-USER root
-RUN chmod g+w /config/apps
-RUN apt-get update
-RUN apt-get install curl -y
-USER 1001
+COPY --chown=1001:0 src/main/liberty/config /config/
+COPY --chown=1001:0 messaging-ear/target/messaging-ear-1.0-SNAPSHOT.ear /config/apps/Messaging.ear
 
-RUN installUtility install --acceptLicense defaultServer
+RUN configure.sh

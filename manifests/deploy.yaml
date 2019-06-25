@@ -19,9 +19,8 @@ metadata:
   name: messaging
   labels:
     app: stock-trader
-  annotations: { 
+  annotations:
     prism.subkind: Liberty
-  }
 # namespace: stock-trader
 spec:
   replicas: 1
@@ -90,22 +89,30 @@ spec:
                 name: urls
                 key: notification
                 optional: true
+          - name: WLP_LOGGING_CONSOLE_FORMAT
+            value: json
+          - name: WLP_LOGGING_CONSOLE_SOURCE
+            value: message,ffdc
         ports:
           - containerPort: 9080
           - containerPort: 9443
         imagePullPolicy: Always
-#        readinessProbe:
-#          httpGet:
-#            path: /health
-#           port: 9080
-#          initialDelaySeconds: 30
-#          periodSeconds: 5
-#        livenessProbe:
-#          httpGet:
-#            path: /health
-#            port: 9080
-#          initialDelaySeconds: 60
-#          periodSeconds: 5
+        readinessProbe:
+          httpGet:
+            path: /health
+            port: 9080
+          initialDelaySeconds: 60
+          periodSeconds: 15
+          successThreshold: 1
+          failureThreshold: 3
+        livenessProbe:
+          httpGet:
+            path: /health
+            port: 9080
+          initialDelaySeconds: 90
+          periodSeconds: 15
+          successThreshold: 1
+          failureThreshold: 5 # Allow a little time to exec into the pod to grab FFDCs before it's killed
         resources:
           limits:
             cpu: 500m

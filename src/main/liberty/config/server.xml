@@ -30,7 +30,7 @@
 <!--    <feature>logstashCollector-1.0</feature> -->
     </featureManager>
 
-    <logging traceSpecification="*=info" consoleLogLevel="INFO" consoleSource="message,ffdc" consoleFormat="json" />
+    <logging traceSpecification="*=info" consoleLogLevel="INFO" />
 
     <keyStore id="defaultKeyStore" password="passw0rd" type="jks"
          location="${server.config.dir}/resources/security/key.jks" />

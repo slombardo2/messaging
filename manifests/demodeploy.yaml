@@ -1,4 +1,4 @@
-#       Copyright 2017-2019 IBM Corp All Rights Reserved
+#       Copyright 2017 IBM Corp All Rights Reserved
 
 #   Licensed under the Apache License, Version 2.0 (the "License");
 #   you may not use this file except in compliance with the License.
@@ -18,9 +18,10 @@ kind: Deployment
 metadata:
   name: messaging
   labels:
-    app: stock-trader
-  annotations:
+    solution: stock-trader
+  annotations: { 
     prism.subkind: Liberty
+  }
 # namespace: stock-trader
 spec:
   replicas: 1
@@ -34,8 +35,8 @@ spec:
       - name: messaging
 #       Note: this manifests/deploy.yaml will be used when we want to deploy this directly using kubectl or a helm chart. 
 #             Microclimate uses the Charts folder so we can actually have both options
-        image: ibmstocktrader/messaging:latest # Docker Hub
-#       image: mycluster.icp:8500/stock-trader/messaging:latest # IBM Cloud Private
+#        image: ibmstocktrader/messaging:latest # Docker Hub
+        image: bigloon.icp:8500/stock-trader/messaging:demo # IBM Cloud Private
 #       image: registry.ng.bluemix.net/stock_trader/messaging:latest # IBM Container Service
         env:
           - name: MQ_ID
@@ -83,20 +84,22 @@ spec:
               secretKeyRef:
                 name: jwt
                 key: issuer
-          - name: NOTIFICATION_URL
-            valueFrom:
-              configMapKeyRef:
-                name: urls
-                key: notification
-                optional: true
-          - name: WLP_LOGGING_CONSOLE_FORMAT
-            value: json
-          - name: WLP_LOGGING_CONSOLE_SOURCE
-            value: message,ffdc
         ports:
           - containerPort: 9080
           - containerPort: 9443
         imagePullPolicy: Always
+#        readinessProbe:
+#          httpGet:
+#            path: /health
+#           port: 9080
+#          initialDelaySeconds: 30
+#          periodSeconds: 5
+#        livenessProbe:
+#          httpGet:
+#            path: /health
+#            port: 9080
+#          initialDelaySeconds: 60
+#          periodSeconds: 5
         resources:
           limits:
             cpu: 500m
@@ -106,19 +109,17 @@ spec:
             memory: 128Mi
 ---
 #Deploy the autoscaler
-#Commented out - don't want multiple MDB instances concurrently subscribed to the same MQ destination
-#apiVersion: autoscaling/v1
-#kind: HorizontalPodAutoscaler
-#metadata:
-#  name: messaging-hpa
-#  labels:
-#    solution: stock-trader
-#spec:
-#  scaleTargetRef:
-#    apiVersion: apps/v1
-#    kind: Deployment
-#    name: messaging
-#  maxReplicas: 10
-#  minReplicas: 2
-#  targetCPUUtilizationPercentage: 50
----
+apiVersion: autoscaling/v1
+kind: HorizontalPodAutoscaler
+metadata:
+  name: messaging
+  labels:
+    solution: stock-trader
+spec:
+  scaleTargetRef:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: messaging
+  maxReplicas: 10
+  minReplicas: 2
+  targetCPUUtilizationPercentage: 50

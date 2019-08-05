@@ -1,4 +1,4 @@
-#       Copyright 2017-2019 IBM Corp All Rights Reserved
+#       Copyright 2017 IBM Corp All Rights Reserved
 
 #   Licensed under the Apache License, Version 2.0 (the "License");
 #   you may not use this file except in compliance with the License.
@@ -12,32 +12,34 @@
 #   See the License for the specific language governing permissions and
 #   limitations under the License.
 
-#Deploy the pod
 apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:
-  name: messaging
+  name: "{{  .Chart.Name }}-deployment"
   labels:
-    app: stock-trader
-  annotations:
-    prism.subkind: Liberty
-# namespace: stock-trader
+    chart: '{{ .Chart.Name }}-{{ .Chart.Version | replace "+" "_" }}'
 spec:
-  replicas: 1
+  replicas: {{ .Values.replicaCount }}
+  revisionHistoryLimit: {{ .Values.revisionHistoryLimit }}
   template:
     metadata:
       labels:
-        app: messaging
-        solution: stock-trader
+        app: "{{  .Chart.Name }}-selector"
+        version: "current"
     spec:
       containers:
-      - name: messaging
-#       Note: this manifests/deploy.yaml will be used when we want to deploy this directly using kubectl or a helm chart. 
-#             Microclimate uses the Charts folder so we can actually have both options
-        image: ibmstocktrader/messaging:latest # Docker Hub
-#       image: mycluster.icp:8500/stock-trader/messaging:latest # IBM Cloud Private
-#       image: registry.ng.bluemix.net/stock_trader/messaging:latest # IBM Container Service
+      - name: "{{  .Chart.Name  }}"
+        image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
+        imagePullPolicy: {{ .Values.image.pullPolicy }}
+        resources:
+          requests:
+            cpu: "{{ .Values.image.resources.requests.cpu }}"
+            memory: "{{ .Values.image.resources.requests.memory }}"
         env:
+          - name: PORT
+            value: "{{ .Values.service.servicePort }}"
+          - name: APPLICATION_NAME
+            value: "{{ .Release.Name }}"
           - name: MQ_ID
             valueFrom:
               secretKeyRef:
@@ -83,42 +85,6 @@ spec:
               secretKeyRef:
                 name: jwt
                 key: issuer
-          - name: NOTIFICATION_URL
-            valueFrom:
-              configMapKeyRef:
-                name: urls
-                key: notification
-                optional: true
-          - name: WLP_LOGGING_CONSOLE_FORMAT
-            value: json
-          - name: WLP_LOGGING_CONSOLE_SOURCE
-            value: message,ffdc
-        ports:
-          - containerPort: 9080
-          - containerPort: 9443
-        imagePullPolicy: Always
-        resources:
-          limits:
-            cpu: 500m
-            memory: 500Mi
-          requests:
-            cpu: 100m
-            memory: 128Mi
----
-#Deploy the autoscaler
-#Commented out - don't want multiple MDB instances concurrently subscribed to the same MQ destination
-#apiVersion: autoscaling/v1
-#kind: HorizontalPodAutoscaler
-#metadata:
-#  name: messaging-hpa
-#  labels:
-#    solution: stock-trader
-#spec:
-#  scaleTargetRef:
-#    apiVersion: apps/v1
-#    kind: Deployment
-#    name: messaging
-#  maxReplicas: 10
-#  minReplicas: 2
-#  targetCPUUtilizationPercentage: 50
----
+{{- if .Values.generatedBindings.enabled }}
+{{.Files.Get "bindings.yaml" | indent 10 }}
+{{- end }}

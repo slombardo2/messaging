@@ -1,4 +1,4 @@
-#       Copyright 2017-2019 IBM Corp All Rights Reserved
+#       Copyright 2017 IBM Corp All Rights Reserved
 
 #   Licensed under the Apache License, Version 2.0 (the "License");
 #   you may not use this file except in compliance with the License.
@@ -12,10 +12,16 @@
 #   See the License for the specific language governing permissions and
 #   limitations under the License.
 
-# FROM websphere-liberty:microProfile2
-FROM openliberty/open-liberty:microProfile2-ubi-min
+FROM ibmjava:8-sdk
 
-COPY --chown=1001:0 src/main/liberty/config /config/
-COPY --chown=1001:0 messaging-ear/target/messaging-ear-1.0-SNAPSHOT.ear /config/apps/Messaging.ear
+MAINTAINER IBM Java Engineering at IBM Cloud
 
-RUN configure.sh
+RUN apt-get update && apt-get install -y maven
+
+ENV PATH /project/target/liberty/wlp/bin/:$PATH
+
+ARG bx_dev_user=root
+ARG bx_dev_userid=1000
+RUN BX_DEV_USER=$bx_dev_user
+RUN BX_DEV_USERID=$bx_dev_userid
+RUN if [ $bx_dev_user != "root" ]; then useradd -ms /bin/bash -u $bx_dev_userid $bx_dev_user; fi

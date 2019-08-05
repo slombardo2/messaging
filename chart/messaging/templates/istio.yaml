@@ -1,4 +1,4 @@
-#       Copyright 2017-2019 IBM Corp All Rights Reserved
+#       Copyright 2017 IBM Corp All Rights Reserved
 
 #   Licensed under the Apache License, Version 2.0 (the "License");
 #   you may not use this file except in compliance with the License.
@@ -12,10 +12,22 @@
 #   See the License for the specific language governing permissions and
 #   limitations under the License.
 
-# FROM websphere-liberty:microProfile2
-FROM openliberty/open-liberty:microProfile2-ubi-min
-
-COPY --chown=1001:0 src/main/liberty/config /config/
-COPY --chown=1001:0 messaging-ear/target/messaging-ear-1.0-SNAPSHOT.ear /config/apps/Messaging.ear
-
-RUN configure.sh
+{{ if .Values.istio.enabled }}
+apiVersion: config.istio.io/v1alpha2
+kind: RouteRule
+metadata:
+  name: "{{  .Chart.Name }}-default"
+spec:
+  destination:
+    name: "{{  .Chart.Name }}-service"
+  precedence: 1
+  route:
+  - labels:
+      version: "current"
+    weight: {{ .Values.istio.weight }}
+{{ if .Values.base.enabled }}
+  - labels:
+      version: "base"
+    weight: {{ .Values.base.weight }}
+{{ end }}
+{{ end }}

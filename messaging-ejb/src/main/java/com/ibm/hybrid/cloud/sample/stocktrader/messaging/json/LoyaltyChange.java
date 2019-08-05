@@ -14,9 +14,9 @@
    limitations under the License.
  */
 
-package com.ibm.hybrid.cloud.sample.portfolio;
+package com.ibm.hybrid.cloud.sample.stocktrader.messaging.json;
 
-/** JSON-B POJO class representing an ODM business rule for determining the loyalty level of a portfolio */
+/** JSON-B POJO class representing an change in loyalty level for a portfolio */
 public class LoyaltyChange {
     private String fOwner;
     private String fOld;
@@ -28,6 +28,7 @@ public class LoyaltyChange {
     }
 
     public LoyaltyChange(String initialOwner, String initialOldLoyalty, String initialNewLoyalty) { //convenience constructor
+        setOwner(initialOwner);
         setOld(initialOldLoyalty);
         setNew(initialNewLoyalty);
     }

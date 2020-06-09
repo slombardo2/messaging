@@ -15,6 +15,10 @@
 # FROM websphere-liberty:microProfile3
 FROM openliberty/open-liberty:kernel-java11-openj9-ubi
 
+# Following line is a workaround for an issue where sometimes the server somehow loads the built-in server.xml,
+# rather than the one I copy into the image.  That shouldn't be possible, but alas, it appears to be some Docker bug.
+RUN rm /config/server.xml
+
 COPY --chown=1001:0 src/main/liberty/config /config/
 COPY --chown=1001:0 messaging-ear/target/messaging-ear-1.0-SNAPSHOT.ear /config/apps/Messaging.ear
 

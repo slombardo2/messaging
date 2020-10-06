@@ -18,7 +18,7 @@
 ###########################################################################################
 
 image:
-  repository: ibmstocktrader/messaging  # Docker Hub
+  repository: slombardo2/messaging  # Docker Hub
   #repository: mycluster.icp:8500/stock-trader/messaging        # IBM Cloud Private
   #repository: registry.ng.bluemix.net/stock_trader/messaging   # IBM Container Service
   tag: latest
